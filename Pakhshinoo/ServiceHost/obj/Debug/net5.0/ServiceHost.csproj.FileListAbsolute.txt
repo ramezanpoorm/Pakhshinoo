@@ -163,3 +163,13 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\ProductCategory\Index.cshtml.g.cs
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\ProductCategory\Create.cshtml.g.cs
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\ProductCategory\Edit.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Products\Create.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Products\Edit.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Products\Index.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\ProductPictures\Create.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\ProductPictures\Edit.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\ProductPictures\Index.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Slides\Create.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Slides\Edit.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Slides\Index.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shared\_Menu.cshtml.g.cs
