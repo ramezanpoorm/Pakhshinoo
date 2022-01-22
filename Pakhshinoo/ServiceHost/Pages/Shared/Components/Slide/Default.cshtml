@@ -1,0 +1,15 @@
+﻿@model List<_01_PakhshinoQuery.Contract.Slide.SlideQueryModel>
+
+<rs-module-wrap id="rev_slider_1_1_wrapper" style="background: #f5f5f5; padding: 0; margin: 0px auto; margin-top: 0; margin-bottom: 0;">
+    <rs-module id="rev_slider_1_1">
+        <rs-slides>
+
+            @foreach (var slide in Model)
+            {
+                <rs-slide data-title="Slide">
+                    <img loading="lazy" src="@slide.Picture" title="@slide.PictureTitle" alt="@slide.PictureAlt" class="rev-slidebg" />
+                </rs-slide>
+            }
+        </rs-slides>
+    </rs-module>
+</rs-module-wrap>

@@ -1523,6 +1523,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "01_PakhshinoQuery/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ShopManagement.InfraStructure.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/01_PakhshinoQuery.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/01_PakhshinoQuery.dll": {}
+        }
+      },
       "0_Framework/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -5829,6 +5842,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "01_PakhshinoQuery/1.0.0": {
+      "type": "project",
+      "path": "../01_PakhshinoQuery/01_PakhshinoQuery.csproj",
+      "msbuildProject": "../01_PakhshinoQuery/01_PakhshinoQuery.csproj"
+    },
     "0_Framework/1.0.0": {
       "type": "project",
       "path": "../0_Framework/0_Framework.csproj",
@@ -5857,6 +5875,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "01_PakhshinoQuery >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.0",
@@ -5900,6 +5919,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "D:\\PakhshinooCore\\code\\Pakhshinoo\\01_PakhshinoQuery\\01_PakhshinoQuery.csproj": {
+              "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\01_PakhshinoQuery\\01_PakhshinoQuery.csproj"
+            },
             "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj": {
               "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj"
             },
