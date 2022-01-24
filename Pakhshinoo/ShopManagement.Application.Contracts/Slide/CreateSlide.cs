@@ -1,9 +1,13 @@
 ﻿
+using _0_Framework.Application;
+using Microsoft.AspNetCore.Http;
+
 namespace ShopManagement.Application.Contracts.Slide
 {
     public class CreateSlide
     {
-        public string Picture { get; set; }
+        [MaxFileSize(5 * 1024 * 1024, ErrorMessage = ValidationMessages.MaxFileSize)]
+        public IFormFile Picture { get; set; }
         public string PictureAlt { get; set; }
         public string PictureTitle { get; set; }
         public string Heading { get; set; }

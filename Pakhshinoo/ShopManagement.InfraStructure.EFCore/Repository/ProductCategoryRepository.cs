@@ -25,11 +25,16 @@ namespace ShopManagement.InfraStructure.EFCore.Repository
                 Name = x.Name,
                 Keywords = x.Keywords,
                 MetaDescription = x.MetaDescription,
-                Picture = x.Picture,
+                //Picture = x.Picture,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
                 Slug = x.Slug
             }).FirstOrDefault(x => x.Id == id);
+        }
+
+        public string GetNameById(long id)
+        {
+            return _shopContext.ProductCategories.Select(x => new { x.Id, x.Name }).FirstOrDefault(x => x.Id == id).Name;
         }
 
         public List<ProductCategoryViewModel> GetProductCategories()

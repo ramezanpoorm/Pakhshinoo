@@ -51,7 +51,8 @@ namespace ShopManagement.Domain.ProductAgg
             UnitPrice = unitPrice;
             ShortDescription = shortDescription;
             Description = description;
-            Picture = picture;
+            if (!string.IsNullOrWhiteSpace(picture))
+                Picture = picture;
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;
             CategoryId = categoryId;

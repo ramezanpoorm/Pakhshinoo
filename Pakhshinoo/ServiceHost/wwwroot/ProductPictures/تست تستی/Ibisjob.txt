@@ -1,0 +1,34 @@
+insert into [172.16.23.29\Accorhotel].ProtelContact.dbo.ibisApiSelect
+([FaRepDate],[enRepDate],[OkRoom],[OccRoom],[OccRoomPrc],[InRoom],[VacRoom],[VacRoomPrc],[InPers],[InGstRoom],[ttArrRoom],[ttDepRoom],[HotelName],[AvgRmRate],[RtePerPerson],
+	[RevLogins],[RevFB],[RevExtras],[ttArrPerson],[ttDepPerson],[ttRevenue],[CUR],[Payment])
+
+SELECT (SELECT ShortDate FROM [Protel].[proteluser].Miladi_To_Shamsi(hst.datum)) as faRepDate,
+				hst.datum as enRepDate,
+				hst.vermzinr as OkRoom,
+				hst.zi_belegt as OccRoom,
+				(100 * hst.zi_belegt)/hst.vermzinr as OccRoomPrc,
+				hst.zi_auslast as InRoom,
+				hst.zi_frei as VacRoom,
+				(100 * hst.zi_frei)/hst.vermzinr as VacRoomPrc,
+				hst.per_inhou as InPers,
+				hst.zi_inhou as InGstRoom,
+				hst.zi_anrei as ttArrRoom,
+				hst.zi_abrei as ttDepRoom,
+				lz.short as HotelName,
+				hst.u_log_zi as AvgRmRate,
+				hst.u_log_per as RtePerPerson,
+				hst.ums_logis as RevLogis,
+				hst.ums_fb as RevFB,
+				hst.ums_extras as RevExtras,
+				hst.per_anrei as ttArrPerson,
+				hst.per_abrei as ttDepPerson,
+				sch.umsukto as ttRevenue,
+				cur.name as CUR,
+				(hst.barzahl + hst.cczahl + hst.unbarzahl + hst.devisezahl + hst.debizahl) as Payment
+				
+		FROM [Protel].[proteluser].[hstatold] hst
+			inner join [Protel].[proteluser].[salcheck] sch ON sch.datum = hst.datum
+			inner join [Protel].[proteluser].[lizenz] lz ON lz.mpehotel = hst.mpehotel
+			inner join [Protel].[proteluser].[curren] cur ON cur.ref = sch.curr
+		WHERE 
+			lz.short = 'ibis' and sch.mpehotel = 2 and convert(varchar(10), hst.datum, 102) = convert(varchar(10), getdate() - 1, 102)

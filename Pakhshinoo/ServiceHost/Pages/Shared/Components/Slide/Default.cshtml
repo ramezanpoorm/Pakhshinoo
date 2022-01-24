@@ -7,7 +7,7 @@
             @foreach (var slide in Model)
             {
                 <rs-slide data-title="Slide">
-                    <img loading="lazy" src="@slide.Picture" title="@slide.PictureTitle" alt="@slide.PictureAlt" class="rev-slidebg" />
+                    <img loading="lazy" src="~/ProductPictures/@slide.Picture" title="@slide.PictureTitle" alt="@slide.PictureAlt" class="rev-slidebg" />
                 </rs-slide>
             }
         </rs-slides>
