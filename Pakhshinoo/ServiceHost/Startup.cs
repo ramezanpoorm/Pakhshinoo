@@ -1,4 +1,5 @@
 using _0_Framework.Application;
+using DiscountManagement.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -26,6 +27,7 @@ namespace ServiceHost
         {
             var connectionString = Configuration.GetConnectionString("PakhshinoDb");
             ShopManagementBoostrapper.Configure(services, connectionString);
+            DiscountManagementBootstrapper.Configure(services, connectionString);
 
             services.AddTransient<IFileUploader, FileUploader>();
             services.AddRazorPages();

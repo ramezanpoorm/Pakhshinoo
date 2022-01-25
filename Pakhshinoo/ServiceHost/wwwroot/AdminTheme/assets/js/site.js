@@ -35,7 +35,7 @@ $(document).ready(function () {
     $("#MainModal").on("shown.bs.modal",
         function () {
             window.location.hash = "##";
-            $('.persianDateInput').persianDatepicker({
+            $('.persioanDateInput').persianDatepicker({
                 format: 'YYYY/MM/DD',
                 autoClose: true
             });

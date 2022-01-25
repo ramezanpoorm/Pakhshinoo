@@ -177,3 +177,16 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\01_PakhshinoQuery
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\01_PakhshinoQuery.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\Slide\Default.cshtml.g.cs
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\ServiceHost.MvcApplicationPartsAssemblyInfo.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\DiscountManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\DiscountManagement.Application.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\DiscountManagement.Configuration.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\DiscountManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\DiscountManagement.Configuration.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\DiscountManagement.Application.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\DiscountManagement.Application.Contract.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\DiscountManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Discounts\CustomerDiscounts\Create.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Discounts\CustomerDiscounts\Edit.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Discounts\CustomerDiscounts\Index.cshtml.g.cs
