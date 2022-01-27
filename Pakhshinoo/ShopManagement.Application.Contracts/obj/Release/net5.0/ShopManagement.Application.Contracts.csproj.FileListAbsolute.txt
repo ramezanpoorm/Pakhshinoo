@@ -1,0 +1,15 @@
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Application.Contracts\bin\Release\net5.0\ShopManagement.Application.Contracts.deps.json
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Application.Contracts\bin\Release\net5.0\ShopManagement.Application.Contracts.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Application.Contracts\bin\Release\net5.0\ref\ShopManagement.Application.Contracts.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Application.Contracts\bin\Release\net5.0\ShopManagement.Application.Contracts.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Application.Contracts\bin\Release\net5.0\0_Framework.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Application.Contracts\bin\Release\net5.0\0_Framework.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Application.Contracts\obj\Release\net5.0\ShopManagement.Application.Contracts.csproj.AssemblyReference.cache
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Application.Contracts\obj\Release\net5.0\ShopManagement.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Application.Contracts\obj\Release\net5.0\ShopManagement.Application.Contracts.AssemblyInfoInputs.cache
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Application.Contracts\obj\Release\net5.0\ShopManagement.Application.Contracts.AssemblyInfo.cs
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Application.Contracts\obj\Release\net5.0\ShopManagement.Application.Contracts.csproj.CoreCompileInputs.cache
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Application.Contracts\obj\Release\net5.0\ShopManagement.Application.Contracts.csproj.CopyComplete
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Application.Contracts\obj\Release\net5.0\ShopManagement.Application.Contracts.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Application.Contracts\obj\Release\net5.0\ref\ShopManagement.Application.Contracts.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Application.Contracts\obj\Release\net5.0\ShopManagement.Application.Contracts.pdb

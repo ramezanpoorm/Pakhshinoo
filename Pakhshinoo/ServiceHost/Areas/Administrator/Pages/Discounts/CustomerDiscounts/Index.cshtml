@@ -72,22 +72,22 @@
                             <tbody>
                                 @foreach (var item in Model.CustomerDiscounts)
                                 {
-                                <tr>
-                                    <td>@item.Id</td>
+                                    <tr>
+                                        <td>@item.Id</td>
 
-                                    <td>@item.Product</td>
-                                    <td>@item.DiscountRate</td>
-                                    <td>@item.StartDate</td>
-                                    <td>@item.EndDate</td>
-                                    <td>@item.Reason</td>
-                                    <td>@item.CreationDate</td>
-                                    <td>
-                                        <a class="btn btn-warning pull-right m-rl-5"
-                                           href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id})">
-                                            <i class="fa fa-edit"></i> ویرایش
-                                        </a>
-                                    </td>
-</tr>
+                                        <td>@item.Product</td>
+                                        <td>@item.DiscountRate</td>
+                                        <td>@item.StartDate</td>
+                                        <td>@item.EndDate</td>
+                                        <td>@item.Reason</td>
+                                        <td>@item.CreationDate</td>
+                                        <td>
+                                            <a class="btn btn-warning pull-right m-rl-5"
+                                               href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id})">
+                                                <i class="fa fa-edit"></i> ویرایش
+                                            </a>
+                                        </td>
+                                    </tr>
                                 }
                             </tbody>
                         </table>
