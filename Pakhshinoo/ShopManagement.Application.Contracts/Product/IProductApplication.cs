@@ -11,8 +11,6 @@ namespace ShopManagement.Application.Contracts.Product
     {
         OpretaionResult Create(CreateProduct command);
         OpretaionResult Edit(EditProduct command);
-        OpretaionResult IsStock(long Id);
-        OpretaionResult NotInStock(long Id);
         EditProduct GetDetails(long Id);
         List<ProductViewModel> GetProducts();
         List<ProductViewModel> Search(ProductSearchModel searchModel);

@@ -203,3 +203,9 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\InventoryManageme
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\InventoryMangement.InfraStructure.EFCore.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\InventoryManagement.Application.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\InventoryManagement.Application.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Inventory\Create.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Inventory\Edit.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Inventory\Index.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Inventory\Increase.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Inventory\Reduce.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Inventory\OperationLog.cshtml.g.cs

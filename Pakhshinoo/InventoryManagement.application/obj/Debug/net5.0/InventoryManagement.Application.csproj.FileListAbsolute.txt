@@ -17,3 +17,5 @@ D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.application\obj\Debug\net5
 D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.application\obj\Debug\net5.0\InventoryManagement.Application.dll
 D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.application\obj\Debug\net5.0\ref\InventoryManagement.Application.dll
 D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.application\obj\Debug\net5.0\InventoryManagement.Application.pdb
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.application\bin\Debug\net5.0\ShopManagement.Application.Contracts.dll
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.application\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb

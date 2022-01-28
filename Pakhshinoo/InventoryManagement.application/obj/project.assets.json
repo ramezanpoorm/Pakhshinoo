@@ -299,7 +299,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "0_Framework": "1.0.0"
+          "0_Framework": "1.0.0",
+          "ShopManagement.Application.Contracts": "1.0.0"
         },
         "compile": {
           "bin/placeholder/InventoryManagement.Application.Contract.dll": {}
@@ -320,6 +321,20 @@
         },
         "runtime": {
           "bin/placeholder/InventoryManagement.Domain.dll": {}
+        }
+      },
+      "ShopManagement.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "Microsoft.AspNetCore.Http": "2.2.2"
+        },
+        "compile": {
+          "bin/placeholder/ShopManagement.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ShopManagement.Application.Contracts.dll": {}
         }
       }
     }
@@ -847,6 +862,11 @@
       "type": "project",
       "path": "../InvaentoryManagement.Domain/InventoryManagement.Domain.csproj",
       "msbuildProject": "../InvaentoryManagement.Domain/InventoryManagement.Domain.csproj"
+    },
+    "ShopManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../ShopManagement.Application.Contracts/ShopManagement.Application.Contracts.csproj",
+      "msbuildProject": "../ShopManagement.Application.Contracts/ShopManagement.Application.Contracts.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -863,9 +883,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InventoryManagement.application\\InventoryManagement.application.csproj",
-      "projectName": "InventoryManagement.application",
-      "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InventoryManagement.application\\InventoryManagement.application.csproj",
+      "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InventoryManagement.application\\InventoryManagement.Application.csproj",
+      "projectName": "InventoryManagement.Application",
+      "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InventoryManagement.application\\InventoryManagement.Application.csproj",
       "packagesPath": "C:\\Users\\Maysam\\.nuget\\packages\\",
       "outputPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InventoryManagement.application\\obj\\",
       "projectStyle": "PackageReference",

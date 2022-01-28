@@ -32,8 +32,7 @@ namespace ShopManagement.InfraStructure.EFCore.Repository
                 MetaDescription = x.MetaDescription,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
-                ShortDescription = x.ShortDescription,
-                UnitPrice = x.UnitPrice
+                ShortDescription = x.ShortDescription
             }).FirstOrDefault(x => x.Id == Id);
         }
 
@@ -61,8 +60,6 @@ namespace ShopManagement.InfraStructure.EFCore.Repository
                 CategoryId = x.CategoryId,
                 Code = x.Code,
                 Picture = x.Picture,
-                UnitPrice = x.UnitPrice,
-                IsInStock = x.IsInStock,
                 CreationDate = x.CreateDate.ToFarsi()
             });
 

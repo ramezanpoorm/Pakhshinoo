@@ -9,3 +9,4 @@ D:\PakhshinooCore\code\Pakhshinoo\0_Framework\obj\Debug\net5.0\0_Framework.cspro
 D:\PakhshinooCore\code\Pakhshinoo\0_Framework\obj\Debug\net5.0\0_Framework.dll
 D:\PakhshinooCore\code\Pakhshinoo\0_Framework\obj\Debug\net5.0\ref\0_Framework.dll
 D:\PakhshinooCore\code\Pakhshinoo\0_Framework\obj\Debug\net5.0\0_Framework.pdb
+D:\PakhshinooCore\code\Pakhshinoo\0_Framework\obj\Debug\net5.0\0_Framework.csproj.AssemblyReference.cache

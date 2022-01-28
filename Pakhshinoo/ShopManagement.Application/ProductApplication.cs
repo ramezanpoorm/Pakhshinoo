@@ -32,7 +32,7 @@ namespace ShopManagement.Application
             var categoryName = _productCategoryRepository.GetNameById(command.CategoryId);
             var path = $"{categoryName}//{command.Name}";
             var picturePath = _fileUploader.Upload(command.Picture, path);
-            var product = new Product(command.Name, command.Code, command.UnitPrice, command.ShortDescription, command.Description, picturePath, command.PictureAlt, command.PictureTitle, command.CategoryId, slug, command.Keywords, command.MetaDescription);
+            var product = new Product(command.Name, command.Code, command.ShortDescription, command.Description, picturePath, command.PictureAlt, command.PictureTitle, command.CategoryId, slug, command.Keywords, command.MetaDescription);
             _productRepository.Create(product);
             _productRepository.SaveChanges();
             return operation.Successeded();
@@ -53,7 +53,7 @@ namespace ShopManagement.Application
 
             var path = $"{product.Category.Name}/{command.Name}";
             var picturePath = _fileUploader.Upload(command.Picture, path);
-            product.Edit(command.Name, command.Code, command.UnitPrice, command.ShortDescription, command.Description, picturePath, command.PictureAlt, command.PictureTitle, command.CategoryId, slug, command.Keywords, command.MetaDescription);
+            product.Edit(command.Name, command.Code, command.ShortDescription, command.Description, picturePath, command.PictureAlt, command.PictureTitle, command.CategoryId, slug, command.Keywords, command.MetaDescription);
 
             _productRepository.SaveChanges();
             return operation.Successeded();
@@ -67,34 +67,6 @@ namespace ShopManagement.Application
         public List<ProductViewModel> GetProducts()
         {
             return _productRepository.GetProducts();
-        }
-
-        public OpretaionResult IsStock(long id)
-        {
-            var operation = new OpretaionResult();
-            var product = _productRepository.Get(id);
-
-            if (product == null)
-                return operation.Failed(ApplicationMessages.RecordNotFound);
-
-            product.InStock();
-
-            _productRepository.SaveChanges();
-            return operation.Successeded();
-        }
-
-        public OpretaionResult NotInStock(long id)
-        {
-            var operation = new OpretaionResult();
-            var product = _productRepository.Get(id);
-
-            if (product == null)
-                return operation.Failed(ApplicationMessages.RecordNotFound);
-
-            product.NotInStock();
-
-            _productRepository.SaveChanges();
-            return operation.Successeded();
         }
 
         public List<ProductViewModel> Search(ProductSearchModel searchModel)
