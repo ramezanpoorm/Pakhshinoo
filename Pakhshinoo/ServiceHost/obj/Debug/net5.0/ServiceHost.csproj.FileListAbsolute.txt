@@ -193,3 +193,13 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Discounts\ColleagueDiscounts\Create.cshtml.g.cs
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Discounts\ColleagueDiscounts\Edit.cshtml.g.cs
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Discounts\ColleagueDiscounts\Index.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\InventoryManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\InventoryManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\InventoryManagement.InfraStructue.Configuration.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\InventoryMangement.InfraStructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\InventoryManagement.InfraStructue.Configuration.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\InventoryManagement.Application.Contract.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\InventoryManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\InventoryMangement.InfraStructure.EFCore.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\InventoryManagement.Application.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\InventoryManagement.Application.pdb

@@ -1,0 +1,15 @@
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.Application.Contract\bin\Debug\net5.0\InventoryManagement.Application.Contract.deps.json
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.Application.Contract\bin\Debug\net5.0\InventoryManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.Application.Contract\bin\Debug\net5.0\ref\InventoryManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.Application.Contract\bin\Debug\net5.0\InventoryManagement.Application.Contract.pdb
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.Application.Contract\bin\Debug\net5.0\0_Framework.dll
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.Application.Contract\bin\Debug\net5.0\0_Framework.pdb
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.Application.Contract\obj\Debug\net5.0\InventoryManagement.Application.Contract.csproj.AssemblyReference.cache
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.Application.Contract\obj\Debug\net5.0\InventoryManagement.Application.Contract.GeneratedMSBuildEditorConfig.editorconfig
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.Application.Contract\obj\Debug\net5.0\InventoryManagement.Application.Contract.AssemblyInfoInputs.cache
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.Application.Contract\obj\Debug\net5.0\InventoryManagement.Application.Contract.AssemblyInfo.cs
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.Application.Contract\obj\Debug\net5.0\InventoryManagement.Application.Contract.csproj.CoreCompileInputs.cache
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.Application.Contract\obj\Debug\net5.0\InventoryManagement.Application.Contract.csproj.CopyComplete
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.Application.Contract\obj\Debug\net5.0\InventoryManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.Application.Contract\obj\Debug\net5.0\ref\InventoryManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.Application.Contract\obj\Debug\net5.0\InventoryManagement.Application.Contract.pdb
