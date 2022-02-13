@@ -41,6 +41,9 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
 
+                    b.Property<bool>("IsSpecial")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Keywords")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");

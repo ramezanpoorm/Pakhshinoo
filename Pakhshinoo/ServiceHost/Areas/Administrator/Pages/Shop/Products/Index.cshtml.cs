@@ -60,5 +60,23 @@ namespace ServiceHost.Areas.Administrator.Pages.Shop.Products
             return new JsonResult(result);
         }
 
+        public IActionResult OnGetNotSpecial(long id)
+        {
+            var result = _productApplication.NotSpecial(id);
+            if (result.IsSuccesseded)
+                return RedirectToPage("./Index");
+            Message = result.Message;
+            return RedirectToPage("./Index");
+        }
+
+        public IActionResult OnGetSpecial(long id)
+        {
+            var result = _productApplication.Special(id);
+            if (result.IsSuccesseded)
+                return RedirectToPage("./Index");
+            Message = result.Message;
+            return RedirectToPage("./Index");
+        }
+
     }
 }

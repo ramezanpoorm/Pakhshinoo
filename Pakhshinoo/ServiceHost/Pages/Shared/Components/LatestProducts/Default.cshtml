@@ -1,0 +1,68 @@
+﻿@model List<_01_PakhshinoQuery.Contract.Product.ProductQueryModel>
+
+    <section class="elementor-section elementor-top-section elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+        <div class="elementor-container elementor-column-gap-narrow">
+            <div class="elementor-row">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                        <div class="elementor-widget-wrap">
+                            <div class="elementor-element row-is-d-noflex-1 elementor-widget elementor-widget-small-list-product">
+                                <div class="elementor-widget-container">
+                                    <div class="mweb-block-wrap">
+                                        <div class="block-title has_url">
+                                            <div class="title"><i class="fal fa-layer-plus"></i>جدیدترین محصـولات</div>
+                                            <a href="#" class="bk_view_more" title="جدیدترین محصـولات"><i class="fal fa-angle-left"></i>مشاهده همه</a>
+                                        </div>
+
+                                        
+		 
+	
+                                        <div class="block-content-wrap">
+                                            <div class="block-content-inner clear row">
+                                                @foreach (var product in Model)
+                                                {
+                                                    <div class="item item_simple col-12 col-sm-6 col-lg-4">
+                                                        <div class="item-area clear">
+                                                            <div class="product-image-area">
+                                                                <a title="نمایش محصول" data-toggle="tooltip" class="quickview-btn"  asp-page="/Product" asp-route-id="@product.Id"></a>
+                                                                <div class="is-image product-image">
+                                                                    <a asp-page="/Product" asp-route-id="@product.Id" title="@product.PictureTitle">
+                                                                        <img width="75" height="75" src="~/ProductPictures/@product.Picture" class="attachment-simplev size-simplev wp-post-image" alt="" />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-detail-area">
+                                                                <h2 class="product-name">
+                                                                    <a asp-page="/Product" asp-route-id="@product.Id" title="@product.Name">@product.Name</a>
+                                                                </h2>
+                                                                <div class="row">
+                                                                    <span class="price">
+                                                                        @if (product.HasDiscount)
+                                                                        {
+                                                                            <del aria-hidden="true"><span class="Price-amount amount"><bdi>@product.Price&nbsp;<span>تومان</span></bdi></span></del>
+
+                                                                            <ins><span class="Price-amount amount"><bdi>@product.PriceWithDiscount&nbsp;<span>تومان</span></bdi></span></ins>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <ins><span class="Price-amount amount"><bdi>@product.Price&nbsp;<span>تومان</span></bdi></span></ins>
+                                                                        }
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    }
+                                                </div>
+                                        </div>
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

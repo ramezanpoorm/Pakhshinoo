@@ -1,0 +1,65 @@
+﻿@model List<_01_PakhshinoQuery.Contract.Product.ProductQueryModel>
+
+    <section class="elementor-section elementor-top-section elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default divider-pattern">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-row">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                        <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-widget elementor-widget-mobile-deal-slider-product">
+                                <div class="elementor-widget-container">
+                                    <div class="mweb-block-wrap">
+                                        <div class="block-special-title">
+                                            <div class="deal_icon">
+                                                <i class="fal fa-hourglass-start"></i><i class="fal fa-hourglass-half"></i><i class="fal fa-hourglass-end"></i><i class="fal fa-hourglass-end spin"></i>
+                                            </div>
+                                            <span>پیشنهادات</span>شـگفت انگیز
+                                        </div>
+                                        <div class="block-content-wrap">
+                                            <div class="block-content-inner clear mweb-swiper">
+                                                <div class="swiper-slider swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-rtl" dir="rtl" data-slider="{&quot;slidesPerView&quot;:1,&quot;spaceBetween&quot;:15,&quot;watchSlidesVisibility&quot;:true,&quot;autoplay&quot;:true,&quot;touchMoveStopPropagation&quot;:true,&quot;navigation&quot;:{&quot;nextEl&quot;:&quot;.mweb-swiper-next&quot;,&quot;prevEl&quot;:&quot;.mweb-swiper-prev&quot;},&quot;breakpoints&quot;:{&quot;575&quot;:{&quot;slidesPerView&quot;:1},&quot;768&quot;:{&quot;slidesPerView&quot;:2},&quot;1024&quot;:{&quot;slidesPerView&quot;:5}}}">
+
+                                                    <div class="swiper-wrapper">
+
+                                                        @foreach (var product in Model)
+                                                        {
+                                                        <div class="swiper-slide swiper-slide-visible swiper-slide-active">
+                                                            <div class="item special_wrap">
+                                                                <div class="item-area">
+                                                                    <h2 class="product-name"><a asp-page="/Product" asp-route-id="@product.Id" title="@product.PictureTitle">@product.Name</a></h2>
+                                                                    <div class="is-image image_area"><a asp-page="/Product" asp-route-id="@product.Id" title="@product.Name"><img src="~/ProductPictures/@product.Picture" alt="@product.PictureAlt" title="@product.PictureTitle"></a></div>
+                                                                    <span class="price">
+                                                                        @if (product.HasDiscount)
+                                                                        {
+                                                                        <del aria-hidden="true"><span class="Price-amount amount"><bdi>@product.Price&nbsp;<span>تومان</span></bdi></span></del>
+
+                                                                        <ins><span class="Price-amount amount"><bdi>@product.PriceWithDiscount&nbsp;<span>تومان</span></bdi></span></ins>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                    <ins><span class="Price-amount amount"><bdi>@product.Price&nbsp;<span>تومان</span></bdi></span></ins>
+                                                                        }
+                                                                    </span>
+
+                                                                    @*<div class="timer_wrap">
+                                                                        <div class="product-date vc_deal_time" data-date="2022-09-30 20:29:59"></div>
+                                                                    </div>*@
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        }
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html dir="rtl" lang="fa-IR">
 <head>
     <base href="">
@@ -135,73 +136,26 @@
                                 <a href="#"><span class="menu-item-text"><i class="fal fa-home-lg-alt"></i>خانه</span></a>
                             </li>
                             <li class="level-0 menu-item-object-product_cat menu-item-has-children">
-                                <a href="#"><span class="menu-item-text">تجهیزات داخلی خودرو</span></a>
-                                <ul class="sub-menu">
-                                    <li class="level-1 menu-item-object-product_cat">
-                                        <a href="#">داشبورد</a>
-                                    </li>
-                                    <li class="level-1 menu-item-object-product_cat">
-                                        <a href="#">روکش صندلی</a>
-                                    </li>
-                                    <li class="level-1 menu-item-object-product_cat">
-                                        <a href="#">صندلی</a>
-                                    </li>
-                                    <li class="level-1 menu-item-object-product_cat">
-                                        <a href="#">کف پایی</a>
-                                    </li>
-                                    <li class="level-1 menu-item-object-product_cat">
-                                        <a href="#">کنسول وسط</a>
-                                    </li>
-                                </ul>
+                                <a href="#"><span class="menu-item-text">محصولات</span></a>
+                                @await Component.InvokeAsync("ProductCategory")
                             </li>
-                            <li class="level-0 menu-item-object-product_cat menu-item-has-children">
-                                <a href="#"><span class="menu-item-text">تجهیزات بدنه خودرو</span></a>
-                                <ul class="sub-menu">
-                                    <li class="level-1 menu-item-object-product_cat">
-                                        <a href="#">اگزوز</a>
-                                    </li>
-                                    <li class="level-1 menu-item-object-product_cat">
-                                        <a href="#">روشنایی</a>
-                                    </li>
-                                    <li class="level-1 menu-item-object-product_cat">
-                                        <a href="#">سپر</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="level-0 menu-item-object-product_cat menu-item-has-children">
-                                <a href="#"><span class="menu-item-text">لوازم جانبی و مصرفی</span></a>
-                                <ul class="sub-menu">
-                                    <li class="level-1 menu-item-object-product_cat">
-                                        <a href="#">ضبط و باند</a>
-                                    </li>
-                                    <li class="level-1 menu-item-object-product_cat">
-                                        <a href="#">زنجیر چرخ</a>
-                                    </li>
-                                    <li class="level-1 menu-item-object-product_cat">
-                                        <a href="">لنت ترمز</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="level-0 menu-item-object-product_cat menu-item-has-children">
-                                <a href="#"><span class="menu-item-text">مراقبت و نگهداری از خودرو</span></a>
-                                <ul class="sub-menu">
-                                    <li class="level-1 menu-item-object-product_cat">
-                                        <a href="#">اسپری</a>
-                                    </li>
-                                    <li class="level-1 menu-item-object-product_cat">
-                                        <a href="#">نظافت</a>
-                                    </li>
-                                    <li class="level-1 menu-item-object-product_cat">
-                                        <a href="#">واکس و پولیش</a>
-                                    </li>
-                                </ul>
-                            </li>
+
                             <li class="level-0 menu-item-object-page">
-                                <a href="#"><span class="menu-item-text">وبلاگ</span></a>
+                                <a href="#"><span class="menu-item-text">کاتالوگ</span></a>
                             </li>
+
                             <li class="level-0 menu-item-object-page">
-                                <a href="#"><span class="menu-item-text">پرسش و پاسخ</span></a>
+                                <a href="#"><span class="menu-item-text">دانشنامه</span></a>
                             </li>
+
+                            <li class="level-0 menu-item-object-page">
+                                <a href="#"><span class="menu-item-text">تماس با ما</span></a>
+                            </li>
+
+                            <li class="level-0 menu-item-object-page">
+                                <a href="#"><span class="menu-item-text">درباره ما</span></a>
+                            </li>
+                            
                         </ul>
                     </div>
                     <div class="off-canvas-wrap">
@@ -215,72 +169,21 @@
                                         <a href="#"><span class="menu-item-text"><i class="fal fa-home-lg-alt"></i>خانه</span></a>
                                     </li>
                                     <li class="level-0 menu-item-object-product_cat menu-item-has-children">
-                                        <a href="#"><span class="menu-item-text">تجهیزات داخلی خودرو</span></a>
-                                        <ul class="sub-menu">
-                                            <li class="level-1 menu-item-object-product_cat">
-                                                <a href="#">داشبورد</a>
-                                            </li>
-                                            <li class="level-1 menu-item-object-product_cat">
-                                                <a href="#">روکش صندلی</a>
-                                            </li>
-                                            <li class="level-1 menu-item-object-product_cat">
-                                                <a href="#">صندلی</a>
-                                            </li>
-                                            <li class="level-1 menu-item-object-product_cat">
-                                                <a href="#">کف پایی</a>
-                                            </li>
-                                            <li class="level-1 menu-item-object-product_cat">
-                                                <a href="#">کنسول وسط</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="level-0 menu-item-object-product_cat menu-item-has-children">
-                                        <a href="#"><span class="menu-item-text">تجهیزات بدنه خودرو</span></a>
-                                        <ul class="sub-menu">
-                                            <li class="level-1 menu-item-object-product_cat">
-                                                <a href="#">اگزوز</a>
-                                            </li>
-                                            <li class="level-1 menu-item-object-product_cat">
-                                                <a href="#">روشنایی</a>
-                                            </li>
-                                            <li class="level-1 menu-item-object-product_cat">
-                                                <a href="#">سپر</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="level-0 menu-item-object-product_cat menu-item-has-children">
-                                        <a href="#"><span class="menu-item-text">لوازم جانبی و مصرفی</span></a>
-                                        <ul class="sub-menu">
-                                            <li class="level-1 menu-item-object-product_cat">
-                                                <a href="#">ضبط و باند</a>
-                                            </li>
-                                            <li class="level-1 menu-item-object-product_cat">
-                                                <a href="#">زنجیر چرخ</a>
-                                            </li>
-                                            <li class="level-1 menu-item-object-product_cat">
-                                                <a href="">لنت ترمز</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="level-0 menu-item-object-product_cat menu-item-has-children">
-                                        <a href="#"><span class="menu-item-text">مراقبت و نگهداری از خودرو</span></a>
-                                        <ul class="sub-menu">
-                                            <li class="level-1 menu-item-object-product_cat">
-                                                <a href="#">اسپری</a>
-                                            </li>
-                                            <li class="level-1 menu-item-object-product_cat">
-                                                <a href="#">نظافت</a>
-                                            </li>
-                                            <li class="level-1 menu-item-object-product_cat">
-                                                <a href="#">واکس و پولیش</a>
-                                            </li>
-                                        </ul>
+                                        <a href="#"><span class="menu-item-text">محصولات</span></a>
+                                        @await Component.InvokeAsync("ProductCategory")
                                     </li>
                                     <li class="level-0 menu-item-object-page">
-                                        <a href="#"><span class="menu-item-text">وبلاگ</span></a>
+                                        <a href="#"><span class="menu-item-text">کاتالوگ</span></a>
                                     </li>
                                     <li class="level-0 menu-item-object-page">
-                                        <a href="#"><span class="menu-item-text">پرسش و پاسخ</span></a>
+                                        <a href="#"><span class="menu-item-text">دانشنامه</span></a>
+                                    </li>
+
+                                    <li class="level-0 menu-item-object-page">
+                                        <a href="#"><span class="menu-item-text">درباره ما</span></a>
+                                    </li>
+                                    <li class="level-0 menu-item-object-page">
+                                        <a href="#"><span class="menu-item-text">تماس با ما</span></a>
                                     </li>
                                 </ul>
                             </div>
@@ -453,7 +356,7 @@
                 <div class="col-12">
                     <div class="footer_down">
                         <div class="copy_right">کلیه حقوق مادی و معنوی برای این سایت محفوظ می باشد</div>
-                        <div class="logo_designer"><a href="#" rel="nofollow" target="_blank" title="Web design and develop group"> طراحی و توسعه </a> دیناپخش</div>
+                        <div class="logo_designer"><a href="#" rel="nofollow" target="_blank" title="Web design and develop group"> طراحی و توسعه </a> پخشینو</div>
                     </div>
                 </div>
 

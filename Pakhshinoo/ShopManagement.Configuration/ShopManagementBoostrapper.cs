@@ -1,4 +1,6 @@
-﻿using _01_PakhshinoQuery.Contract.Slide;
+﻿using _01_PakhshinoQuery.Contract.Product;
+using _01_PakhshinoQuery.Contract.ProductCategory;
+using _01_PakhshinoQuery.Contract.Slide;
 using _01_PakhshinoQuery.Query;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -38,6 +40,8 @@ namespace ShopManagement.Configuration
             service.AddTransient<ISlideRepository, SlideRepository>();
 
             service.AddTransient<ISlideQuery, SlideQuery>();
+            service.AddTransient<IProductCategoryQuery, ProductCategoryQuery>();
+            service.AddTransient<IProductQuery, ProductQuery>();
 
             service.AddDbContext<ShopContext>(x => x.UseSqlServer(connectionString));
         }

@@ -23,6 +23,7 @@ namespace ShopManagement.Domain.ProductAgg
         public string Keywords { get; private set; }
         public string MetaDescription { get; private set; }
         public string Slug { get; private set; }
+        public bool IsSpecial { get; private set; }
         public ProductCategory Category { get; private set; }
         public List<ProductPicture> ProductPictures { get; private set; }
 
@@ -39,6 +40,7 @@ namespace ShopManagement.Domain.ProductAgg
             Slug = slug;
             Keywords = keywords;
             MetaDescription = metaDescription;
+            IsSpecial = false;
         }
 
         public void Edit(string name, string code, string shortDescription, string description, string picture, string pictureAlt, string pictureTitle, long categoryId, string slug, string keywords, string metaDescription)
@@ -55,6 +57,16 @@ namespace ShopManagement.Domain.ProductAgg
             Slug = slug;
             Keywords = keywords;
             MetaDescription = metaDescription;
+        }
+
+        public void Special()
+        {
+            IsSpecial = true;
+        }
+
+        public void NotSpecial()
+        {
+            IsSpecial = false;
         }
 
     }

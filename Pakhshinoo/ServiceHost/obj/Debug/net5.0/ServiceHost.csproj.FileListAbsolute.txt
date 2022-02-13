@@ -209,3 +209,8 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Inventory\Increase.cshtml.g.cs
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Inventory\Reduce.cshtml.g.cs
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Inventory\OperationLog.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\ProductCategory\default.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Pages\ProductCategory.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\SpecialProducts\Default.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\LatestProducts\Default.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Pages\Product.cshtml.g.cs

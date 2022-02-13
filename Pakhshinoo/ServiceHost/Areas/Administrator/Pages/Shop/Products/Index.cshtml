@@ -64,6 +64,7 @@
                                     <th>نام</th>
                                     <th>کد</th>
                                     <th>گروه</th>
+                                    <th>وضعیت</th>
                                     <th>تاریخ تولید</th>
                                     <th>عملیات</th>
                                 </tr>
@@ -79,13 +80,33 @@
                                     <td>@item.Name</td>
                                     <td>@item.Code</td>
                                     <td>@item.Category</td>
-                                    
+
+                                    <td class="text-center">
+                                        @if (!item.IsSpecial)
+                                        {
+                                            <i class="fa fa-check text-info">معمولی</i>
+                                        }
+                                        else
+                                        {
+                                    <i class="fa fa-remove text-warning">پیشنهاد ویژه</i>
+                                        }
+                                    </td>
+
                                     <td>@item.CreationDate</td>
                                     <td>
                                         <a class="btn btn-warning pull-right m-rl-5"
                                            href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id})">
                                             <i class="fa fa-edit"></i> ویرایش
                                         </a>
+
+                                        @if (!item.IsSpecial)
+                                        {
+                                            <a asp-page="./Index" asp-page-handler="Special" class="btn btn-warning btn-custom waves-effect waves-light m-b-5" asp-route-id="@item.Id">تبدیل به پیشنهاد ویژه</a>
+                                        }
+                                        else
+                                        {
+                                            <a asp-page="./Index" asp-page-handler="NotSpecial" class="btn btn-success btn-custom waves-effect waves-light m-b-5" asp-route-id="@item.Id">خارج شدن از پیشنهاد ویژه</a>
+                                        }
                                     </td>
                                 </tr>
                                 }
@@ -106,6 +127,5 @@
         $(document).ready(function () {
             $('#datatable').dataTable();
         });
-
     </script>
 }
