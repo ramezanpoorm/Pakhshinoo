@@ -1,0 +1,15 @@
+D:\PakhshinooCore\code\Pakhshinoo\AccountManagement.Application.Contract\bin\Release\net5.0\AccountManagement.Application.Contract.deps.json
+D:\PakhshinooCore\code\Pakhshinoo\AccountManagement.Application.Contract\bin\Release\net5.0\AccountManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\AccountManagement.Application.Contract\bin\Release\net5.0\ref\AccountManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\AccountManagement.Application.Contract\bin\Release\net5.0\AccountManagement.Application.Contract.pdb
+D:\PakhshinooCore\code\Pakhshinoo\AccountManagement.Application.Contract\bin\Release\net5.0\0_Framework.dll
+D:\PakhshinooCore\code\Pakhshinoo\AccountManagement.Application.Contract\bin\Release\net5.0\0_Framework.pdb
+D:\PakhshinooCore\code\Pakhshinoo\AccountManagement.Application.Contract\obj\Release\net5.0\AccountManagement.Application.Contract.csproj.AssemblyReference.cache
+D:\PakhshinooCore\code\Pakhshinoo\AccountManagement.Application.Contract\obj\Release\net5.0\AccountManagement.Application.Contract.GeneratedMSBuildEditorConfig.editorconfig
+D:\PakhshinooCore\code\Pakhshinoo\AccountManagement.Application.Contract\obj\Release\net5.0\AccountManagement.Application.Contract.AssemblyInfoInputs.cache
+D:\PakhshinooCore\code\Pakhshinoo\AccountManagement.Application.Contract\obj\Release\net5.0\AccountManagement.Application.Contract.AssemblyInfo.cs
+D:\PakhshinooCore\code\Pakhshinoo\AccountManagement.Application.Contract\obj\Release\net5.0\AccountManagement.Application.Contract.csproj.CoreCompileInputs.cache
+D:\PakhshinooCore\code\Pakhshinoo\AccountManagement.Application.Contract\obj\Release\net5.0\AccountManagement.Application.Contract.csproj.CopyComplete
+D:\PakhshinooCore\code\Pakhshinoo\AccountManagement.Application.Contract\obj\Release\net5.0\AccountManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\AccountManagement.Application.Contract\obj\Release\net5.0\ref\AccountManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\AccountManagement.Application.Contract\obj\Release\net5.0\AccountManagement.Application.Contract.pdb

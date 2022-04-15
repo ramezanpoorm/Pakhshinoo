@@ -28,6 +28,9 @@ namespace ShopManagement.InfraStructure.EFCore.Mapping
             builder.Property(x => x.Slug).HasMaxLength(255);
 
             builder.HasOne(x => x.Category).WithMany(x => x.Products).HasForeignKey(x => x.CategoryId);
+            builder.HasOne(x => x.Car).WithMany(x => x.Products).HasForeignKey(x => x.CarId);
+            builder.HasOne(x => x.Brand).WithMany(x => x.Products).HasForeignKey(x => x.BrandId);
+            builder.HasOne(x => x.Company).WithMany(x => x.Products).HasForeignKey(x => x.CompanyId);
             builder.HasMany(x => x.ProductPictures).WithOne(x => x.Product).HasForeignKey(x => x.ProductId);
         }
     }

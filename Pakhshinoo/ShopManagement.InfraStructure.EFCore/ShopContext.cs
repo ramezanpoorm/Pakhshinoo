@@ -1,4 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ShopManagement.Domain.BrandAgg;
+using ShopManagement.Domain.CarAgg;
+using ShopManagement.Domain.CompanyAgg;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManagement.Domain.ProductPictureAgg;
@@ -13,6 +16,9 @@ namespace ShopManagement.InfraStructure.EFCore
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductPicture> ProductPictures { get; set; }
         public DbSet<Slide> Slides { get; set; }
+        public DbSet<Car> Cars { get; set; }
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Company> Companies { get; set; }
 
         public ShopContext(DbContextOptions<ShopContext> options):base(options)
         {

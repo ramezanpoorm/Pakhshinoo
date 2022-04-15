@@ -19,7 +19,7 @@ namespace ShopManagement.Application
         public OpretaionResult Create(CreateProductCategory command)
         {
             var operation = new OpretaionResult();
-            if (_productCategoryRepository.Exists(x=>x.Name == command.Name))
+            if (_productCategoryRepository.Exists(x => x.Name == command.Name))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             var slug = command.Slug.Slugify();

@@ -19,3 +19,15 @@ D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\obj\Release\net5.0\01_Pakhsh
 D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\obj\Release\net5.0\01_PakhshinoQuery.dll
 D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\obj\Release\net5.0\ref\01_PakhshinoQuery.dll
 D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\obj\Release\net5.0\01_PakhshinoQuery.pdb
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\DiscountManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\DiscountManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\DiscountManagement.Infrastructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\InventoryManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\InventoryManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\InventoryMangement.InfraStructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\DiscountManagement.Infrastructure.EFCore.pdb
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\InventoryManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\InventoryMangement.InfraStructure.EFCore.pdb
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\DiscountManagement.Application.Contract.pdb
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\DiscountManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\InventoryManagement.Application.Contract.pdb

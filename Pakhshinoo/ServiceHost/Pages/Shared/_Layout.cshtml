@@ -1,4 +1,5 @@
-﻿
+﻿@inject _0_Framework.Application.IAuthHelper authHelper
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html dir="rtl" lang="fa-IR">
 <head>
@@ -40,53 +41,9 @@
             </div>
         </div>
     </div>
-    <div class="account_action">
-        <div class="title">حساب کاربری</div>
-        <div class="login_wrap">
-            <form id="mweb_login" action="#0" method="post">
-                <span class="username"><input id="signin_email" name="signin_email" type="text" placeholder="نام کاربری یا شماره موبایل" required /></span>
-                <span class="password"><input id="signin_password" name="signin_password" type="password" placeholder="گذرواژه" required /></span>
-                <label><input type="checkbox" id="remember-me" name="remember-me" /><span class="remember_me">مرا به خاطر بسپار</span></label>
-                <p id="message"></p>
-                <input type="hidden" name="action" value="ajax_login" />
-                <div class="flex_row">
-                    <input type="submit" value="ورود به حساب کاربری" />
-                    <a class="lost" href="#">فراموشی گذرواژه؟</a>
-                </div>
-            </form>
-            <span class="seprator"><i>یا</i></span>
 
-            <div class="create_account">
-                <span class="button"><i class="fal fa-user-plus"></i> ساخت حساب کاربری</span>
-            </div>
-        </div>
-        <div class="register_wrap">
-            <i class="close_modal fal fa-times-circle"></i>
+    @*@await Component.InvokeAsync("LoginRegister")*@
 
-            <form action="#" method="post">
-                <p class="form-row" id="phone_number_field">
-                    <label for="phone_number"></label>
-                    <span class="mobile"><input type="text" name="phone_number" id="phone_number" placeholder="شماره موبایل - 09xxxxxxxxx" value="" maxlength="11" required="" /></span>
-                </p>
-
-                <span class="form-row-wide mail">
-                    <input type="email" name="signup_email" id="signup_email" value="" placeholder="پست الکترونیک" required="" />
-                </span>
-
-                <span class="form-row-wide password">
-                    <input type="password" name="signup_pass" id="signup_pass" value="" placeholder="گذرواژه" required="" />
-                    <p class="help-block">حداقل 8 کاراکتر</p>
-                </span>
-
-                <p id="message"></p>
-                <input type="hidden" name="action" value="ajax_register" />
-                <div class="flex_row">
-                    <input type="submit" class="button" value="عضویت" />
-                </div>
-            </form>
-        </div>
-    </div>
-    
     <header role="banner" class="head_4 head_5">
         <div class="container">
             <div class="row">
@@ -106,9 +63,19 @@
                     </form>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4">
-                    <a class="hs_icon user_login login_btn" href="#">
-                        <span> <i class="fal fa-user"></i> </span>
-                    </a>
+                    @if (!authHelper.IsAuthenticated())
+                    {
+                        <a class="hs_icon" asp-page="/account">
+                            <span> <i class="fal fa-user"></i> </span>
+                        </a>
+                    }
+                    else
+                    {
+                        <a asp-page="/account" asp-page-handler="Logout">
+                            <span> خروچ </span>
+                        </a>
+                    }
+
                     <!-- ./user_login -->
 
                     <a href="#" class="head_wishlist_btn hs_icon"><i class="fal fa-heart"></i></a>
@@ -155,7 +122,7 @@
                             <li class="level-0 menu-item-object-page">
                                 <a href="#"><span class="menu-item-text">درباره ما</span></a>
                             </li>
-                            
+
                         </ul>
                     </div>
                     <div class="off-canvas-wrap">
@@ -196,7 +163,7 @@
             </div>
         </div>
     </header>
-    
+
     @RenderBody()
     <!--#main-site-wrap-->
 

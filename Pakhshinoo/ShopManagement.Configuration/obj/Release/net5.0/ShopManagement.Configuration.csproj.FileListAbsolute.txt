@@ -26,3 +26,15 @@ D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\obj\Release\net5.
 D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\obj\Release\net5.0\ref\ShopManagement.Configuration.dll
 D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\obj\Release\net5.0\ShopManagement.Configuration.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\obj\Release\net5.0\ShopManagement.Configuration.genruntimeconfig.cache
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\DiscountManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\DiscountManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\DiscountManagement.Infrastructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\InventoryManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\InventoryManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\InventoryMangement.InfraStructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\DiscountManagement.Application.Contract.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\DiscountManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\DiscountManagement.Infrastructure.EFCore.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\InventoryManagement.Application.Contract.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\InventoryManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\InventoryMangement.InfraStructure.EFCore.pdb

@@ -1,0 +1,121 @@
+﻿@page
+@model ServiceHost.Pages.AccountModel
+@{
+}
+
+<div class="main-site-wrap">
+    <div class="mweb-site-mask"></div>
+    <div class="site-wrap-outer clear">
+        <div class="page-wrap page-layout-wrap is-sidebar-none container">
+            <div class="row">
+                <div class="content-wrap page-layout-inner content-without-sidebar col-12">
+                    <article class="is-page inner_wrap post-wrapper post-611 page type-page status-publish hentry">
+                        <div class="blog_top">
+                            <div class="blog_icon"><i class="fal fa-compress"></i></div>
+                            <h1 class="blog_title">ورود/ ثبت نام</h1>
+                        </div>
+
+                        <div class="entry entry-content">
+
+                            <div class="container-wrap page-my-account">
+                                <div class="container">
+                                    <div id="content">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="tabs woo_myaccount_login" data-toggle="tabslet" data-animation="true">
+
+                                                        <div id="login">
+                                                            <div class="product-notices-wrapper"></div>
+                                                            @if (Model.LoginMessage != null)
+                                                            {
+                                                                <div class="alert alert-danger">@Model.LoginMessage</div>
+                                                            }
+                                                            <form class="product-form product-form-login login" asp-page-handler="Login" method="post">
+
+
+                                                                <p class="product-form-row product-form-row--wide form-row form-row-wide">
+                                                                    <label for="username">نام کاربری یا موبایل &nbsp;<span class="required">*</span></label>
+                                                                    <input type="text" class="product-Input product-Input--text input-text" name="username" id="username" autocomplete="username" value="">
+                                                                </p>
+                                                                <p class="product-form-row product-form-row--wide form-row form-row-wide">
+                                                                    <label for="password">گذرواژه&nbsp;<span class="required">*</span></label>
+                                                                    <span class="password-input"><input class="product-Input product-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password"><span class="show-password-input"></span></span>
+                                                                </p>
+
+
+                                                                <p class="form-row">
+                                                                    <label class="product-form__label product-form__label-for-checkbox product-form-login__rememberme">
+                                                                        <input class="product-form__input product-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever"> <span>مرا به خاطر بسپار</span>
+                                                                    </label>
+                                                                    <button type="submit" class="product-button button product-form-login__submit" name="login" value="ورود">ورود</button>
+                                                                </p>
+                                                                <p class="product-LostPassword lost_password">
+                                                                    <a href="#">گذرواژه خود را فراموش کرده اید؟</a>
+                                                                </p>
+
+
+                                                            </form>
+
+                                                        </div>
+
+
+                                                    </div>
+
+                                                </td>
+                                                <td>
+                                                    <div class="tabs woo_myaccount_login" data-toggle="tabslet" data-animation="true">
+
+                                                        <div id="register">
+
+                                                            <form method="post" class="product-form product-form-register register">
+
+                                                                <p class="form-row" id="phone_number_field">
+                                                                    <label for="phone_number">شماره موبایل <abbr class="required" title="ضروری">*</abbr></label>
+                                                                    <span class="product-input-wrapper"><input type="text" class="input-text " name="phone_number" id="phone_number" placeholder="" value="" required=""></span>
+                                                                </p>
+
+
+                                                                <p class="product-form-row product-form-row--wide form-row form-row-wide">
+                                                                    <label for="reg_email">آدرس ایمیل&nbsp;<span class="required">*</span></label>
+                                                                    <input type="email" class="product-Input product-Input--text input-text" name="email" id="reg_email" autocomplete="email" value="">
+                                                                </p>
+
+
+                                                                <p class="product-form-row product-form-row--wide form-row form-row-wide">
+                                                                    <label for="reg_password">گذرواژه&nbsp;<span class="required">*</span></label>
+                                                                    <span class="password-input"><input type="password" class="product-Input product-Input--text input-text" name="password" id="reg_password" autocomplete="new-password"><span class="show-password-input"></span></span>
+                                                                </p>
+
+
+                                                                <div class="product-privacy-policy-text"></div>
+                                                                <p class="product-form-row form-row">
+                                                                    <button type="submit" class="product-Button product-button button product-form-register__submit" name="register" value="عضویت">ثبت نام</button>
+                                                                </p>
+
+
+                                                            </form>
+
+
+                                                        </div>
+
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

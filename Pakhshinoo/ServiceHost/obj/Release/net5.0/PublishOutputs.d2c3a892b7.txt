@@ -309,6 +309,7 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwr
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.min.map
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery\LICENSE.txt
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\112233.JPG
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\product-no-image.JPG
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\slides\2022-01-24-12-31-57-Screenshot (1).png
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\slides\2022-01-24-12-34-02-Screenshot (3).png
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\slides\2022-01-24-12-34-20-Screenshot (2).png
@@ -322,12 +323,17 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwr
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\برق و انژکتور\2022-01-23-18-56-13-Screenshot (2).png
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\برق و انژکتور\آئينه بغل چپ پرايد ورسي\2022-01-24-11-03-07-Screenshot (3).png
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\برق و انژکتور\آئينه بغل چپ پرايد ورسي\2022-01-24-11-03-18-Screenshot (2).png
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\برق و انژکتور\آفتابگير پايه فلزي راست پرايد قديم ورسي\2022-02-13-09-56-21-2c7b4feb-2b90-43fc-888a-d15be773498a.3c05ebfc0cd7f66dcac76fee13ca4b10.jpeg
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\برق و انژکتور\آفتابگير پايه فلزي راست پرايد قديم ورسي\2022-02-13-09-57-48-2c7b4feb-2b90-43fc-888a-d15be773498a.3c05ebfc0cd7f66dcac76fee13ca4b10.jpeg
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\برق و انژکتور\آفتابگير پايه فلزي راست پرايد قديم ورسي\2022-02-13-09-58-08-AFtabgir-10.jpg
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\برق و انژکتور\آفتابگير پايه فلزي راست پرايد قديم ورسي\2022-02-13-09-58-26-110404721.jpg
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\برق و انژکتور\تست تستی\2022-01-24-11-03-58-Screenshot (3).png
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\تست تستی2\2022-01-24-12-15-39-Screenshot (1).png
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\تست تستی\2022-01-23-19-02-38-Screenshot (2).png
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\تست تستی\Arshad1400.pdf
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\تست تستی\Ibisjob.txt
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\تست تستی\Screenshot (2).png
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\تعلیق ، ترمز و فرمان\آفتابگير پايه فلزي راست كرم پرايد ورسي\2022-02-13-09-57-20-2c7b4feb-2b90-43fc-888a-d15be773498a.3c05ebfc0cd7f66dcac76fee13ca4b10.jpeg
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\موتور و گیربکس\2022-01-23-19-02-04-Screenshot (3).png
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\موتور و گیربکس\2022-01-24-09-18-01-Screenshot (3).png
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\موتور و گیربکس\2022-01-24-09-19-53-Screenshot (3).png
@@ -548,6 +554,11 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\runt
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\01_PakhshinoQuery.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\0_Framework.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Application.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Configuration.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Infrastructure.EFCore.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Application.Contract.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Application.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Configuration.dll
@@ -563,11 +574,16 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Shop
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ShopManagement.Configuration.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ShopManagement.Domain.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ShopManagement.InfraStructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Configuration.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Configuration.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\InventoryManagement.InfraStructue.Configuration.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ShopManagement.Configuration.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\01_PakhshinoQuery.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\0_Framework.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Application.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Application.Contract.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Infrastructure.EFCore.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Application.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Application.Contract.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Domain.pdb
