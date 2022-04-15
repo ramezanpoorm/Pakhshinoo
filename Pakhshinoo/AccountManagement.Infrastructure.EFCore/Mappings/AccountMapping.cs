@@ -12,10 +12,10 @@ namespace AccountManagement.Infrastructure.EFCore.Mappings
             builder.ToTable("Accounts");
             builder.HasKey(x => x.Id);
 
-            builder.Property(x => x.FullName).HasMaxLength(100);
-            builder.Property(x => x.Password).HasMaxLength(200);
-            builder.Property(x => x.Mobile).HasMaxLength(50);
-            builder.Property(x => x.UserName).HasMaxLength(100);
+            builder.Property(x => x.FullName).HasMaxLength(100).IsRequired();
+            builder.Property(x => x.Password).HasMaxLength(200).IsRequired();
+            builder.Property(x => x.Mobile).HasMaxLength(50).IsRequired();
+            builder.Property(x => x.UserName).HasMaxLength(100).IsRequired();
             builder.Property(x => x.ProfilePhoto).HasMaxLength(100);
         }
     }

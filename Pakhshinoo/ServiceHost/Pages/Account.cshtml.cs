@@ -45,13 +45,13 @@ namespace ServiceHost.Pages
             return RedirectToPage("/Index");
         }
 
-        //public IActionResult OnPostRegister(RegisterAccount command)
-        //{
-        //    var result = _accountApplication.Register(command);
-        //    if (result.IsSuccedded)
-        //        return RedirectToPage("/Account");
-        //    RegisterMessage = result.Message;
-        //    return RedirectToPage("/Account");
-        //}
+        public IActionResult OnPostRegister(CreateAccount command)
+        {
+            var result = _accountApplication.Create(command);
+            if (result.IsSuccesseded)
+                return RedirectToPage("/Account");
+            RegisterMessage = result.Message;
+            return RedirectToPage("/Account");
+        }
     }
 }
