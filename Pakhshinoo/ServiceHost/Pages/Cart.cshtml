@@ -1,0 +1,139 @@
+﻿@page
+@using _0_Framework.Application
+@model ServiceHost.Pages.CartModel
+@{
+    ViewData["Title"] = "سبد خرید";
+}
+@{ double total = 0;} 
+<div class="main-site-wrap">
+    <div class="mweb-site-mask"></div>
+    <div class="site-wrap-outer clear">
+        <div class="container-wrap page-shopping-cart">
+            <div class="container">
+                <div class="order-steps">
+                    <div class="checkout-breadcrumb">
+                        <div class="title-cart">
+                            <i class="fal fa-bags-shopping"></i><a href="#"><h4>سبد خرید</h4></a>
+                        </div>
+                        <div class="title-checkout">
+                            <i class="fal fa-file-invoice"></i><a href="#"><h4>جزئیات پرداخت</h4></a>
+                        </div>
+                        <div class="title-thankyou">
+                            <i class="fal fa-receipt"></i><h4>تکمیل سفارش</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div id="content" class="wc_page_body ">
+                    <div class="products">
+                        <div class="products-notices-wrapper"></div>
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-lg-9">
+                                @*<form class="products-cart-form clear" action="#" method="post">*@
+
+                                    <table class="shop_table shop_table_responsive cart products-cart-form__contents" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th class="product-remove">&nbsp;</th>
+                                                <th class="product-thumbnail">&nbsp;</th>
+                                                <th class="product-name">محصول</th>
+                                                <th class="product-price">قیمت واحد</th>
+                                                <th class="product-quantity">تعداد</th>
+                                                <th class="product-subtotal">جمع جزء</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            @foreach (var item in Model.CartItems)
+                                            {
+                                                
+                                                <tr class="products-cart-form__cart-item cart_item">
+                                                    <td class="product-remove"><a asp-page-handler="RemoveFromCart" asp-route-id="@item.Id" class="remove">×</a></td>
+                                                    <td class="product-thumbnail">
+                                                        <a href="#"><img src="~/ProductPictures/@item.Picture" class="attachment-products_thumbnail size-products_thumbnail" alt=""></a>
+                                                    </td>
+
+                                                    <td class="product-name">
+                                                        <a href="#">@item.Name</a>
+                                                        <span class="lead_time el_ready el_lt_cart"><i class="fal fa-truck-loading"></i> آماده ارسال</span>
+                                                        <div class="clear"></div>
+                                                    </td>
+
+                                                    <td class="product-price">
+                                                        <span class="products-Price-amount amount"><bdi>@item.UnitPrice.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span>
+                                                    </td>
+
+                                                    <td class="product-quantity" data-title="تعداد">
+                                                        <div class="quantity">
+                                                            <label class="screen-reader-text">@item.Name</label>
+                                                            <input type="number" class="input-text qty text" step="1" min="0" max="" value="@item.Count" title="تعداد" size="4" placeholder="" inputmode="numeric">
+                                                            <div class="plus-minus">
+                                                                <div class="increase elm_qty fal fa-plus"></div>
+                                                                <div class="reduced elm_qty fal fa-minus"></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td class="product-subtotal">
+                                                        <span class="products-Price-amount amount"><bdi>@item.TotalItemPrice.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                total = item.TotalItemPrice + total;
+         }
+
+
+                                            <tr>
+                                                <td colspan="6" class="actionss">
+                                                    <button type="submit" class="button" name="update_cart" value="بروزرسانی سبد خرید" disabled="" aria-disabled="true">بروزرسانی سبد خرید</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div class="coupon">
+                                        <label for="coupon_code">کدتخفیف:</label>
+                                        <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="کد تخفیف">
+                                        <button type="submit" class="button" name="apply_coupon" value="اعمال کدتخفیف">اعمال کدتخفیف</button>
+                                    </div>
+                                @*</form>*@
+
+
+                            </div>
+
+                            <div class="col-12 col-sm-12 col-lg-3">
+                                <div class="cart-collaterals">
+                                    <div class="col-colla">
+                                        <div class="cart_totals">
+                                            <h2>جمع کل سبد خرید</h2>
+                                            <table class="shop_table shop_table_responsive" cellspacing="0">
+                                                <tbody>
+                                                    <tr class="cart-subtotal">
+                                                        <th>جمع جزء</th>
+                                                        <td><span class="products-Price-amount amount"><bdi>@total.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span></td>
+                                                    </tr>
+                                                    <tr class="order-total">
+                                                        <th>مجموع</th>
+                                                        <td><strong><span class="products-Price-amount amount"><bdi>@total.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span></strong> </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="wc-proceed-to-checkout">
+                                                <a href="#" class="checkout-button button alt wc-forward">
+                                                    ادامه جهت تسویه حساب
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

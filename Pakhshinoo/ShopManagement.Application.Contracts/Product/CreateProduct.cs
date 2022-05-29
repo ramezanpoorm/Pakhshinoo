@@ -32,5 +32,6 @@ namespace ShopManagement.Application.Contracts.Product
         public string MetaDescription { get; set; }
         public string Slug { get; set; }
         public List<ProductCategoryViewModel> Categories { get; set; }
+        public long BrandId { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿
 using _0_Framework.Application;
+using _01_PakhshinoQuery.Contract.Paging;
 using _01_PakhshinoQuery.Contract.Product;
 using _01_PakhshinoQuery.Contract.ProductCategory;
 using DiscountManagement.Infrastructure.EFCore;
@@ -36,18 +37,20 @@ namespace _01_PakhshinoQuery.Query
             }).ToList();
         }
 
-        public List<ProductCategoryQueryModel> GetProductCategoriesWithProduct()
+        public List<ProductCategoryQueryModel> GetProductCategoriesWithProduct(int pageid)
         {
+            int skip = (pageid - 1) * 20;
             return _shopContext.ProductCategories.Include(x => x.Products).ThenInclude(x => x.Category).Select(x => new ProductCategoryQueryModel
             {
                 Id = x.Id,
                 Name = x.Name,
-                Products = MapProducts(x.Products)
+                //Products = MapProducts(x.Products, skip)
             }).ToList();
         }
         
-        public ProductCategoryQueryModel GetProductCategoryWithProductsBy(long id)
+        public ProductCategoryQueryModel GetProductCategoryWithProductsBy(long id, int pageid)
         {
+            int skip = (pageid - 1) * 40;
             var inventory = _inventoryContext.Inventory.Select(x =>
                 new { x.ProductId, x.UnitPrice }).ToList();
             var discounts = _discountContext.CustomerDiscounts
@@ -65,7 +68,9 @@ namespace _01_PakhshinoQuery.Query
                     MetaDescription = x.MetaDescription,
                     Keywords = x.Keywords,
                     Slug = x.Slug,
-                    Products = MapProducts(x.Products)
+                    Products = MapProducts(x.Products, skip),/*.Where(s => s.BrandId == ).ToList()*///, skip)
+                    PageCount= x.Products.Count,
+                    ActivePage = pageid
                 }).FirstOrDefault(x => x.Id == id);
 
             foreach (var product in catetory.Products)
@@ -87,11 +92,11 @@ namespace _01_PakhshinoQuery.Query
                     }
                 }
             }
-
+            
             return catetory;
         }
 
-        private static List<ProductQueryModel> MapProducts(List<Product> products)
+        private static List<ProductQueryModel> MapProducts(List<Product> products, int skip)
         {
             return products.Select(product => new ProductQueryModel
             {
@@ -102,7 +107,12 @@ namespace _01_PakhshinoQuery.Query
                 PictureAlt = product.PictureAlt,
                 PictureTitle = product.PictureTitle,
                 Slug = product.Slug
-            }).ToList();
+            }).Skip(skip).Take(40).ToList();
+        }
+
+        public ProductCategoryQueryModel FilterProducts(ProductCategoryQueryModel filter)
+        {
+            throw new NotImplementedException();
         }
     }
 }

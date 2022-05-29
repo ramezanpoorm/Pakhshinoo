@@ -1,6 +1,9 @@
 using _0_Framework.Application;
 using _0_Framework.Infrastructure;
+using _01_PakhshinoQuery.Contract.Brand;
+using _01_PakhshinoQuery.Query;
 using AccountManagement.Configuration;
+using BlogManagement.Infrastructure.Configuration;
 using DiscountManagement.Configuration;
 using InventoryManagement.InfraStructue.Configuration;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -33,10 +36,12 @@ namespace ServiceHost
             DiscountManagementBootstrapper.Configure(services, connectionString);
             InventoryBootstrapper.Configure(services, connectionString);
             AccountManagementBootstrapper.Configure(services, connectionString);
+            BlogManagementBootstrapper.Configure(services, connectionString);
 
             services.AddSingleton<IPasswordHasher, PasswordHasher>();
             services.AddTransient<IFileUploader, FileUploader>();
             services.AddTransient<IAuthHelper, AuthHelper>();
+            //services.AddTransient<IBrandQuery, BrandQuery>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -65,6 +70,8 @@ namespace ServiceHost
 
                 options.AddPolicy("Account",
                     builder => builder.RequireRole(new List<string> { Roles.Administrator }));
+                options.AddPolicy("Inventory",
+                    builder => builder.RequireRole(new List<string> { Roles.Administrator }));
             });
 
             services.AddRazorPages()
@@ -75,6 +82,7 @@ namespace ServiceHost
                     options.Conventions.AuthorizeAreaFolder("Administration", "/Shop", "Shop");
                     options.Conventions.AuthorizeAreaFolder("Administration", "/Discounts", "Discount");
                     options.Conventions.AuthorizeAreaFolder("Administration", "/Accounts", "Account");
+                    options.Conventions.AuthorizeAreaFolder("Administration", "/Inventory", "Inventory");
                 });
         }
 

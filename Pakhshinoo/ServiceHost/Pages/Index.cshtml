@@ -124,6 +124,10 @@
                                         <div class="elementor-widget-wrap">
                                             <div class="elementor-element elementor-widget elementor-widget-carousel-onsale-product">
                                                 <div class="elementor-widget-container">
+                                                    <div class="block-title has_url">
+                                                        <div class="title"><i class="fal fa-box"></i>پرفروش ترین ها</div>
+                                                        <a href="#" class="bk_view_more" title="پرفروش ترین ها"><i class="fal fa-angle-left"></i>مشاهده همه</a>
+                                                    </div>
                                                     <div class="block-content-wrap">
                                                         <div class="block-content-inner clear row product-type-1">
                                                             <div class="col-12 col-sm-12 col-md-8 col-lg-9">
@@ -266,7 +270,7 @@
                                                                 </div>
                                                             </div>
 
-                                                            <div class="col-12 col-sm-12 col-md-4 col-lg-3 deal_left_side">
+                                                            <div class="d-none d-md-block col-12 col-sm-12 col-md-4 col-lg-3 deal_left_side">
                                                                 <div class="deal_left_timer">
                                                                     <img src="~/Theme/assets/img/suggest.png" alt="انواع قطعات خودرو">
                                                                 </div>
@@ -390,48 +394,9 @@
                             <div class="elementor-row">
                                 <div class="elementor-column elementor-col-100 elementor-top-column elementor-element">
                                     <div class="elementor-column-wrap elementor-element-populated">
-                                        <div class="elementor-widget-wrap">
-                                            <div class="block-title has_url">
-                                                <div class="title"><i class="fal fa-newspaper"></i>دانش نامـه</div>
-                                                <a href="#" class="bk_view_more" title="دانش نامـه"><i class="fal fa-angle-left"></i>مشاهده همه</a>
-                                            </div>
-                                            <div class="elementor-element elementor-widget elementor-widget-block-post-gride">
-                                                <div class="elementor-widget-container">
-                                                    <div class="mweb-block-wrap row-is-d-noflex-yes">
-                                                        <div class="block-content-wrap">
-                                                            <div class="block-content-inner clear blog-posts-content-2 row">
-                                                                <div class="col-6 col-sm-6 col-lg-4 grid_center">
-                                                                    <a class="grid_image" style="background-image: url(/Theme/assets/img/post7-1-min-256x170.jpg);" href="#">
-                                                                        <h4 class="over_title">مرسدس AMG CLA 45 شوتینگ بریک مدل ۲۰۲۰ رونمایی شد</h4>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="col-6 col-sm-6 col-lg-3 grid_right">
-                                                                    <a class="grid_image" style="background-image: url(/Theme/assets/img/post5-1-min-256x170.jpg);" href="#">
-                                                                        <h4 class="over_title">آئودی RS3 با تیونینگ ABT معرفی شد</h4>
-                                                                    </a>
-                                                                    <a class="grid_image" style="background-image: url(/Theme/assets/img/256x170.jpg);" href="#">
-                                                                        <h4 class="over_title">قیمت و مشخصات فنی رنو آرکانا اعلام شد</h4>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="col-6 col-sm-6 col-lg-2 grid_center">
-                                                                    <a class="grid_image" style="background-image: url(/Theme/assets/img/11-256x170.jpg);" href="#">
-                                                                        <h4 class="over_title">تولید پیکاپ مرسدس بنز کلاس ایکس متوقف می‌شود</h4>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="col-12 col-sm-12 col-lg-3 grid_left">
-                                                                    <a class="grid_image" style="background-image: url(/Theme/assets/img/82-256x170.jpg);" href="#">
-                                                                        <h4 class="over_title">خودروهای مدل ۲۰۱۹ با کمترین هزینه‌های نگه‌داری</h4>
-                                                                    </a>
-                                                                    <a class="grid_image" style="background-image: url(/Theme/assets/img/20-256x170.jpg);" href="#">
-                                                                        <h4 class="over_title">آئودی Q3 ‌اسپرت‌بک مدل ۲۰۲۰ معرفی شد</h4>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+
+                                        @await Component.InvokeAsync("ArticleIndexPage")
+
                                     </div>
                                 </div>
                             </div>

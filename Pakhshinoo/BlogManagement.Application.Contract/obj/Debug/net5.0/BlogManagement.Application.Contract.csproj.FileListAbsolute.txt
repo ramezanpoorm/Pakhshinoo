@@ -1,0 +1,15 @@
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Application.Contract\bin\Debug\net5.0\BlogManagement.Application.Contract.deps.json
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Application.Contract\bin\Debug\net5.0\BlogManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Application.Contract\bin\Debug\net5.0\ref\BlogManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Application.Contract\bin\Debug\net5.0\BlogManagement.Application.Contract.pdb
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Application.Contract\bin\Debug\net5.0\0_Framework.dll
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Application.Contract\bin\Debug\net5.0\0_Framework.pdb
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.csproj.AssemblyReference.cache
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.GeneratedMSBuildEditorConfig.editorconfig
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.AssemblyInfoInputs.cache
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.AssemblyInfo.cs
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.csproj.CoreCompileInputs.cache
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.csproj.CopyComplete
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Application.Contract\obj\Debug\net5.0\ref\BlogManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.pdb

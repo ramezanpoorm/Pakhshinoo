@@ -1,9 +1,10 @@
 ﻿
+using _01_PakhshinoQuery.Contract.Paging;
 using System.Collections.Generic;
 
 namespace _01_PakhshinoQuery.Contract.Product
 {
-    public class ProductQueryModel
+    public class ProductQueryModel 
     {
         public long Id { get; set; }
         public string Picture { get; set; }
@@ -11,6 +12,7 @@ namespace _01_PakhshinoQuery.Contract.Product
         public string PictureTitle { get; set; }
         public string Name { get; set; }
         public string Price { get; set; }
+        public double DoublePrice { get; set; }
         public string PriceWithDiscount { get; set; }
         public int DiscountRate { get; set; }
         public string Category { get; set; }
@@ -24,8 +26,14 @@ namespace _01_PakhshinoQuery.Contract.Product
         public string Keywords { get; set; }
         public string MetaDescription { get; set; }
         public bool IsStock { get; set; }
+        public long BrandId { get; set; }
+        public string Brand { get; set; }
+
         public List<ProductPictureQueryModel> Pictures { get; set; }
+        
     }
+
+    
 
     public class ProductPictureQueryModel
     {

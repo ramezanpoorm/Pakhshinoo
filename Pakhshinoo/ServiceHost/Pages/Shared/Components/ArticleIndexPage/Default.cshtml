@@ -1,0 +1,27 @@
+﻿@model List<_01_LampshadeQuery.Contracts.Article.ArticleQueryModel>
+
+    <div class="elementor-widget-wrap">
+        <div class="block-title has_url">
+            <div class="title"><i class="fal fa-newspaper"></i>دانش نامـه</div>
+            <a href="#" class="bk_view_more" title="دانش نامـه"><i class="fal fa-angle-left"></i>مشاهده همه</a>
+        </div>
+        <div class="elementor-element elementor-widget elementor-widget-block-post-gride">
+            <div class="elementor-widget-container">
+                <div class="mweb-block-wrap row-is-d-noflex-yes">
+                    <div class="block-content-wrap">
+                        <div class="block-content-inner clear blog-posts-content-2 row">
+                            @foreach (var item in Model)
+                            {
+                            <div class="col-6 col-sm-6 col-lg-3 grid_center">
+                                <a asp-page="/Article" asp-route-id="@item.Slug" asp-route-pageid="1" class="grid_image" style="background-image: url(/ProductPictures/@item.Picture);"><h4 class="over_title">@item.Title</h4></a>
+                                
+                            </div>
+                            }
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

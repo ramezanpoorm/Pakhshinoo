@@ -3,10 +3,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html dir="rtl" lang="fa-IR">
 <head>
-    <base href="">
-    <meta charset="UTF-8">
+    <base href="" />
+    <meta charset="UTF-8" />
     <meta name="generator" content="site 2.8.1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name='robots' content='max-image-preview:large' />
     <title>فروشگاه آنلاین لوازم یدکی خودرو</title>
     <meta name="description" content="فروشگاه آنلاین خرید اینترنتی قطعات لوازم یدکی خودرو پراید پژو با بهترین قیمت و ارسال رایگان و ضمانت اصل‌بودن کالا ارسال سراسر کشور" />
@@ -27,6 +27,7 @@
     <link rel="apple-touch-icon" href="~/Theme/assets/img/logo-fal-blue-1-1.webp" />
     <meta name="msapplication-TileImage" content="~/Theme/assets/img/logo-fal-blue-1-1.webp" />
     <link rel="stylesheet" id="style-css" href="~/Theme/assets/css/styles.css?ver=9.0.1" type="text/css" media="all" />
+    
 </head>
 <body class="rtl home page-template product-template-default single-product products style_tabs_three">
     <div class="togglesidebar cart_sidebar">
@@ -34,23 +35,33 @@
             <div class="cart_sidebar_head">
                 <div class="fal fa-times cart_sidebar_close close_sidebar" data-class="open_cart_sidebar"></div>
                 <strong>سبد خرید</strong>
-                <div class="cart_count">0</div>
+                <div class="cart_count" id="#cart_items_count2">0</div>
             </div>
             <div class="widget_shopping_cart_content">
-                <p class="mini-cart__empty-message">هیچ محصولی در سبد خرید نیست.</p>
+                <ul class="products-mini-cart cart_list product_list_widget" id="cart_items_wrapper">
+                    @*<p class="mini-cart__empty-message">هیچ محصولی در سبد خرید نیست.</p>*@
+                </ul>
+                <div class="mini_cart_bottom">
+
+
+                    <p class="products-mini-cart__buttons buttons">
+                        <a asp-page="/Cart" class="button wc-forward">مشاهده سبد خرید</a>
+                        <a href="#" class="button checkout wc-forward">تسویه حساب</a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 
     @*@await Component.InvokeAsync("LoginRegister")*@
-
+    
     <header role="banner" class="head_4 head_5">
         <div class="container">
             <div class="row">
                 <div class="col-6 col-sm-6 col-md-3">
                     <div class="logo">
-                        <a href="#" title="فروشگاه اینترنتی دیجی لند">
-                            <img src="~/Theme/assets/img/logo-car.webp" alt="فروشگاه اینترنتی دیجی لند" />
+                        <a href="/index" title="فروشگاه اینترنتی پخشینو">
+                            <img src="~/Theme/assets/img/logo-car.webp" alt="" />
                         </a>
                     </div>
                 </div>
@@ -65,26 +76,34 @@
                 <div class="col-6 col-sm-6 col-md-4">
                     @if (!authHelper.IsAuthenticated())
                     {
-                        <a class="hs_icon" asp-page="/account">
-                            <span> <i class="fal fa-user"></i> </span>
+                        <a class="sign-in hs_icon" asp-page="/Account">
+                            <span> <i class="fal fa-sign-in"></i>  ورود | ثبت‌نام</span>
                         </a>
                     }
                     else
                     {
-                        <a asp-page="/account" asp-page-handler="Logout">
-                            <span> خروچ </span>
-                        </a>
-                    }
+                <div class="sign-in hs_icon user_login">
+                    <span>خوش آمدید @authHelper.CurrentAccountInfo().Fullname.</span>
+                    
+                    <div class="my-account">
+                        <ul class="menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">حساب کاربری</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">سبد خرید</a></li>
+                            <li><a asp-page="/account" asp-page-handler="Logout">خروج</a></li>
+                        </ul>
+                    </div>
+                </div>
+                    }	
 
                     <!-- ./user_login -->
 
-                    <a href="#" class="head_wishlist_btn hs_icon"><i class="fal fa-heart"></i></a>
-                    <a href="#" class="hs_icon instagram" title="ما در شبکه اجتماعی"> <i class="fab fa-instagram"></i> </a>
+                    <a href="#" class="d-none d-sm-block head_wishlist_btn hs_icon"><i class="fal fa-heart"></i></a>
+                    <a href="https://www.instagram.com/pakhshinoo" class="d-none d-lg-block hs_icon instagram" title="ما در شبکه اجتماعی"> <i class="fab fa-instagram"></i> </a>
                     <!-- ./top_icons -->
-                    <div class="hs_icon phone">
+                    <div class="d-none d-sm-block hs_icon phone">
                         <i class="fal fa-phone"></i>
                         <div class="head_phone">
-                            <p><a href="tel:+989194060357">09194060357</a></p><p><a href="mailto:infoyoursite.com">infoyoursite.com</a></p>
+                            <p><a href="tel:+982146886036">02146886036</a></p><p><a href="mailto:info@pakhshinoo.com">info@pakhshinoo.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -93,34 +112,33 @@
                 <div class="container no_padding">
                     <div class="menu_cart">
                         <div class="shop_cart hs_icon get_sidebar" data-class="open_cart_sidebar">
-                            <a href="#" title="مشاهده سبد خرید"><span class="shop-badge">0 </span><i class="fal fa-shopping-basket"></i></a>
+                            <a href="#" title="مشاهده سبد خرید"><span class="shop-badge" id="cart_items_count">0 </span><i class="fal fa-shopping-basket"></i></a>
                         </div>
                     </div>
 
                     <div id="navigation" class="mweb-drop-down mweb-main-menu" role="navigation">
                         <ul class="menu">
                             <li class="level-0 menu-item-type-custom menu-item-object-custom current-menu-item">
-                                <a href="#"><span class="menu-item-text"><i class="fal fa-home-lg-alt"></i>خانه</span></a>
+                                <a href="/index"><span class="menu-item-text"><i class="fal fa-home-lg-alt"></i>خانه</span></a>
                             </li>
                             <li class="level-0 menu-item-object-product_cat menu-item-has-children">
-                                <a href="#"><span class="menu-item-text">محصولات</span></a>
+                                <a><span class="menu-item-text">محصولات</span></a>
                                 @await Component.InvokeAsync("ProductCategory")
                             </li>
 
                             <li class="level-0 menu-item-object-page">
-                                <a href="#"><span class="menu-item-text">کاتالوگ</span></a>
+                                <a href="/Pakhshinoo.xlsx"><span class="menu-item-text">دانلود اکسل لیست محصولات</span></a>
                             </li>
 
-                            <li class="level-0 menu-item-object-page">
-                                <a href="#"><span class="menu-item-text">دانشنامه</span></a>
+                            <li class="level-0 menu-item-object-product_cat menu-item-has-children">
+                                <a><span class="menu-item-text">دانشنامه</span></a>
+                                @await Component.InvokeAsync("ArticleCategory")
                             </li>
-
                             <li class="level-0 menu-item-object-page">
-                                <a href="#"><span class="menu-item-text">تماس با ما</span></a>
+                                <a href="/about-us"><span class="menu-item-text">درباره ما</span></a>
                             </li>
-
                             <li class="level-0 menu-item-object-page">
-                                <a href="#"><span class="menu-item-text">درباره ما</span></a>
+                                <a href="/contact-us"><span class="menu-item-text">تماس با ما</span></a>
                             </li>
 
                         </ul>
@@ -133,31 +151,32 @@
                             <div class="mobile-menu-wrap">
                                 <ul class="menu">
                                     <li class="level-0 menu-item-type-custom menu-item-object-custom current-menu-item">
-                                        <a href="#"><span class="menu-item-text"><i class="fal fa-home-lg-alt"></i>خانه</span></a>
+                                        <a href="/index"><span class="menu-item-text"><i class="fal fa-home-lg-alt"></i>خانه</span></a>
                                     </li>
                                     <li class="level-0 menu-item-object-product_cat menu-item-has-children">
-                                        <a href="#"><span class="menu-item-text">محصولات</span></a>
+                                        <a><span class="menu-item-text">محصولات</span></a>
                                         @await Component.InvokeAsync("ProductCategory")
                                     </li>
                                     <li class="level-0 menu-item-object-page">
-                                        <a href="#"><span class="menu-item-text">کاتالوگ</span></a>
+                                        <a href="/Pakhshinoo.xlsx"><span class="menu-item-text">دانلود اکسل لیست محصولات</span></a>
                                     </li>
-                                    <li class="level-0 menu-item-object-page">
-                                        <a href="#"><span class="menu-item-text">دانشنامه</span></a>
+                                    <li class="level-0 menu-item-object-product_cat menu-item-has-children">
+                                        <a><span class="menu-item-text">دانشنامه</span></a>
+										@await Component.InvokeAsync("ArticleCategory")
                                     </li>
 
                                     <li class="level-0 menu-item-object-page">
-                                        <a href="#"><span class="menu-item-text">درباره ما</span></a>
+                                        <a href="/about-us"><span class="menu-item-text">درباره ما</span></a>
                                     </li>
                                     <li class="level-0 menu-item-object-page">
-                                        <a href="#"><span class="menu-item-text">تماس با ما</span></a>
+                                        <a href="contact-us"><span class="menu-item-text">تماس با ما</span></a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="is-show mobile-nav-button">
-                        <a id="mweb-trigger" class="icon-wrap" href="#"> <i class="fal fa-bars"></i> فهرست</a>
+                        <a id="mweb-trigger" class="icon-wrap"> <i class="fal fa-bars"></i> فهرست</a>
                     </div>
                 </div>
             </div>
@@ -171,7 +190,11 @@
         <ul>
             <li><a href="#" title="علاقه مندی ها"><i class="fal fa-heart"></i><span id="wl_count">0</span></a></li>
             <li><a href="#" class="compare_sticky" title="مقایسه"><i class="fal fa-exchange"></i><span>0</span></a></li>
-            <li><a href="#" class="get_sidebar" data-class="open_cart_sidebar" title="سبد خرید"><i class="fal fa-shopping-bag"></i><span id="toolbox_cart">0 </span></a></li>
+            <li>
+                <a href="#" class="get_sidebar" data-class="open_cart_sidebar" title="سبد خرید">
+                    <i class="fal fa-shopping-bag"></i><span id="toolbox_cart">0 </span>
+                </a>
+            </li>
             <li><a href="#" class="gototop" title="رفتن به بالا"><i class="fal fa-arrow-up"></i></a></li>
         </ul>
     </div>
@@ -291,45 +314,53 @@
                     <div class="footer_list">
                         <div class="title_list">خدمات مشتریان</div>
                         <ul class="menu">
-                            <li class="menu-item menu-item-type-post_type"><a href="#">تماس با ما</a></li>
-                            <li class="menu-item menu-item-type-post_type"><a href="#">شورتکد</a></li>
-                            <li class="menu-item menu-item-type-custom"><a href="#">سوالات متداول</a></li>
-                            <li class="menu-item menu-item-type-custom"><a href="#">رویه بازگردانی کالا</a></li>
-                            <li class="menu-item menu-item-type-custom"><a href="#">حریم خصوصی</a></li>
+							<li class="menu-item menu-item-type-post_type"><a href="/index">صفحه اصلی</a></li>
+							<li class="menu-item menu-item-type-custom"><a href="/about-us">درباره ما</a></li>
+                            <li class="menu-item menu-item-type-post_type"><a href="/contact-us">تماس با ما</a></li>
+                            <li class="menu-item menu-item-type-custom"><a href="/Account">ورود | ثبت‌نام</a></li>
+                            <li class="menu-item menu-item-type-custom"><a href="/faq">رویه‌های بازگرداندن کالا</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                    <h4 class="footer_aboutus_head"><i class="fal fa-info"></i>ما کی هستیم</h4>
+                    <h4 class="footer_aboutus_head"><i class="fal fa-info"></i>دربار پخشینو</h4>
                     <div class="footer_aboutus">
-                        فروشگاه آنلاین لوازم یدکی خودرو دیناپخش با ارائه خدمات فروش آنلاین لوازم یدکی خودرو تلاش کرده است با پشتوانه سال ها تجربه در بازار قطعات یدکی خودرو، مجموعه ای از بهترین ها را برای شما فراهم نماید.
-                        با استفاده از بخش تماس با ما پذیرای هرگونه پیشنهاد، نظر، انتقاد از سوی کاربران عزیز هستیم.
+                        پخشینو  شرکتی برآمده از تطبیق و سازماندهی است که بر پایه ارزش بخشیدن به صنایع مشترک، کارمندان خود و سهامداران و بر اساس فرهنگ سازمانی، خوشبینی، صداقت ، کارگروهی سازنده و منابع خلاقانه سرمایه انسانی با استفاده از فن آوری های نوین جهانی فعالیت دارد.
                     </div>
                 </div>
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
                     <div class="contact_us_wrap type_3">
                         <h5>ارتباط با ما</h5>
-                        <div class="contact_item"><i class="fal fa-map-marked-alt"></i><span>تهران - خیابان ولیعصر - ساختمان شفق</span></div>
-                        <div class="contact_item phone"><i class="fal fa-phone-volume"></i><strong>0215</strong>567890744</div>
-                        <div class="contact_item email">info@yourstite.com</div>
+                        <div class="contact_item"><i class="fal fa-map-marked-alt"></i><span>تهران - شهر قدس - 45 متری کلهر - بالاتراز راهنمایی رانندگی - پلاک 17</span></div>
+                        <div class="contact_item phone"><i class="fal fa-phone-volume"></i><strong>021</strong>46886036</div>
+                        <div class="contact_item email">info@pakhshinoo.com</div>
                         <div class="clear"></div>
                         <a class="footer_social_l telegram" href="#"><i class="fab fa-telegram-plane"></i> Telegram</a>
-                        <a class="footer_social_l instagram" href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a class="footer_social_l instagram" href="https://www.instagram.com/pakhshinoo"><i class="fab fa-instagram"></i> Instagram</a>
                     </div>
                 </div>
 
                 <div class="col-12">
                     <div class="footer_down">
-                        <div class="copy_right">کلیه حقوق مادی و معنوی برای این سایت محفوظ می باشد</div>
-                        <div class="logo_designer"><a href="#" rel="nofollow" target="_blank" title="Web design and develop group"> طراحی و توسعه </a> پخشینو</div>
+                        <div class="copy_right">کلیه حقوق مادی و معنوی برای پخشینو محفوظ می باشد</div>
+                        <div class="logo_designer"><a href="https://www.pakhshinoo.com" rel="nofollow" target="_blank" title="Web design and develop group"> طراحی و توسعه </a> پخشینو</div>
                     </div>
                 </div>
 
             </div>
         </div>
     </footer>
-    <script type='text/javascript' src='~/Theme/assets/js/main-header.js' id='site-script'></script>
+    <script src="~/Theme/assets/js/jquery.min.js"></script>
+    <script src="~/Theme/assets/js/main-header.js"></script>
+    <script src="~/Theme/assets/js/plugins.js"></script>
+    <script src="~/Theme/assets/js/custom.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            updateCart();
+        });
+    </script>
+
 </body>
 </html>

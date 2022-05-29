@@ -1,0 +1,1164 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Configuration\\BlogManagement.Configuration.csproj": {}
+  },
+  "projects": {
+    "D:\\PakhshinooCore\\code\\Pakhshinoo\\01_PakhshinoQuery\\01_PakhshinoQuery.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\01_PakhshinoQuery\\01_PakhshinoQuery.csproj",
+        "projectName": "01_PakhshinoQuery",
+        "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\01_PakhshinoQuery\\01_PakhshinoQuery.csproj",
+        "packagesPath": "C:\\Users\\Maysam\\.nuget\\packages\\",
+        "outputPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\01_PakhshinoQuery\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Maysam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Infrastructure.EFCore\\BlogManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Infrastructure.EFCore\\BlogManagement.Infrastructure.EFCore.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\InvaentoryManagement.Domain\\InventoryManagement.Domain.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InvaentoryManagement.Domain\\InventoryManagement.Domain.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\InventoryMangement.InfraStructure.EFCore\\InventoryMangement.InfraStructure.EFCore.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InventoryMangement.InfraStructure.EFCore\\InventoryMangement.InfraStructure.EFCore.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.InfraStructure.EFCore\\ShopManagement.InfraStructure.EFCore.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.InfraStructure.EFCore\\ShopManagement.InfraStructure.EFCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj",
+        "projectName": "0_Framework",
+        "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj",
+        "packagesPath": "C:\\Users\\Maysam\\.nuget\\packages\\",
+        "outputPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Maysam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Cookies": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application.Contract\\BlogManagement.Application.Contract.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application.Contract\\BlogManagement.Application.Contract.csproj",
+        "projectName": "BlogManagement.Application.Contract",
+        "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application.Contract\\BlogManagement.Application.Contract.csproj",
+        "packagesPath": "C:\\Users\\Maysam\\.nuget\\packages\\",
+        "outputPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application.Contract\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Maysam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application\\BlogManagement.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application\\BlogManagement.Application.csproj",
+        "projectName": "BlogManagement.Application",
+        "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application\\BlogManagement.Application.csproj",
+        "packagesPath": "C:\\Users\\Maysam\\.nuget\\packages\\",
+        "outputPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Maysam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application.Contract\\BlogManagement.Application.Contract.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application.Contract\\BlogManagement.Application.Contract.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Domain\\BlogManagement.Domain.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Domain\\BlogManagement.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Configuration\\BlogManagement.Configuration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Configuration\\BlogManagement.Configuration.csproj",
+        "projectName": "BlogManagement.Configuration",
+        "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Configuration\\BlogManagement.Configuration.csproj",
+        "packagesPath": "C:\\Users\\Maysam\\.nuget\\packages\\",
+        "outputPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Configuration\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Maysam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\01_PakhshinoQuery\\01_PakhshinoQuery.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\01_PakhshinoQuery\\01_PakhshinoQuery.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application.Contract\\BlogManagement.Application.Contract.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application.Contract\\BlogManagement.Application.Contract.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application\\BlogManagement.Application.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application\\BlogManagement.Application.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Domain\\BlogManagement.Domain.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Domain\\BlogManagement.Domain.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Infrastructure.EFCore\\BlogManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Infrastructure.EFCore\\BlogManagement.Infrastructure.EFCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Domain\\BlogManagement.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Domain\\BlogManagement.Domain.csproj",
+        "projectName": "BlogManagement.Domain",
+        "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Domain\\BlogManagement.Domain.csproj",
+        "packagesPath": "C:\\Users\\Maysam\\.nuget\\packages\\",
+        "outputPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Maysam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application.Contract\\BlogManagement.Application.Contract.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application.Contract\\BlogManagement.Application.Contract.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Infrastructure.EFCore\\BlogManagement.Infrastructure.EFCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Infrastructure.EFCore\\BlogManagement.Infrastructure.EFCore.csproj",
+        "projectName": "BlogManagement.Infrastructure.EFCore",
+        "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Infrastructure.EFCore\\BlogManagement.Infrastructure.EFCore.csproj",
+        "packagesPath": "C:\\Users\\Maysam\\.nuget\\packages\\",
+        "outputPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Infrastructure.EFCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Maysam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application.Contract\\BlogManagement.Application.Contract.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Application.Contract\\BlogManagement.Application.Contract.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Domain\\BlogManagement.Domain.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Domain\\BlogManagement.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Application.Contract\\DiscountManagement.Application.Contract.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Application.Contract\\DiscountManagement.Application.Contract.csproj",
+        "projectName": "DiscountManagement.Application.Contract",
+        "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Application.Contract\\DiscountManagement.Application.Contract.csproj",
+        "packagesPath": "C:\\Users\\Maysam\\.nuget\\packages\\",
+        "outputPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Application.Contract\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Maysam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Domain\\DiscountManagement.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Domain\\DiscountManagement.Domain.csproj",
+        "projectName": "DiscountManagement.Domain",
+        "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Domain\\DiscountManagement.Domain.csproj",
+        "packagesPath": "C:\\Users\\Maysam\\.nuget\\packages\\",
+        "outputPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Maysam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Application.Contract\\DiscountManagement.Application.Contract.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Application.Contract\\DiscountManagement.Application.Contract.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj",
+        "projectName": "DiscountManagement.Infrastructure.EFCore",
+        "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj",
+        "packagesPath": "C:\\Users\\Maysam\\.nuget\\packages\\",
+        "outputPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Infrastructure.EFCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Maysam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Domain\\DiscountManagement.Domain.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Domain\\DiscountManagement.Domain.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.InfraStructure.EFCore\\ShopManagement.InfraStructure.EFCore.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.InfraStructure.EFCore\\ShopManagement.InfraStructure.EFCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PakhshinooCore\\code\\Pakhshinoo\\InvaentoryManagement.Domain\\InventoryManagement.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InvaentoryManagement.Domain\\InventoryManagement.Domain.csproj",
+        "projectName": "InventoryManagement.Domain",
+        "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InvaentoryManagement.Domain\\InventoryManagement.Domain.csproj",
+        "packagesPath": "C:\\Users\\Maysam\\.nuget\\packages\\",
+        "outputPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InvaentoryManagement.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Maysam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PakhshinooCore\\code\\Pakhshinoo\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj",
+        "projectName": "InventoryManagement.Application.Contract",
+        "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj",
+        "packagesPath": "C:\\Users\\Maysam\\.nuget\\packages\\",
+        "outputPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InventoryManagement.Application.Contract\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Maysam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PakhshinooCore\\code\\Pakhshinoo\\InventoryMangement.InfraStructure.EFCore\\InventoryMangement.InfraStructure.EFCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InventoryMangement.InfraStructure.EFCore\\InventoryMangement.InfraStructure.EFCore.csproj",
+        "projectName": "InventoryMangement.InfraStructure.EFCore",
+        "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InventoryMangement.InfraStructure.EFCore\\InventoryMangement.InfraStructure.EFCore.csproj",
+        "packagesPath": "C:\\Users\\Maysam\\.nuget\\packages\\",
+        "outputPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InventoryMangement.InfraStructure.EFCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Maysam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\InvaentoryManagement.Domain\\InventoryManagement.Domain.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\InvaentoryManagement.Domain\\InventoryManagement.Domain.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.InfraStructure.EFCore\\ShopManagement.InfraStructure.EFCore.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.InfraStructure.EFCore\\ShopManagement.InfraStructure.EFCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj",
+        "projectName": "ShopManagement.Application.Contracts",
+        "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj",
+        "packagesPath": "C:\\Users\\Maysam\\.nuget\\packages\\",
+        "outputPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.Application.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Maysam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.InfraStructure.EFCore\\ShopManagement.InfraStructure.EFCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.InfraStructure.EFCore\\ShopManagement.InfraStructure.EFCore.csproj",
+        "projectName": "ShopManagement.InfraStructure.EFCore",
+        "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.InfraStructure.EFCore\\ShopManagement.InfraStructure.EFCore.csproj",
+        "packagesPath": "C:\\Users\\Maysam\\.nuget\\packages\\",
+        "outputPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.InfraStructure.EFCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Maysam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagment.Domain\\ShopManagement.Domain.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagment.Domain\\ShopManagement.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagment.Domain\\ShopManagement.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagment.Domain\\ShopManagement.Domain.csproj",
+        "projectName": "ShopManagement.Domain",
+        "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagment.Domain\\ShopManagement.Domain.csproj",
+        "packagesPath": "C:\\Users\\Maysam\\.nuget\\packages\\",
+        "outputPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagment.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Maysam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\0_Framework\\0_Framework.csproj"
+              },
+              "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj": {
+                "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

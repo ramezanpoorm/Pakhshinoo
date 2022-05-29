@@ -59,6 +59,7 @@ namespace _01_PakhshinoQuery.Query
                 product.IsStock = productInventory.InStock;
                 var price = productInventory.UnitPrice;
                 product.Price = price.ToMoney();
+                product.DoublePrice = price;
 
                 var discount = discounts.FirstOrDefault(x => x.ProductId == product.Id);
 

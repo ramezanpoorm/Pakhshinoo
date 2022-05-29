@@ -15,12 +15,12 @@ namespace ServiceHost.Pages
 
         public ProductCategoryModel(IProductCategoryQuery productCategoryQuery)
         {
-            _productCategoryQuery = productCategoryQuery;
+            _productCategoryQuery = productCategoryQuery;            
         }
 
-        public void OnGet(long id)
+        public void OnGet(long id, int pageid)
         {
-            ProductCategory = _productCategoryQuery.GetProductCategoryWithProductsBy(id);
+            ProductCategory = _productCategoryQuery.GetProductCategoryWithProductsBy(id, pageid);        
         }
     }
 }

@@ -32,7 +32,7 @@ namespace ShopManagement.Application
             var categoryName = _productCategoryRepository.GetNameById(command.CategoryId);
             var path = $"{categoryName}//{command.Name}";
             var picturePath = _fileUploader.Upload(command.Picture, path);
-            var product = new Product(command.Name, command.Code, command.ShortDescription, command.Description, picturePath, command.PictureAlt, command.PictureTitle, command.CategoryId, slug, command.Keywords, command.MetaDescription);
+            var product = new Product(command.Name, command.Code, command.ShortDescription, command.Description, picturePath, command.PictureAlt, command.PictureTitle, command.CategoryId, slug, command.Keywords, command.MetaDescription, command.BrandId);
             _productRepository.Create(product);
             _productRepository.SaveChanges();
             return operation.Successeded();

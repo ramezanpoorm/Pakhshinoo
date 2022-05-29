@@ -1,0 +1,159 @@
+﻿@page "{id}"
+@model ServiceHost.Pages.ArticleModel
+@{
+    ViewData["Title"] = Model.Article.Title;
+    ViewData["keywords"] = Model.Article.Keywords;
+    ViewData["metaDescription"] = Model.Article.MetaDescription;
+}
+
+<div class="main-site-wrap">
+    <div class="mweb-site-mask"></div>
+    <div class="site-wrap-outer clear">
+        <div class="page-wrap page-layout-wrap is- is-sidebar-left container">
+            <div class="row">
+                <div class="col-12">
+                    <ol class="breadcrumb breadcrumb-arrow">
+                        <li><a asp-page="/Index">صفحه اصلی</a></li>
+                        <li><a asp-page="/ArticleCategory" asp-route-id="@Model.Article.CategorySlug">@Model.Article.CategoryName</a></li>
+                        <li><span>@Model.Article.Title</span></li>
+                    </ol>
+                </div>
+
+
+                <div class="content-wrap single-inner col-12 col-sm-12 col-md-12 col-lg-9 content-with-sidebar">
+                    <article class="is-single inner_wrap post-wrapper status-publish format-standard has-post-thumbnail hentry">
+                        <div class="blog_top">
+                            <div class="blog_icon"><i class="fal fa-rss"></i></div>
+                            <h1 class="blog_title">@Model.Article.Title</h1>
+                        </div>
+                        <div class="entry entry-content">
+                            <img src="~/ProductPictures/@Model.Article.Picture" class="img-fluid" alt="@Model.Article.PictureAlt" title="@Model.Article.Title">
+                            @Html.Raw(Model.Article.Description)
+
+                        </div>
+                        <div class="blog_tag_wrap">
+                            <span class="tags-title">کلیدواژه : </span>
+                            @foreach (var tag in Model.Article.KeywordList)
+                            {
+                                <li>
+                                    <a asp-page="/Search" asp-route-value="@tag">@tag</a>,
+                                </li>
+                            }
+                        </div>
+                        <div class="blog_bottom">
+                            @*<i class="meta-items-i"><i class="fal fa-user"></i>کاربر تست</i>*@
+                            <i class="meta-items-i"><i class="fal fa-clock"></i><time>@Model.Article.PublishDate</time></i>
+                            <div class="social_icons blog_social">
+                                <i class="fal fa-share-alt"></i>
+                                <div class="blog_socials">
+                                    <ul>
+                                        <li><a class="fab fa-facebook" href="#" target="_blank"></a></li>
+                                        <li><a class="fab fa-twitter" href="#" target="_blank"></a></li>
+                                        <li><a class="fab fa-telegram" href="#" target="_blank"></a></li>
+                                        <li><a class="fab fa-whatsapp" href="#" target="_blank"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="related-wrap">
+                        <div class="block-title">
+                            <div class="title"><i class="small fal fa-retweet"></i>گروه مقالات</div>
+                        </div>
+                        <div class="related-content row blog-posts-content-4">
+                            @foreach (var category in Model.ArticleCategories)
+                            {
+                                <div class="item col-sm-12 col-md-6">
+                                    <div class="item-area clear bk_blog_line">
+                                        <a asp-page="./ArticleCategory" asp-route-id="@category.Slug" class="active">
+                                            @category.Name <span class="counter">@category.ArticlesCount</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            }
+                            </div>
+                    </div>
+
+                    <div id="respond" class="comment-respond">
+                        <div class="block-title cm_title">
+                            <div class="title">
+                                <i class="small fal fa-comment-alt-lines"></i>ارسال دیدگاه
+                            </div>
+                        </div>
+
+                        <form action="#" method="post" id="comment-reply-form" class="comment-reply-form" novalidate="">
+                            <p class="logged-in-as"><a href="#">با عنوان محسن وارد شده‌اید</a>.<a href="#">خارج می‌شوید؟</a></p>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <textarea id="comment" name="comment" class="form-control" cols="45" placeholder="متن دیدگاه" rows="7"></textarea>
+                                </div>
+                            </div>
+                            <p class="form-submit">
+                                <input name="submit" type="submit" id="submit" class="submit" value="ارسال" />
+                            </p>
+                        </form>
+                    </div>
+                    <!-- #respond -->
+                </div>
+
+
+
+
+
+                <div id="sidebar" class="sidebar-wrap col-12 col-sm-12 col-md-12 col-lg-3 clearfix" role="complementary">
+                    <div class="theiaStickySidebar">
+                        <div class="mweb-sidebar-sticky">
+                            <div class="sidebar-inner">
+
+                                <aside id="telegram_wg-3" class="widget widget_telegram_wg">
+                                    <div>
+                                        <a href="#" target="_blank">
+                                            <div class="telegram_head"><i class="fab fa-telegram-plane"></i>کانال تلگرام</div>
+                                            <div class="telegram_info"><p>اخبار مقالات و تخفیفات گروهی را دنبال کنید</p><span>Pakhshinoo</span></div>
+                                        </a>
+                                    </div>
+                                </aside>
+
+                                <aside id="recent-comments-4" class="widget widget_recent_comments">
+                                    <div class="widget_title">آخرین مقالات</div>
+                                    <div class="widget-content">
+                                        <ul id="recentcomments">
+                                            @foreach (var article in Model.LatestArticles)
+                                            {
+                                                <li>
+                                                    <a asp-page="./Article" asp-route-id="@article.Slug">
+                                                        @article.Title
+                                                    </a> <span>@article.PublishDate</span>
+                                                </li>
+                                            }
+                                            </ul>
+                                    </div>
+                                </aside>
+
+                                <aside id="tag_cloud-3" class="widget widget_tag_cloud">
+                                    <div class="widget_title">برچسب</div>
+                                    <div class="widget-content">
+                                        <div class="tagcloud">
+                                            @foreach (var tag in Model.Article.KeywordList)
+                                            {
+                                            <a asp-page="/Search" asp-route-value="@tag">@tag</a>
+                                            }
+                                                
+
+                                            </div>
+                                    </div>
+                                </aside>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>

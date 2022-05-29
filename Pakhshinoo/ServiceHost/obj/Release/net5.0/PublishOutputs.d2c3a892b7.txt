@@ -310,6 +310,9 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwr
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery\LICENSE.txt
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\112233.JPG
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\product-no-image.JPG
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\profilePhotos\2022-04-14-09-11-55-SavabeghCode.JPG
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\profilePhotos\2022-04-14-09-32-15-Screenshot (3).png
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\profilePhotos\2022-04-15-10-52-39-Screenshot (2).png
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\slides\2022-01-24-12-31-57-Screenshot (1).png
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\slides\2022-01-24-12-34-02-Screenshot (3).png
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\slides\2022-01-24-12-34-20-Screenshot (2).png
@@ -334,6 +337,8 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwr
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\تست تستی\Ibisjob.txt
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\تست تستی\Screenshot (2).png
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\تعلیق ، ترمز و فرمان\آفتابگير پايه فلزي راست كرم پرايد ورسي\2022-02-13-09-57-20-2c7b4feb-2b90-43fc-888a-d15be773498a.3c05ebfc0cd7f66dcac76fee13ca4b10.jpeg
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\خودرو\2022-05-18-15-08-29-Screenshot (2).png
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\خودرو\درباره-خودرو\2022-05-18-15-20-45-240px-2013-2016_Toyota_Corolla_(ZRE172R)_SX_sedan_(2018-09-17)_01.jpg
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\موتور و گیربکس\2022-01-23-19-02-04-Screenshot (3).png
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\موتور و گیربکس\2022-01-24-09-18-01-Screenshot (3).png
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\ProductPictures\موتور و گیربکس\2022-01-24-09-19-53-Screenshot (3).png
@@ -440,7 +445,11 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwr
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\Theme\assets\img\Untitled-1-185x185.jpg
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\Theme\assets\img\Untitled-1-75x75.jpg
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\Theme\assets\img\wallet.webp
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\Theme\assets\js\active.js
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\Theme\assets\js\custom.js
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\Theme\assets\js\jquery.min.js
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\Theme\assets\js\main-header.js
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\Theme\assets\js\plugins.js
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\appsettings.Development.json
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\appsettings.json
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ServiceHost.dll
@@ -456,12 +465,15 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Micr
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.CodeAnalysis.Razor.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.CodeAnalysis.Workspaces.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.Data.SqlClient.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.DotNet.PlatformAbstractions.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Design.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.Extensions.DependencyModel.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.Extensions.PlatformAbstractions.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.Identity.Client.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.JsonWebTokens.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.Logging.dll
@@ -476,6 +488,7 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Micr
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Nancy.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Newtonsoft.Json.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\System.Composition.AttributedModel.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\System.Composition.Convention.dll
@@ -559,6 +572,11 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Acco
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Configuration.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Domain.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Infrastructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Application.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Configuration.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Infrastructure.EFCore.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Application.Contract.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Application.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Configuration.dll
@@ -575,6 +593,7 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Shop
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ShopManagement.Domain.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ShopManagement.InfraStructure.EFCore.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Configuration.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Configuration.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Configuration.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\InventoryManagement.InfraStructue.Configuration.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ShopManagement.Configuration.pdb
@@ -584,6 +603,10 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Acco
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Application.Contract.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Domain.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Infrastructure.EFCore.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Application.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Application.Contract.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Infrastructure.EFCore.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Application.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Application.Contract.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Domain.pdb

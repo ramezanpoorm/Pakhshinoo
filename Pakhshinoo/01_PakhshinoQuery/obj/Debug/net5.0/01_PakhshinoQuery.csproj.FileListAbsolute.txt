@@ -31,3 +31,9 @@ D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\DiscountMan
 D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.pdb
 D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\DiscountManagement.Application.Contract.pdb
 D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\DiscountManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\BlogManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\BlogManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.pdb
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\BlogManagement.Application.Contract.pdb
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\BlogManagement.Domain.pdb

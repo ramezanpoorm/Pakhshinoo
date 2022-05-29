@@ -1,0 +1,110 @@
+﻿@page "{id}"
+@model ServiceHost.Pages.ArticleCategoryModel
+@{
+}
+
+<div class="main-site-wrap">
+    <div class="mweb-site-mask"></div>
+    <div class="site-wrap-outer clear">
+        <div class="page-wrap page-layout-wrap is- is-sidebar-left container">
+            <div class="row">
+                <div class="col-12">
+                    <ol class="breadcrumb breadcrumb-arrow">
+                        <li><a asp-page="./Index">صفحه نخست</a></li>
+                        <li><span> @Model.ArticleCategory.Name </span></li>
+                    </ol>
+                </div>
+                <div class="content-wrap block-wrapper col-12 col-sm-12 col-md-12 col-lg-9 content-with-sidebar">
+                    <div class="content-inner">
+
+                        @foreach(var article in Model.ArticleCategory.Articles)
+                        {
+                        <div class="inner_wrap list_blog_item">
+                            <div class="blog_top">
+                                <div class="blog_comment hide_mobile">فاقد دیدگاه</div>
+                                <div class="blog_icon"><i class="fal fa-rss"></i></div>
+                                <h2 class="blog_title"><a asp-page="./Article" asp-route-id="@article.Slug">
+    @article.Title
+</a></h2>
+                            </div>
+                            <div class="blog_body">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-4">
+                                        <div class="is-image">
+                                            <a asp-page="./Article" asp-route-id="@article.Slug">
+                                                <img src="~/ProductPictures/@article.Picture"
+                                                     class="img-fluid" alt="@article.PictureAlt"
+                                                     title="@article.Title">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8">
+                                        <div class="desc">@article.ShortDescription</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog_bottom">
+                                @*<i class="meta-items-i"><i class="fal fa-user"></i>کاربر تست</i>*@
+                                <i class="meta-items-i"><i class="fal fa-clock"></i><time datetime="@article.PublishDate">@article.PublishDate</time></i>
+                                <a href="@article.CanonicalAddress" rel="bookmark" class="read_more"><i class="fal fa-link"></i></a>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+
+                <div id="sidebar" class="sidebar-wrap col-12 col-sm-12 col-md-12 col-lg-3 clearfix" role="complementary">
+                    <div class="theiaStickySidebar">
+                        <div class="mweb-sidebar-sticky">
+                            <div class="sidebar-inner">
+
+                                <aside id="telegram_wg-3" class="widget widget_telegram_wg">
+                                    <div>
+                                        <a href="#" target="_blank">
+                                            <div class="telegram_head"><i class="fab fa-telegram-plane"></i>کانال تلگرام</div>
+                                            <div class="telegram_info"><p>اخبار مقالات و تخفیفات گروهی را دنبال کنید</p><span>dinapakhsh</span></div>
+                                        </a>
+                                    </div>
+                                </aside>
+
+                                <aside id="recent-comments-4" class="widget widget_recent_comments">
+                                    <div class="widget_title">گروه مقالات</div>
+                                    <div class="widget-content">
+                                        <ul id="recentcomments">
+                                            @foreach (var article in Model.LatestArticles)
+                                            {
+                                            <li>
+                                                <a asp-page="./Article" asp-route-id="@article.Slug">
+                                                    <img src="~/ProductPictures/@article.Picture"
+                                                         class="img-fluid" alt="@article.PictureAlt"
+                                                         title="@article.PictureTitle">
+                                                </a>@article.Title
+                                            </li>
+                                            }
+                                                
+                                            </ul>
+                                    </div>
+                                </aside>
+
+                                <aside id="tag_cloud-3" class="widget widget_tag_cloud">
+                                    <div class="widget_title">برچسب</div>
+                                    <div class="widget-content">
+                                        <div class="tagcloud">
+                                            @foreach (var tag in Model.ArticleCategory.KeywordList)
+                                            {
+                                            <a asp-page="./Search" asp-route-value="@tag">@tag</a>
+                                            }                                                
+                                                
+                                            </div>
+                                    </div>
+                                </aside>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -99,40 +99,26 @@
                                                 <span class="products-Price-amount amount"><bdi>@Model.Product.Price&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span>
                                             </p>
                                         }
-                                        <form class="variations_form cart" action="#" method="post" enctype='multipart/form-data' data-product_id="">
 
-                                            @*<table class="variations" cellspacing="0">
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="label"><label for="pa_color">رنگ</label></td>
-                                                        <td class="value">
-                                                            <select id="pa_color" class="" name="attribute_pa_color">
-                                                                <option value="">یک گزینه را انتخاب کنید</option>
-                                                                <option value="red">قرمز</option>
-                                                                <option value="black">مشکی</option>
-                                                            </select>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>*@
-
-                                            <div class="single_variation_wrap">
-                                                <div class="products-variation single_variation"></div>
-                                                <div class="products-variation-add-to-cart variations_button">
-                                                    <div class="quantity">
-                                                        <label class="screen-reader-text">@Model.Product.Name</label>
-                                                        <input type="number" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="تعداد" size="4" inputmode="numeric" />
-                                                        <div class="plus-minus">
-                                                            <div class="increase elm_qty fal fa-plus"></div>
-                                                            <div class="reduced elm_qty fal fa-minus"></div>
-                                                        </div>
+                                    <div clsss="variations_form cart">
+                                        <div class="single_variation_wrap">
+                                            <div class="products-variation single_variation"></div>
+                                            <div class="products-variation-add-to-cart variations_button">
+                                                <div class="quantity">
+                                                    <label class="screen-reader-text">@Model.Product.Name</label>
+                                                    <input type="number" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="تعداد" size="4" inputmode="numeric" id="productCount" />
+                                                    <div class="plus-minus">
+                                                        <div class="increase elm_qty fal fa-plus"></div>
+                                                        <div class="reduced elm_qty fal fa-minus"></div>
                                                     </div>
-
-                                                    <button type="submit" class="single_add_to_cart_button button alt">افزودن به سبد خرید</button>
                                                 </div>
-                                            </div>
 
-                                        </form>
+                                                <button type="button" class="single_add_to_cart_button button alt" onclick="addToCart('@Model.Product.Id', '@Model.Product.Name', '@Model.Product.DoublePrice', '@Model.Product.Picture')">افزودن به سبد خرید</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                        
 
                                         <span class="lead_time el_ready"><i class="fal fa-truck-loading"></i> آماده ارسال</span>
 
@@ -182,15 +168,15 @@
                             <li class="description_tab" id="tab-title-description" role="tab" aria-controls="tab-description">
                                 <a href="#tab-description">توضیحات</a>
                             </li>
-                            <li class="additional_information_tab" role="tab" aria-controls="tab-additional_information">
+                            @*<li class="additional_information_tab" role="tab" aria-controls="tab-additional_information">
                                 <a href="#tab-additional_information">اطلاعات بیشتر</a>
-                            </li>
+                            </li>*@
                             <li class="reviews_tab" role="tab" aria-controls="tab-reviews">
                                 <a href="#tab-reviews">نظرات کاربران</a>
                             </li>
-                            <li class="questions_tab" id="tab-title-questions" role="tab" aria-controls="tab-questions">
+                            @*<li class="questions_tab" id="tab-title-questions" role="tab" aria-controls="tab-questions">
                                 <a href="#tab-questions">سوالات کاربران</a>
-                            </li>
+                            </li>*@
                             <li class="review_p_tab_tab" id="tab-title-review_p_tab" role="tab" aria-controls="tab-review_p_tab">
                                 <a href="#tab-review_p_tab">نقد و بررسی</a>
                             </li>
@@ -216,7 +202,7 @@
                                 </div>
                             </div>
 
-                            <table class="shop_attributes">
+                            @*<table class="shop_attributes">
                                 <tr class="attribute_group_row attribute_group_row_defined">
                                     <th class="attribute_group_name" colspan="2"><i class="fal fa-chevron-circle-left attribute-group-icon"></i>سایر مشخصات</th>
                                 </tr>
@@ -243,7 +229,7 @@
                                         </table>
                                     </td>
                                 </tr>
-                            </table>
+                            </table>*@
                         </div>
 
                         <div class="products-Tabs-panel entry-content wc-tab" id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">

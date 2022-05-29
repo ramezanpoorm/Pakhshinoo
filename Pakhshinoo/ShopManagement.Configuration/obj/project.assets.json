@@ -1744,6 +1744,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "BlogManagement.Infrastructure.EFCore": "1.0.0",
           "DiscountManagement.Infrastructure.EFCore": "1.0.0",
           "InventoryManagement.Domain": "1.0.0",
           "InventoryMangement.InfraStructure.EFCore": "1.0.0",
@@ -1771,6 +1772,49 @@
         },
         "runtime": {
           "bin/placeholder/0_Framework.dll": {}
+        }
+      },
+      "BlogManagement.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BlogManagement.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlogManagement.Application.Contract.dll": {}
+        }
+      },
+      "BlogManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "BlogManagement.Application.Contract": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BlogManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlogManagement.Domain.dll": {}
+        }
+      },
+      "BlogManagement.Infrastructure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BlogManagement.Application.Contract": "1.0.0",
+          "BlogManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BlogManagement.Infrastructure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlogManagement.Infrastructure.EFCore.dll": {}
         }
       },
       "DiscountManagement.Application.Contract/1.0.0": {
@@ -6262,6 +6306,21 @@
       "path": "../0_Framework/0_Framework.csproj",
       "msbuildProject": "../0_Framework/0_Framework.csproj"
     },
+    "BlogManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../BlogManagement.Application.Contract/BlogManagement.Application.Contract.csproj",
+      "msbuildProject": "../BlogManagement.Application.Contract/BlogManagement.Application.Contract.csproj"
+    },
+    "BlogManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BlogManagement.Domain/BlogManagement.Domain.csproj",
+      "msbuildProject": "../BlogManagement.Domain/BlogManagement.Domain.csproj"
+    },
+    "BlogManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../BlogManagement.Infrastructure.EFCore/BlogManagement.Infrastructure.EFCore.csproj",
+      "msbuildProject": "../BlogManagement.Infrastructure.EFCore/BlogManagement.Infrastructure.EFCore.csproj"
+    },
     "DiscountManagement.Application.Contract/1.0.0": {
       "type": "project",
       "path": "../DiscountManagement.Application.Contract/DiscountManagement.Application.Contract.csproj",
@@ -6416,7 +6475,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
       }
     }
   }

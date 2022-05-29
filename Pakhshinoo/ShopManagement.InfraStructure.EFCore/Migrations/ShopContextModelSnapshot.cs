@@ -65,6 +65,31 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
                     b.ToTable("Cars");
                 });
 
+            modelBuilder.Entity("ShopManagement.Domain.CarProductAgg.CarProduct", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<long>("CarId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("CarProducts");
+                });
+
             modelBuilder.Entity("ShopManagement.Domain.CompanyAgg.Company", b =>
                 {
                     b.Property<long>("Id")
@@ -88,6 +113,31 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
                     b.ToTable("Company");
                 });
 
+            modelBuilder.Entity("ShopManagement.Domain.CompanyProductAgg.CompanyProduct", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<long>("CompanyId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CompanyId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("CompanyProducts");
+                });
+
             modelBuilder.Entity("ShopManagement.Domain.ProductAgg.Product", b =>
                 {
                     b.Property<long>("Id")
@@ -98,9 +148,6 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
                     b.Property<long>("BrandId")
                         .HasColumnType("bigint");
 
-                    b.Property<long>("CarId")
-                        .HasColumnType("bigint");
-
                     b.Property<long>("CategoryId")
                         .HasColumnType("bigint");
 
@@ -108,9 +155,6 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
                         .IsRequired()
                         .HasMaxLength(25)
                         .HasColumnType("nvarchar(25)");
-
-                    b.Property<long>("CompanyId")
-                        .HasColumnType("bigint");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
@@ -160,11 +204,7 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
 
                     b.HasIndex("BrandId");
 
-                    b.HasIndex("CarId");
-
                     b.HasIndex("CategoryId");
-
-                    b.HasIndex("CompanyId");
 
                     b.ToTable("Products");
                 });
@@ -304,17 +344,49 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
                     b.ToTable("Slides");
                 });
 
+            modelBuilder.Entity("ShopManagement.Domain.CarProductAgg.CarProduct", b =>
+                {
+                    b.HasOne("ShopManagement.Domain.CarAgg.Car", "Car")
+                        .WithMany("CarProducts")
+                        .HasForeignKey("CarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ShopManagement.Domain.ProductAgg.Product", "Product")
+                        .WithMany("CarProducts")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Car");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("ShopManagement.Domain.CompanyProductAgg.CompanyProduct", b =>
+                {
+                    b.HasOne("ShopManagement.Domain.CompanyAgg.Company", "Company")
+                        .WithMany("CompanyProducts")
+                        .HasForeignKey("CompanyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ShopManagement.Domain.ProductAgg.Product", "Product")
+                        .WithMany("CompanyProducts")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Company");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("ShopManagement.Domain.ProductAgg.Product", b =>
                 {
                     b.HasOne("ShopManagement.Domain.BrandAgg.Brand", "Brand")
                         .WithMany("Products")
                         .HasForeignKey("BrandId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ShopManagement.Domain.CarAgg.Car", "Car")
-                        .WithMany("Products")
-                        .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -324,19 +396,9 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ShopManagement.Domain.CompanyAgg.Company", "Company")
-                        .WithMany("Products")
-                        .HasForeignKey("CompanyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Brand");
 
-                    b.Navigation("Car");
-
                     b.Navigation("Category");
-
-                    b.Navigation("Company");
                 });
 
             modelBuilder.Entity("ShopManagement.Domain.ProductPictureAgg.ProductPicture", b =>
@@ -357,16 +419,20 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
 
             modelBuilder.Entity("ShopManagement.Domain.CarAgg.Car", b =>
                 {
-                    b.Navigation("Products");
+                    b.Navigation("CarProducts");
                 });
 
             modelBuilder.Entity("ShopManagement.Domain.CompanyAgg.Company", b =>
                 {
-                    b.Navigation("Products");
+                    b.Navigation("CompanyProducts");
                 });
 
             modelBuilder.Entity("ShopManagement.Domain.ProductAgg.Product", b =>
                 {
+                    b.Navigation("CarProducts");
+
+                    b.Navigation("CompanyProducts");
+
                     b.Navigation("ProductPictures");
                 });
 

@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AccountManagement.Configuration\AccountManagement.Configuration.csproj" />
+    <ProjectReference Include="..\BlogManagement.Configuration\BlogManagement.Configuration.csproj" />
     <ProjectReference Include="..\DiscountManagement.Configuration\DiscountManagement.Configuration.csproj" />
     <ProjectReference Include="..\InventoryManagement.InfraStructue.Configuration\InventoryManagement.InfraStructue.Configuration.csproj" />
     <ProjectReference Include="..\ShopManagement.Configuration\ShopManagement.Configuration.csproj" />
@@ -13,6 +14,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="Nancy" Version="2.0.0" />
   </ItemGroup>
 
 </Project>
