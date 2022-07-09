@@ -8,5 +8,7 @@ namespace _01_PakhshinoQuery.Contract.Product
         ProductQueryModel GetDetails(long id);
         List<ProductQueryModel> GetSpecialProducts();
         List<ProductQueryModel> GetLatestProducts();
+        List<ProductQueryModel> GetAllProducts(int pageid, long brandId, double startPrice, double endPrice, long carId, long companyId, long categoryId);
+                
     }
 }

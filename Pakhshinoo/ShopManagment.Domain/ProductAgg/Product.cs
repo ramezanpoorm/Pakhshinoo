@@ -32,10 +32,13 @@ namespace ShopManagement.Domain.ProductAgg
         public string Slug { get; private set; }
         public bool IsSpecial { get; private set; }
         public ProductCategory Category { get; private set; }
-        public List<CarProduct> CarProducts { get; private set; }
+        
         public Brand Brand { get; private set; }
+        public List<CarProduct> CarProducts { get; private set; }
         public List<CompanyProduct> CompanyProducts { get; private set; }
         public List<ProductPicture> ProductPictures { get; private set; }
+
+        public double UnitPrice { get; private set; }
 
         public Product(string name, string code, string shortDescription, string description, string picture, string pictureAlt, string pictureTitle, long categoryId, string slug, string keywords, string metaDescription, long brandId)
         {

@@ -18,9 +18,11 @@ namespace ServiceHost.Pages
             _productCategoryQuery = productCategoryQuery;            
         }
 
-        public void OnGet(long id, int pageid)
+        public void OnGet(long id, int pageid, long brandId, double startPrice, double endPrice, long carId, long companyId)
         {
-            ProductCategory = _productCategoryQuery.GetProductCategoryWithProductsBy(id, pageid);        
+            if (endPrice == 0)
+                endPrice = 1200000000;
+            ProductCategory = _productCategoryQuery.GetProductCategoryWithProductsBy(id, pageid, brandId, startPrice, endPrice, carId, companyId);        
         }
     }
 }

@@ -1759,6 +1759,48 @@
           "bin/placeholder/BlogManagement.Infrastructure.EFCore.dll": {}
         }
       },
+      "CommentManagement.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Application.Contracts.dll": {}
+        }
+      },
+      "CommentManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "CommentManagement.Application.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Domain.dll": {}
+        }
+      },
+      "CommentManagement.InfraStructure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CommentManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.InfraStructure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.InfraStructure.EFCore.dll": {}
+        }
+      },
       "DiscountManagement.Application.Contract/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -6183,6 +6225,21 @@
       "path": "../BlogManagement.Infrastructure.EFCore/BlogManagement.Infrastructure.EFCore.csproj",
       "msbuildProject": "../BlogManagement.Infrastructure.EFCore/BlogManagement.Infrastructure.EFCore.csproj"
     },
+    "CommentManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Application.Contracts/CommentManagement.Application.Contracts.csproj",
+      "msbuildProject": "../CommentManagement.Application.Contracts/CommentManagement.Application.Contracts.csproj"
+    },
+    "CommentManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Domain/CommentManagement.Domain.csproj",
+      "msbuildProject": "../CommentManagement.Domain/CommentManagement.Domain.csproj"
+    },
+    "CommentManagement.InfraStructure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.InfraStructure.EFCore/CommentManagement.InfraStructure.EFCore.csproj",
+      "msbuildProject": "../CommentManagement.InfraStructure.EFCore/CommentManagement.InfraStructure.EFCore.csproj"
+    },
     "DiscountManagement.Application.Contract/1.0.0": {
       "type": "project",
       "path": "../DiscountManagement.Application.Contract/DiscountManagement.Application.Contract.csproj",
@@ -6232,6 +6289,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "BlogManagement.Infrastructure.EFCore >= 1.0.0",
+      "CommentManagement.InfraStructure.EFCore >= 1.0.0",
       "DiscountManagement.Infrastructure.EFCore >= 1.0.0",
       "InventoryManagement.Domain >= 1.0.0",
       "InventoryMangement.InfraStructure.EFCore >= 1.0.0",
@@ -6274,6 +6332,9 @@
           "projectReferences": {
             "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Infrastructure.EFCore\\BlogManagement.Infrastructure.EFCore.csproj": {
               "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Infrastructure.EFCore\\BlogManagement.Infrastructure.EFCore.csproj"
+            },
+            "D:\\PakhshinooCore\\code\\Pakhshinoo\\CommentManagement.InfraStructure.EFCore\\CommentManagement.InfraStructure.EFCore.csproj": {
+              "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\CommentManagement.InfraStructure.EFCore\\CommentManagement.InfraStructure.EFCore.csproj"
             },
             "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj": {
               "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj"

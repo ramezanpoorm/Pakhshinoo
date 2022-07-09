@@ -10,6 +10,7 @@ namespace DiscountManagement.Domain.CustomerDiscountAgg
         public DateTime StartDate { get; private set; }
         public DateTime EndDate { get; private set; }
         public string Reason { get; private set; }
+        public bool IsSpecial { get; set; }
 
         public CustomerDiscount(long productId, int discountRate, DateTime startDate, DateTime endDate, string reason)
         {
@@ -18,15 +19,17 @@ namespace DiscountManagement.Domain.CustomerDiscountAgg
             StartDate = startDate;
             EndDate = endDate;
             Reason = reason;
+            IsSpecial = false;
         }
 
-        public void Edit(long productId, int discountRate, DateTime startDate, DateTime endDate, string reason)
+        public void Edit(long productId, int discountRate, DateTime startDate, DateTime endDate, string reason, bool isSpecial)
         {
             ProductId = productId;
             DiscountRate = discountRate;
             StartDate = startDate;
             EndDate = endDate;
             Reason = reason;
+            IsSpecial = isSpecial;
         }
     }
 

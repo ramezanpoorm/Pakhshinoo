@@ -18,7 +18,8 @@ namespace _01_PakhshinoQuery.Query
         {
             return _shopContext.Companies.Select(x => new CompanyQueryModel
             {
-                Name = x.Name,
+                Id = x.Id,
+                Name = x.Name
             }).ToList();
         }
     }

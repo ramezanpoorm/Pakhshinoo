@@ -37,3 +37,9 @@ D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\BlogManag
 D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\BlogManagement.Infrastructure.EFCore.pdb
 D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\BlogManagement.Application.Contract.pdb
 D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\BlogManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\CommentManagement.Application.Contracts.dll
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\CommentManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\CommentManagement.InfraStructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\CommentManagement.InfraStructure.EFCore.pdb
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\CommentManagement.Application.Contracts.pdb
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Release\net5.0\CommentManagement.Domain.pdb

@@ -276,3 +276,15 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Pages\conta
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Pages\FAQ.cshtml.g.cs
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\ProductCategoryIn\default.cshtml.g.cs
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\ArticleLatestCategory\Default.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.Contracts.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.Contracts.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Comment\Index.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Pages\AllProduct.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\CommentManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\CommentManagement.InfraStructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\CommentMangement.InfraStructure.Configuration.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\CommentMangement.InfraStructure.Configuration.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\CommentManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\CommentManagement.InfraStructure.EFCore.pdb

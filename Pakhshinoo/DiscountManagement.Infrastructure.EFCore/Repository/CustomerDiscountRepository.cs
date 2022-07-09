@@ -31,6 +31,7 @@ namespace DiscountManagement.Infrastructure.EFCore.Repository
                 EndDate = x.EndDate.ToString(),
                 ProductId = x.ProductId,
                 Reason = x.Reason,
+                IsSpecial = x.IsSpecial,
                 StartDate = x.StartDate.ToString()
             }).FirstOrDefault(x => x.Id == id);
         }

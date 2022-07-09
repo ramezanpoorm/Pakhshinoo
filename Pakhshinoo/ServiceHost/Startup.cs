@@ -4,6 +4,7 @@ using _01_PakhshinoQuery.Contract.Brand;
 using _01_PakhshinoQuery.Query;
 using AccountManagement.Configuration;
 using BlogManagement.Infrastructure.Configuration;
+using CommentMangement.InfraStructure.Configuration;
 using DiscountManagement.Configuration;
 using InventoryManagement.InfraStructue.Configuration;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -37,6 +38,7 @@ namespace ServiceHost
             InventoryBootstrapper.Configure(services, connectionString);
             AccountManagementBootstrapper.Configure(services, connectionString);
             BlogManagementBootstrapper.Configure(services, connectionString);
+            CommentManagementBootstraper.Configure(services, connectionString);
 
             services.AddSingleton<IPasswordHasher, PasswordHasher>();
             services.AddTransient<IFileUploader, FileUploader>();

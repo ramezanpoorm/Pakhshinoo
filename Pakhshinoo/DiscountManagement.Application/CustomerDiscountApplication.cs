@@ -37,7 +37,7 @@ namespace DiscountManagement.Application
 
             var startDate = command.StartDate.ToGeorgianDateTime();
             var endDate = command.EndDate.ToGeorgianDateTime();
-            customerDiscount.Edit(command.ProductId, command.DiscountRate, startDate, endDate, command.Reason);
+            customerDiscount.Edit(command.ProductId, command.DiscountRate, startDate, endDate, command.Reason, command.IsSpecial);
             _customerDiscountRepository.SaveChanges();
             return operation.Successeded();
         }

@@ -7,6 +7,8 @@
   <ItemGroup>
     <ProjectReference Include="..\AccountManagement.Configuration\AccountManagement.Configuration.csproj" />
     <ProjectReference Include="..\BlogManagement.Configuration\BlogManagement.Configuration.csproj" />
+    <ProjectReference Include="..\CommentManagement.Application.Contracts\CommentManagement.Application.Contracts.csproj" />
+    <ProjectReference Include="..\CommentMangement.InfraStructure.Configuration\CommentMangement.InfraStructure.Configuration.csproj" />
     <ProjectReference Include="..\DiscountManagement.Configuration\DiscountManagement.Configuration.csproj" />
     <ProjectReference Include="..\InventoryManagement.InfraStructue.Configuration\InventoryManagement.InfraStructue.Configuration.csproj" />
     <ProjectReference Include="..\ShopManagement.Configuration\ShopManagement.Configuration.csproj" />

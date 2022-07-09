@@ -30,7 +30,7 @@
                     <span asp-validation-for="DiscountRate" class="error"></span>
                 </div>
             </div>
-            
+
         </div>
         <div class="row">
             <div class="col-md-6">
@@ -48,7 +48,17 @@
                 </div>
             </div>
         </div>
-        
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="IsSpecial" class="control-label">نمایش در صفحه اصلی به عنوان پیشنهاد ویژه</label>
+                    <input type="checkbox" class="form-control" asp-for="IsSpecial">
+                    <span asp-validation-for="IsSpecial" class="error"></span>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group no-margin">

@@ -3051,6 +3051,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "BlogManagement.Infrastructure.EFCore": "1.0.0",
+          "CommentManagement.InfraStructure.EFCore": "1.0.0",
           "DiscountManagement.Infrastructure.EFCore": "1.0.0",
           "InventoryManagement.Domain": "1.0.0",
           "InventoryMangement.InfraStructure.EFCore": "1.0.0",
@@ -3226,6 +3227,78 @@
         },
         "runtime": {
           "bin/placeholder/BlogManagement.Infrastructure.EFCore.dll": {}
+        }
+      },
+      "CommentManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CommentManagement.Application.Contracts": "1.0.0",
+          "CommentManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Application.dll": {}
+        }
+      },
+      "CommentManagement.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Application.Contracts.dll": {}
+        }
+      },
+      "CommentManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "CommentManagement.Application.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Domain.dll": {}
+        }
+      },
+      "CommentManagement.InfraStructure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CommentManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.InfraStructure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.InfraStructure.EFCore.dll": {}
+        }
+      },
+      "CommentMangement.InfraStructure.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CommentManagement.Application": "1.0.0",
+          "CommentManagement.Domain": "1.0.0",
+          "CommentManagement.InfraStructure.EFCore": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentMangement.InfraStructure.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentMangement.InfraStructure.Configuration.dll": {}
         }
       },
       "DiscountManagement.Application/1.0.0": {
@@ -10133,6 +10206,31 @@
       "path": "../BlogManagement.Infrastructure.EFCore/BlogManagement.Infrastructure.EFCore.csproj",
       "msbuildProject": "../BlogManagement.Infrastructure.EFCore/BlogManagement.Infrastructure.EFCore.csproj"
     },
+    "CommentManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Application/CommentManagement.Application.csproj",
+      "msbuildProject": "../CommentManagement.Application/CommentManagement.Application.csproj"
+    },
+    "CommentManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Application.Contracts/CommentManagement.Application.Contracts.csproj",
+      "msbuildProject": "../CommentManagement.Application.Contracts/CommentManagement.Application.Contracts.csproj"
+    },
+    "CommentManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Domain/CommentManagement.Domain.csproj",
+      "msbuildProject": "../CommentManagement.Domain/CommentManagement.Domain.csproj"
+    },
+    "CommentManagement.InfraStructure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.InfraStructure.EFCore/CommentManagement.InfraStructure.EFCore.csproj",
+      "msbuildProject": "../CommentManagement.InfraStructure.EFCore/CommentManagement.InfraStructure.EFCore.csproj"
+    },
+    "CommentMangement.InfraStructure.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../CommentMangement.InfraStructure.Configuration/CommentMangement.InfraStructure.Configuration.csproj",
+      "msbuildProject": "../CommentMangement.InfraStructure.Configuration/CommentMangement.InfraStructure.Configuration.csproj"
+    },
     "DiscountManagement.Application/1.0.0": {
       "type": "project",
       "path": "../DiscountManagement.Application/DiscountManagement.Application.csproj",
@@ -10213,6 +10311,8 @@
     "net5.0": [
       "AccountManagement.Configuration >= 1.0.0",
       "BlogManagement.Configuration >= 1.0.0",
+      "CommentManagement.Application.Contracts >= 1.0.0",
+      "CommentMangement.InfraStructure.Configuration >= 1.0.0",
       "DiscountManagement.Configuration >= 1.0.0",
       "InventoryManagement.InfraStructue.Configuration >= 1.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
@@ -10259,6 +10359,12 @@
             },
             "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Configuration\\BlogManagement.Configuration.csproj": {
               "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\BlogManagement.Configuration\\BlogManagement.Configuration.csproj"
+            },
+            "D:\\PakhshinooCore\\code\\Pakhshinoo\\CommentManagement.Application.Contracts\\CommentManagement.Application.Contracts.csproj": {
+              "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\CommentManagement.Application.Contracts\\CommentManagement.Application.Contracts.csproj"
+            },
+            "D:\\PakhshinooCore\\code\\Pakhshinoo\\CommentMangement.InfraStructure.Configuration\\CommentMangement.InfraStructure.Configuration.csproj": {
+              "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\CommentMangement.InfraStructure.Configuration\\CommentMangement.InfraStructure.Configuration.csproj"
             },
             "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Configuration\\DiscountManagement.Configuration.csproj": {
               "projectPath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\DiscountManagement.Configuration\\DiscountManagement.Configuration.csproj"

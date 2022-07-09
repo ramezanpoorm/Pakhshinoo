@@ -37,11 +37,17 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwr
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\css\bootstrap.css
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\css\bootstrap.css.map
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\css\bootstrap.min.css
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\css\font\summernote.eot
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\css\font\summernote.hash
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\css\font\summernote.ttf
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\css\font\summernote.woff
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\css\font\summernote.woff2
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\css\helper.css
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\css\material-design-iconic-font.min.css
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\css\persian-datepicker.min.css
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\css\style-responsive.css
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\css\style.css
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\css\summernote-bs4.css
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\css\waves-effect.css
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\datatables\dataTables.bootstrap.js
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\datatables\datatables.js
@@ -207,6 +213,7 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwr
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\js\persian-datepicker.min.js
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\js\site.js
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\js\skycons.min.js
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\js\summernote-bs4.js
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\js\waves.js
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\js\wow.min.js
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\AdminTheme\assets\jvectormap\gdp-data.js
@@ -577,6 +584,11 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Blog
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Configuration.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Domain.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Infrastructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\CommentManagement.Application.Contracts.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\CommentManagement.Application.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\CommentManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\CommentManagement.InfraStructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\CommentMangement.InfraStructure.Configuration.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Application.Contract.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Application.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Configuration.dll
@@ -594,6 +606,8 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Shop
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ShopManagement.InfraStructure.EFCore.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Configuration.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Configuration.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\CommentManagement.Application.Contracts.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\CommentMangement.InfraStructure.Configuration.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Configuration.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\InventoryManagement.InfraStructue.Configuration.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ShopManagement.Configuration.pdb
@@ -607,6 +621,9 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Blog
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Application.Contract.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Domain.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Infrastructure.EFCore.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\CommentManagement.Application.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\CommentManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\CommentManagement.InfraStructure.EFCore.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Application.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Application.Contract.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\DiscountManagement.Domain.pdb

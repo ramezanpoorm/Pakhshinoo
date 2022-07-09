@@ -13,10 +13,12 @@ namespace _01_PakhshinoQuery.Contract.ProductCategory
         public string Keywords { get; set; }
         public string MetaDescription { get; set; }
         public long BrandId { get; set; }
+        public long CarId { get; set; }
+        public long CompanyId { get; set; }
         public List<ProductQueryModel> Products { get; set; }
         public double DoublePrice { get; set; }
-        public int StartPrice { get; set; }
-        public int EndPrice { get; set; }
+        public double StartPrice { get; set; }
+        public double EndPrice { get; set; }
         //public ProductQueryModel SetPaging(BasePaging paging)
         //{
         //    this.PageId = paging.PageId;

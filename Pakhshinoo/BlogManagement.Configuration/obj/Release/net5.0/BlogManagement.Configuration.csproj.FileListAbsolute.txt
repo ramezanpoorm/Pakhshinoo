@@ -41,3 +41,9 @@ D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Configuration\obj\Release\net5.
 D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Configuration\obj\Release\net5.0\BlogManagement.Configuration.dll
 D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Configuration\obj\Release\net5.0\ref\BlogManagement.Configuration.dll
 D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Configuration\obj\Release\net5.0\BlogManagement.Configuration.pdb
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Configuration\bin\Release\net5.0\CommentManagement.Application.Contracts.dll
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Configuration\bin\Release\net5.0\CommentManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Configuration\bin\Release\net5.0\CommentManagement.InfraStructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Configuration\bin\Release\net5.0\CommentManagement.Application.Contracts.pdb
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Configuration\bin\Release\net5.0\CommentManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\BlogManagement.Configuration\bin\Release\net5.0\CommentManagement.InfraStructure.EFCore.pdb

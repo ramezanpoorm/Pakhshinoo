@@ -48,7 +48,7 @@ namespace _01_PakhshinoQuery.Query
             }).ToList();
         }
         
-        public ProductCategoryQueryModel GetProductCategoryWithProductsBy(long id, int pageid)
+        public ProductCategoryQueryModel GetProductCategoryWithProductsBy(long id, int pageid, long brandId, double startPrice, double endPrice, long carId, long companyId)
         {
             int skip = (pageid - 1) * 40;
             var inventory = _inventoryContext.Inventory.Select(x =>
@@ -56,24 +56,30 @@ namespace _01_PakhshinoQuery.Query
             var discounts = _discountContext.CustomerDiscounts
                 .Where(x => x.StartDate < DateTime.Now && x.EndDate > DateTime.Now)
                 .Select(x => new { x.DiscountRate, x.ProductId, x.EndDate }).ToList();
+            
+            var category = _shopContext.ProductCategories
+                    .Include(a => a.Products)
+                    .ThenInclude(x => x.Category)
+                    .Select(x => new ProductCategoryQueryModel
+                    {
+                        Id = x.Id,
+                        Name = x.Name,
+                        Description = x.Description,
+                        MetaDescription = x.MetaDescription,
+                        Keywords = x.Keywords,
+                        Slug = x.Slug,
+                        Products = MapProducts(x.Products.Where(s => s.UnitPrice >= startPrice && s.UnitPrice <= endPrice && (brandId == 0 || s.BrandId == brandId) && (carId == 0 || s.CarProducts.Where(p => p.ProductId == s.Id && p.CarId == carId).Any()) && (companyId == 0 || s.CompanyProducts.Where(p => p.ProductId == s.Id && p.CompanyId == companyId).Any())).ToList(), skip),
+                        PageCount = x.Products.Where(s => s.UnitPrice >= startPrice && s.UnitPrice <= endPrice && (brandId == 0 || s.BrandId == brandId) && (carId == 0 || s.CarProducts.Where(p => p.ProductId == s.Id && p.CarId == carId).Any()) && (companyId == 0 || s.CompanyProducts.Where(p => p.ProductId == s.Id && p.CompanyId == companyId).Any())).ToList().Count,
+                        ActivePage = pageid,
+                        StartPrice = startPrice,
+                        EndPrice = endPrice,
+                        CarId = carId,
+                        CompanyId = companyId,
+                        BrandId = brandId
+                    }).FirstOrDefault(x => x.Id == id);
 
-            var catetory = _shopContext.ProductCategories
-                .Include(a => a.Products)
-                .ThenInclude(x => x.Category)
-                .Select(x => new ProductCategoryQueryModel
-                {
-                    Id = x.Id,
-                    Name = x.Name,
-                    Description = x.Description,
-                    MetaDescription = x.MetaDescription,
-                    Keywords = x.Keywords,
-                    Slug = x.Slug,
-                    Products = MapProducts(x.Products, skip),/*.Where(s => s.BrandId == ).ToList()*///, skip)
-                    PageCount= x.Products.Count,
-                    ActivePage = pageid
-                }).FirstOrDefault(x => x.Id == id);
-
-            foreach (var product in catetory.Products)
+            
+            foreach (var product in category.Products)
             {
                 var productInventory = inventory.FirstOrDefault(x => x.ProductId == product.Id);
                 if (productInventory != null)
@@ -81,6 +87,7 @@ namespace _01_PakhshinoQuery.Query
                     var price = productInventory.UnitPrice;
                     product.Price = price.ToMoney();
                     var discount = discounts.FirstOrDefault(x => x.ProductId == product.Id);
+                    product.DoublePrice = price;
                     if (discount != null)
                     {
                         int discountRate = discount.DiscountRate;
@@ -88,12 +95,13 @@ namespace _01_PakhshinoQuery.Query
                         //product.DiscountExpireDate = discount.EndDate.ToDiscountFormat();
                         product.HasDiscount = discountRate > 0;
                         var discountAmount = Math.Round((price * discountRate) / 100);
-                        product.PriceWithDiscount = (price - discountAmount).ToMoney();
+                        product.PriceWithDiscountForShow = (price - discountAmount).ToMoney();
+                        product.PriceWithDiscountForCart = (price - discountAmount);
                     }
                 }
             }
-            
-            return catetory;
+
+            return category;
         }
 
         private static List<ProductQueryModel> MapProducts(List<Product> products, int skip)
@@ -106,13 +114,8 @@ namespace _01_PakhshinoQuery.Query
                 Picture = product.Picture,
                 PictureAlt = product.PictureAlt,
                 PictureTitle = product.PictureTitle,
-                Slug = product.Slug
+                Slug = product.Slug               
             }).Skip(skip).Take(40).ToList();
-        }
-
-        public ProductCategoryQueryModel FilterProducts(ProductCategoryQueryModel filter)
-        {
-            throw new NotImplementedException();
         }
     }
 }

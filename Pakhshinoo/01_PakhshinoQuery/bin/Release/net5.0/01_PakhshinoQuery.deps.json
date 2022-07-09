@@ -9,6 +9,7 @@
       "01_PakhshinoQuery/1.0.0": {
         "dependencies": {
           "BlogManagement.Infrastructure.EFCore": "1.0.0",
+          "CommentManagement.InfraStructure.EFCore": "1.0.0",
           "DiscountManagement.Infrastructure.EFCore": "1.0.0",
           "InventoryManagement.Domain": "1.0.0",
           "InventoryMangement.InfraStructure.EFCore": "1.0.0",
@@ -1284,6 +1285,33 @@
           "BlogManagement.Infrastructure.EFCore.dll": {}
         }
       },
+      "CommentManagement.Application.Contracts/1.0.0": {
+        "dependencies": {
+          "0_Framework": "1.0.0"
+        },
+        "runtime": {
+          "CommentManagement.Application.Contracts.dll": {}
+        }
+      },
+      "CommentManagement.Domain/1.0.0": {
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "CommentManagement.Application.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "CommentManagement.Domain.dll": {}
+        }
+      },
+      "CommentManagement.InfraStructure.EFCore/1.0.0": {
+        "dependencies": {
+          "CommentManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0"
+        },
+        "runtime": {
+          "CommentManagement.InfraStructure.EFCore.dll": {}
+        }
+      },
       "DiscountManagement.Application.Contract/1.0.0": {
         "dependencies": {
           "0_Framework": "1.0.0",
@@ -2199,6 +2227,21 @@
       "sha512": ""
     },
     "BlogManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CommentManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CommentManagement.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CommentManagement.InfraStructure.EFCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

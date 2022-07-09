@@ -17,7 +17,8 @@ namespace _01_PakhshinoQuery.Query
         {
             return _shopContext.Cars.Select(x => new CarQueryModel
             {
-                Name = x.Name,
+                Id = x.Id,
+                Name = x.Name
             }).ToList();
         }
     }

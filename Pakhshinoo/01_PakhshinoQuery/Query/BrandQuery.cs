@@ -18,6 +18,7 @@ namespace _01_PakhshinoQuery.Query
         {
             return _shopContext.Brands.Select(x => new BrandQueryModel
             {
+                Id = x.Id,
                 Name = x.Name,
             }).ToList();
         }

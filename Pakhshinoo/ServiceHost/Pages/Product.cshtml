@@ -1,5 +1,7 @@
 ﻿@page "{id}"
 @model ServiceHost.Pages.ProductModel
+@inject _0_Framework.Application.IAuthHelper authHelper
+
 @{
     ViewData["Title"] = "صفحه محصول";
 }
@@ -11,7 +13,7 @@
             <div id="content" role="main">
                 <div class="container">
                     <nav class="products-breadcrumb">
-                        <a asp-page="~/Index">خانه</a>&nbsp;&#47;&nbsp;<a asp-page="/ProductCategory" asp-route-id="@Model.Product.CategoryId">@Model.Product.Category</a>&nbsp;&#47;&nbsp;@Model.Product.Name
+                        <a asp-page="/Index">خانه</a>&nbsp;&#47;&nbsp;<a asp-page="/ProductCategory" asp-route-id="@Model.Product.CategoryId">@Model.Product.Category</a>&nbsp;&#47;&nbsp;@Model.Product.Name
                     </nav>
 
                     <div class="products-notices-wrapper"></div>
@@ -23,14 +25,14 @@
                                 <div class="inner">
 
                                     @if (Model.Product.HasDiscount)
-                                    {<div class="product-label label-circle"><div class="circle"></div><span>@Model.Product.DiscountRate%</span></div>}
+                                    {<div class="product-label label-circle"><div class="circle"></div><span>@Model.Product.DiscountRate %</span></div>}
                                     <div class="images gallery-with-images">
                                         <div class="product-images">
                                             <div class="swiper-container" dir="rtl">
                                                 <div class="swiper-wrapper">
                                                     @*<div class="swiper-slide img products-product-gallery__image">
-                                                        <img src="~/ProductPictures/@Model.Product.Picture" class="img-responsive products-main-image" alt="@Model.Product.PictureAlt" />
-                                                    </div>*@
+                                                            <img src="~/ProductPictures/@Model.Product.Picture" class="img-responsive products-main-image" alt="@Model.Product.PictureAlt" />
+                                                        </div>*@
 
                                                     @foreach (var picture in Model.Product.Pictures)
                                                     {
@@ -60,7 +62,7 @@
                                                             <img src="~/ProductPictures/@picture.Picture" class="img-responsive products-main-thumb" alt="@picture.PictureAlt" title="@picture.PictureTitle" />
                                                         </div>
                                                     }
-                                                    
+
                                                 </div>
                                                 <div class="swiper-button-next swiper-button-v1-next"></div>
                                                 <div class="swiper-button-prev swiper-button-v1-prev"></div>
@@ -90,7 +92,7 @@
                                             <p class="price">
                                                 <del aria-hidden="true">
                                                     <span class="Price-amount amount"><bdi>@Model.Product.Price&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span>
-                                                </del>  <i>|</i>  <span class="products-Price-amount amount"><bdi>@Model.Product.PriceWithDiscount&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span>
+                                                </del>  <i>|</i>  <span class="products-Price-amount amount"><bdi>@Model.Product.PriceWithDiscountForShow&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span>
                                             </p>
                                         }
                                         else
@@ -100,25 +102,33 @@
                                             </p>
                                         }
 
-                                    <div clsss="variations_form cart">
-                                        <div class="single_variation_wrap">
-                                            <div class="products-variation single_variation"></div>
-                                            <div class="products-variation-add-to-cart variations_button">
-                                                <div class="quantity">
-                                                    <label class="screen-reader-text">@Model.Product.Name</label>
-                                                    <input type="number" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="تعداد" size="4" inputmode="numeric" id="productCount" />
-                                                    <div class="plus-minus">
-                                                        <div class="increase elm_qty fal fa-plus"></div>
-                                                        <div class="reduced elm_qty fal fa-minus"></div>
+                                        <div clsss="variations_form cart">
+                                            <div class="single_variation_wrap">
+                                                <div class="products-variation single_variation"></div>
+                                                <div class="products-variation-add-to-cart variations_button">
+                                                    <div class="quantity">
+                                                        <label class="screen-reader-text">@Model.Product.Name</label>
+                                                        <input type="number" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="تعداد" size="4" inputmode="numeric" id="productCount" />
+                                                        <div class="plus-minus">
+                                                            <div class="increase elm_qty fal fa-plus"></div>
+                                                            <div class="reduced elm_qty fal fa-minus"></div>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                    <a type="button" class="single_add_to_cart_button button alt" asp-page="/ProductCategory" asp-route-id="@Model.Product.CategoryId">بازگشت به دسته بندی مرتبط</a>
 
-                                                <button type="button" class="single_add_to_cart_button button alt" onclick="addToCart('@Model.Product.Id', '@Model.Product.Name', '@Model.Product.DoublePrice', '@Model.Product.Picture')">افزودن به سبد خرید</button>
+                                                    @if (Model.Product.HasDiscount)
+                                                    {
+                                                        <button type="button" class="single_add_to_cart_button button alt" onclick="addToCart('@Model.Product.Id', '@Model.Product.Name', '@Model.Product.PriceWithDiscountForCart', '@Model.Product.Picture')">افزودن به سبد خرید</button>
+                                                    }
+                                                    else
+                                                    {
+                                                        <button type="button" class="single_add_to_cart_button button alt" onclick="addToCart('@Model.Product.Id', '@Model.Product.Name', '@Model.Product.DoublePrice', '@Model.Product.Picture')">افزودن به سبد خرید</button>
+                                                    }
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                        
+
 
                                         <span class="lead_time el_ready"><i class="fal fa-truck-loading"></i> آماده ارسال</span>
 
@@ -169,28 +179,28 @@
                                 <a href="#tab-description">توضیحات</a>
                             </li>
                             @*<li class="additional_information_tab" role="tab" aria-controls="tab-additional_information">
-                                <a href="#tab-additional_information">اطلاعات بیشتر</a>
-                            </li>*@
+                                    <a href="#tab-additional_information">اطلاعات بیشتر</a>
+                                </li>*@
                             <li class="reviews_tab" role="tab" aria-controls="tab-reviews">
                                 <a href="#tab-reviews">نظرات کاربران</a>
                             </li>
                             @*<li class="questions_tab" id="tab-title-questions" role="tab" aria-controls="tab-questions">
-                                <a href="#tab-questions">سوالات کاربران</a>
-                            </li>*@
-                            <li class="review_p_tab_tab" id="tab-title-review_p_tab" role="tab" aria-controls="tab-review_p_tab">
-                                <a href="#tab-review_p_tab">نقد و بررسی</a>
-                            </li>
+                                    <a href="#tab-questions">سوالات کاربران</a>
+                                </li>*@
+                            @*<li class="review_p_tab_tab" id="tab-title-review_p_tab" role="tab" aria-controls="tab-review_p_tab">
+                                    <a href="#tab-review_p_tab">نقد و بررسی</a>
+                                </li>*@
 
                         </ul>
                         <div class="products-Tabs-panel entry-content wc-tab" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
                             <div class="tab_content_heading">
                                 <i class="fal fa-pen-alt"></i>
-                                <div class="heading_left"><span class="tab_h_title">نقد و بررسی اجمالی</span><span class="tab_h_desc"></span></div>
+                                <div class="heading_left"><span class="tab_h_title">شرح محصول</span><span class="tab_h_desc"></span></div>
                             </div>
                             <p>@Model.Product.Description</p>
                             <p>&nbsp;</p>
                             <p>&nbsp;</p>
-                            
+
                             <span class="tagged_as">برچسب: @Model.Product.Keywords</span>
                         </div>
                         <div class="products-Tabs-panel entry-content wc-tab" id="tab-additional_information" role="tabpanel" aria-labelledby="tab-title-additional_information">
@@ -203,33 +213,33 @@
                             </div>
 
                             @*<table class="shop_attributes">
-                                <tr class="attribute_group_row attribute_group_row_defined">
-                                    <th class="attribute_group_name" colspan="2"><i class="fal fa-chevron-circle-left attribute-group-icon"></i>سایر مشخصات</th>
-                                </tr>
-                                <tr class="attribute_row attribute_row_list">
-                                    <td>
-                                        <table class="attribute_name_values">
-                                            <tr><th class="attribute_name">جنس</th><td class="attribute_value"><p>پلی اورتان</p></td></tr>
-                                            <tr class="alt">
-                                                <th class="attribute_name">مناسب برای خودرو</th>
-                                                <td class="attribute_value"><p>پراید<br />ساینا<br />تیبا 1<br />تیبا 2</p></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="attribute_name">قابلیت شستشو</th>
-                                                <td class="attribute_value"><p>دارد</p></td>
-                                            </tr>
-                                            <tr class="alt">
-                                                <th class="attribute_name">سایر توضیحات</th>
-                                                <td class="attribute_value"><p>مناسب برای پراید تیبا 1 تیبا 2 ساینا<br />دارای استیل ضد خش<br />دارای سه تکه مجزا</p></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="attribute_name">رنگ</th>
-                                                <td class="attribute_value"><p>قرمز<br />مشکی</p></td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>*@
+                                    <tr class="attribute_group_row attribute_group_row_defined">
+                                        <th class="attribute_group_name" colspan="2"><i class="fal fa-chevron-circle-left attribute-group-icon"></i>سایر مشخصات</th>
+                                    </tr>
+                                    <tr class="attribute_row attribute_row_list">
+                                        <td>
+                                            <table class="attribute_name_values">
+                                                <tr><th class="attribute_name">جنس</th><td class="attribute_value"><p>پلی اورتان</p></td></tr>
+                                                <tr class="alt">
+                                                    <th class="attribute_name">مناسب برای خودرو</th>
+                                                    <td class="attribute_value"><p>پراید<br />ساینا<br />تیبا 1<br />تیبا 2</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="attribute_name">قابلیت شستشو</th>
+                                                    <td class="attribute_value"><p>دارد</p></td>
+                                                </tr>
+                                                <tr class="alt">
+                                                    <th class="attribute_name">سایر توضیحات</th>
+                                                    <td class="attribute_value"><p>مناسب برای پراید تیبا 1 تیبا 2 ساینا<br />دارای استیل ضد خش<br />دارای سه تکه مجزا</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="attribute_name">رنگ</th>
+                                                    <td class="attribute_value"><p>قرمز<br />مشکی</p></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>*@
                         </div>
 
                         <div class="products-Tabs-panel entry-content wc-tab" id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
@@ -258,108 +268,33 @@
                                         <div id="review_form_wrapper">
                                             <div id="review_form">
                                                 <div id="respond" class="comment-respond">
-                                                    <span id="reply-title" class="comment-reply-title">دیدگاه خود را در مورد محصول &ldquo;کفپوش سه بعدی خودرو ماهوت مدل اکو مناسب برای پراید تیبا ساینا&rdquo;بنویسید</span>
-                                                    <p class="must-log-in">
-                                                        <strong>برای ثبت دیدگاه، لازم است ابتدا وارد حساب کاربری خود شوید.</strong>
-                                                        <button class="comment_login"><i class="fal fa-comment"></i>افزودن دیدگاه جدید</button>
-                                                    </p>
-                                                    <form action="#" method="post" id="commentform" class="comment-form" novalidate="">
-                                                        <div class="comment-form-rating">
-                                                            <label for="rating">امتیاز شما</label>
-                                                            <p class="stars">
-                                                                <span>
-                                                                    <a class="star-1" href="#">1</a>
-                                                                    <a class="star-2" href="#">2</a>
-                                                                    <a class="star-3" href="#">3</a>
-                                                                    <a class="star-4" href="#">4</a>
-                                                                    <a class="star-5" href="#">5</a>
-                                                                </span>
+                                                    <span id="reply-title" class="comment-reply-title">دیدگاه خود را در مورد محصول &ldquo;@Model.Product.Name&rdquo;بنویسید</span>
+                                                    @if (!authHelper.IsAuthenticated())
+                                                    {
+                                                        <p class="must-log-in">
+                                                            <strong>برای ثبت دیدگاه، لازم است ابتدا وارد حساب کاربری خود شوید.</strong>
+                                                            <button class="comment_login"><i class="fal fa-comment"></i>افزودن دیدگاه جدید</button>
+                                                        </p>
+                                                    }
+                                                    else { 
+                                                        <form method="post" id="commentform" class="comment-form" novalidate="">
+                                                            
+
+                                                            <p class="comment-form-comment">
+                                                                <label for="comment">دیدگاه شما <span class="required">*</span>@authHelper.CurrentAccountInfo().Fullname</label>
+                                                                <textarea id="comment" name="message" cols="45" rows="8" aria-required="true" required=""></textarea>
+                                                                <input type="hidden" name="ownerRecordId" value="@Model.Product.Id" />
+                                                                <input type="hidden" name="productId" value="@Model.Product.Id" />
+                                                                <input type="hidden" name="Name" value="@authHelper.CurrentAccountInfo().Fullname" />
+                                                                <input type="hidden" name="Email" value="@authHelper.CurrentAccountInfo().Username" />
                                                             </p>
-                                                        </div>
 
-                                                        <div class="rating_wrap">
-                                                            <span>کیفیت ساخت: </span>
-                                                            <div class="rate_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content ui-slider-pips ui-slider-float">
-                                                                <span class="ui-slider-handle ui-corner-all ui-state-default"><span class="ui-slider-tip">معمولی</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-first ui-slider-pip-1"><span class="ui-slider-line"></span><span class="ui-slider-label">1</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-2"><span class="ui-slider-line"></span><span class="ui-slider-label">2</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-3 ui-slider-pip-initial ui-slider-pip-selected"><span class="ui-slider-line"></span><span class="ui-slider-label">3</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-4"><span class="ui-slider-line"></span><span class="ui-slider-label">4</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-last ui-slider-pip-5"><span class="ui-slider-line"></span><span class="ui-slider-label">5</span></span>
-                                                            </div>
-                                                            <input type="hidden" value="3">
-                                                        </div>
-
-                                                        <div class="rating_wrap">
-                                                            <span>طراحی و زیبایی: </span>
-                                                            <div class="rate_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content ui-slider-pips ui-slider-float">
-                                                                <span class="ui-slider-handle ui-corner-all ui-state-default"><span class="ui-slider-tip">معمولی</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-first ui-slider-pip-1"><span class="ui-slider-line"></span><span class="ui-slider-label">1</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-2"><span class="ui-slider-line"></span><span class="ui-slider-label">2</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-3 ui-slider-pip-initial ui-slider-pip-selected"><span class="ui-slider-line"></span><span class="ui-slider-label">3</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-4"><span class="ui-slider-line"></span><span class="ui-slider-label">4</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-last ui-slider-pip-5"><span class="ui-slider-line"></span><span class="ui-slider-label">5</span></span>
-                                                            </div>
-                                                            <input type="hidden" value="3">
-                                                        </div>
-
-                                                        <div class="rating_wrap">
-                                                            <span>راحتی استفاده: </span>
-                                                            <div class="rate_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content ui-slider-pips ui-slider-float">
-                                                                <span class="ui-slider-handle ui-corner-all ui-state-default"><span class="ui-slider-tip">معمولی</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-first ui-slider-pip-1"><span class="ui-slider-line"></span><span class="ui-slider-label">1</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-2"><span class="ui-slider-line"></span><span class="ui-slider-label">2</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-3 ui-slider-pip-initial ui-slider-pip-selected"><span class="ui-slider-line"></span><span class="ui-slider-label">3</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-4"><span class="ui-slider-line"></span><span class="ui-slider-label">4</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-last ui-slider-pip-5"><span class="ui-slider-line"></span><span class="ui-slider-label">5</span></span>
-                                                            </div>
-                                                            <input type="hidden" value="3">
-                                                        </div>
-
-                                                        <div class="rating_wrap">
-                                                            <span>ارزش خرید: </span>
-                                                            <div class="rate_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content ui-slider-pips ui-slider-float">
-                                                                <span class="ui-slider-handle ui-corner-all ui-state-default"><span class="ui-slider-tip">معمولی</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-first ui-slider-pip-1"><span class="ui-slider-line"></span><span class="ui-slider-label">1</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-2"><span class="ui-slider-line"></span><span class="ui-slider-label">2</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-3 ui-slider-pip-initial ui-slider-pip-selected"><span class="ui-slider-line"></span><span class="ui-slider-label">3</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-4"><span class="ui-slider-line"></span><span class="ui-slider-label">4</span></span>
-                                                                <span class="ui-slider-pip ui-slider-pip-last ui-slider-pip-5"><span class="ui-slider-line"></span><span class="ui-slider-label">5</span></span>
-                                                            </div>
-                                                            <input type="hidden" value="3">
-                                                        </div>
-
-                                                        <div class="row">
-                                                            <div class="col-12 col-sm-6 advantages warp_add_point">
-                                                                <label>نقاط قوت</label>
-                                                                <div class="add_point">
-                                                                    <input title="نقاط قوت" class="input_add_point" type="text" id="advantage-input" value="">
-                                                                    <button type="button" class="add_point_advantage"></button>
-                                                                </div>
-                                                                <div class="advantages_list"></div>
-                                                            </div>
-
-                                                            <div class="col-12 col-sm-6 disadvantages warp_add_point">
-                                                                <label>نقاط ضعف</label>
-                                                                <div class="add_point">
-                                                                    <input title="نقاط ضعف" class="input_add_point" type="text" id="disadvantages-input" value="">
-                                                                    <button type="button" class="add_point_disadvantage"></button>
-                                                                </div>
-                                                                <div class="disadvantages_list"></div>
-                                                            </div>
-                                                        </div>
-
-                                                        <p class="comment-form-comment">
-                                                            <label for="comment">دیدگاه شما <span class="required">*</span></label>
-<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required=""></textarea>
-                                                        </p>
-
-                                                        <p class="form-submit">
-                                                            <input name="submit" type="submit" id="submit" class="submit" value="ثبت">
-                                                        </p>
-                                                    </form>
-
-                                                </div>
+                                                            <p class="form-submit">
+                                                                <input name="submit" type="submit" id="submit" class="submit" value="ثبت">
+                                                            </p>
+                                                        </form>
+                                                    }
+                                                    </div>
                                             </div>
                                         </div>
 
@@ -368,91 +303,95 @@
 
                                     <div class="col-12">
                                         <div id="comments" class="comment_override">
-                                            <h2 class="products-Reviews-title">نقد و بررسی‌ها</h2>
-                                            <p class="products-noreviews">هیچ دیدگاهی برای این محصول نوشته نشده است.</p>
+                                            <h2 class="products-Reviews-title">نظرات ثبت شده</h2>
+                                            @foreach (var comment in Model.Product.Comments)
+                                            {
+                                                <p class="products-noreviews">@comment.Name</p>
+                                                <p>@comment.Message</p>
+                                            }
+                                            </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        @*<div class="products-Tabs-panel products-Tabs-panel--questions panel entry-content wc-tab" id="tab-questions" role="tabpanel" aria-labelledby="tab-title-questions">
+                                <div class="tab_content_heading">
+                                    <i class="fal fa-question-square"></i>
+                                    <div class="heading_left">
+                                        <span class="tab_h_title">پرسش و پاسخ</span><span class="tab_h_desc"></span>
+                                    </div>
+                                </div>
+                                <ul class="questionlist"></ul>
+
+                                <div id="respond" class="comment-respond">
+                                    <div class="block-title cm_title title--decor1">
+                                        <span class="title">
+                                            ارسال پرسش <small>
+                                                <a rel="nofollow" id="cancel-comment-reply-link" href="#" style="display:none;">لغو پاسخ</a>
+                                            </small>
+                                        </span>
+                                    </div>
+                                    <form action="#" method="post" id="questions-form" class="questions-form">
+                                        <p class="logged-in-as">
+                                            <a href="#">با عنوان محسن وارد شده‌اید</a>.
+                                            <a href="#">خارج می‌شوید؟</a>
+                                        </p>
+                                        <div class="form-group">
+                                            <textarea id="comment" name="comment" class="form-control" cols="45" placeholder="پرسش خود را بنوسید" rows="7" required=""></textarea>
+                                            <input type="hidden" name="comment_type" value="pquestion" id="comment_type">
+                                        </div>
+                                        <p class="form-submit">
+                                            <input name="submit" type="submit" id="submit" class="submit" value="ارسال پرسش"> <input type="hidden" name="comment_post_ID" value="1790">
+                                        </p>
+                                    </form>
+                                </div>
+
+                            </div>*@
+
+
+                        @*<div class="products-Tabs-panel products-Tabs-panel--review_p_tab panel entry-content wc-tab" id="tab-review_p_tab" role="tabpanel">
+                                <div class="tab_content_heading">
+                                    <i class="fal fa-clipboard-list-check"></i>
+                                    <div class="heading_left">
+                                        <span class="tab_h_title">نقد و بررسی</span><span class="tab_h_desc"></span>
+                                    </div>
+                                </div>
+                                <div class="row clear">
+                                    <div class="col-12 col-sm-12 col-md-4">
+                                        <div class="products_review_point good">
+                                            <span class="review_title">نقاط قوت</span>
+                                            <ul>
+                                                <li>همه چیش</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-sm-12 col-md-4">
+                                        <div class="products_review_point bad">
+                                            <span class="review_title">نقاط ضعف</span>
+                                            <ul>
+                                                <li>واقعا هیچی</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-sm-12 col-md-4">
+                                        <div class="products_review_progress clear">
+                                            <p class="progress-label">کیفیت ساخت: <span>8.7</span></p>
+                                            <div class="progress progress-animation progress-xs right"><div class="progress-bar" role="progressbar" data-transitiongoal="87"></div></div>
+                                            <p class="progress-label">طراحی و زیبایی: <span>9.0</span></p>
+                                            <div class="progress progress-animation progress-xs right"><div class="progress-bar" role="progressbar" data-transitiongoal="90"></div></div>
+                                            <p class="progress-label">راحتی استفاده: <span>9.1</span></p>
+                                            <div class="progress progress-animation progress-xs right"><div class="progress-bar" role="progressbar" data-transitiongoal="91"></div></div>
+                                            <p class="progress-label">ارزش خرید: <span>0.0</span></p>
+                                            <div class="progress progress-animation progress-xs right"><div class="progress-bar" role="progressbar" data-transitiongoal="50"></div></div>
                                         </div>
                                     </div>
 
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="products-Tabs-panel products-Tabs-panel--questions panel entry-content wc-tab" id="tab-questions" role="tabpanel" aria-labelledby="tab-title-questions">
-                            <div class="tab_content_heading">
-                                <i class="fal fa-question-square"></i>
-                                <div class="heading_left">
-                                    <span class="tab_h_title">پرسش و پاسخ</span><span class="tab_h_desc"></span>
-                                </div>
-                            </div>
-                            <ul class="questionlist"></ul>
-
-                            <div id="respond" class="comment-respond">
-                                <div class="block-title cm_title title--decor1">
-                                    <span class="title">
-                                        ارسال پرسش <small>
-                                            <a rel="nofollow" id="cancel-comment-reply-link" href="#" style="display:none;">لغو پاسخ</a>
-                                        </small>
-                                    </span>
-                                </div>
-                                <form action="#" method="post" id="questions-form" class="questions-form">
-                                    <p class="logged-in-as">
-                                        <a href="#">با عنوان محسن وارد شده‌اید</a>.
-                                        <a href="#">خارج می‌شوید؟</a>
-                                    </p>
-                                    <div class="form-group">
-                                        <textarea id="comment" name="comment" class="form-control" cols="45" placeholder="پرسش خود را بنوسید" rows="7" required=""></textarea>
-                                        <input type="hidden" name="comment_type" value="pquestion" id="comment_type">
-                                    </div>
-                                    <p class="form-submit">
-                                        <input name="submit" type="submit" id="submit" class="submit" value="ارسال پرسش"> <input type="hidden" name="comment_post_ID" value="1790">
-                                    </p>
-                                </form>
-                            </div>
-
-                        </div>
-
-
-                        <div class="products-Tabs-panel products-Tabs-panel--review_p_tab panel entry-content wc-tab" id="tab-review_p_tab" role="tabpanel">
-                            <div class="tab_content_heading">
-                                <i class="fal fa-clipboard-list-check"></i>
-                                <div class="heading_left">
-                                    <span class="tab_h_title">نقد و بررسی</span><span class="tab_h_desc"></span>
-                                </div>
-                            </div>
-                            <div class="row clear">
-                                <div class="col-12 col-sm-12 col-md-4">
-                                    <div class="products_review_point good">
-                                        <span class="review_title">نقاط قوت</span>
-                                        <ul>
-                                            <li>همه چیش</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-4">
-                                    <div class="products_review_point bad">
-                                        <span class="review_title">نقاط ضعف</span>
-                                        <ul>
-                                            <li>واقعا هیچی</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-4">
-                                    <div class="products_review_progress clear">
-                                        <p class="progress-label">کیفیت ساخت: <span>8.7</span></p>
-                                        <div class="progress progress-animation progress-xs right"><div class="progress-bar" role="progressbar" data-transitiongoal="87"></div></div>
-                                        <p class="progress-label">طراحی و زیبایی: <span>9.0</span></p>
-                                        <div class="progress progress-animation progress-xs right"><div class="progress-bar" role="progressbar" data-transitiongoal="90"></div></div>
-                                        <p class="progress-label">راحتی استفاده: <span>9.1</span></p>
-                                        <div class="progress progress-animation progress-xs right"><div class="progress-bar" role="progressbar" data-transitiongoal="91"></div></div>
-                                        <p class="progress-label">ارزش خرید: <span>0.0</span></p>
-                                        <div class="progress progress-animation progress-xs right"><div class="progress-bar" role="progressbar" data-transitiongoal="50"></div></div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+                            </div>*@
 
                     </div>
 

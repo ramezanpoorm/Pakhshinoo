@@ -1,6 +1,9 @@
 ﻿@page "{id}"
 @model ServiceHost.Pages.ProductCategoryModel
-@*@inject List<_01_PakhshinoQuery.Contract.Brand.BrandQueryModel> brand*@
+@inject _01_PakhshinoQuery.Contract.ProductCategory.IProductCategoryQuery ProductCategory
+@inject _01_PakhshinoQuery.Contract.Brand.IBrandQuery Brand
+@inject _01_PakhshinoQuery.Contract.Car.ICarQuery Car
+@inject _01_PakhshinoQuery.Contract.Company.ICompanyQuery Company
 @{
     ViewData["Title"] = "محصولات";
 }
@@ -19,15 +22,21 @@
                                     <aside class="widget products widget_price_filter">
                                         <div class="widget_title">فیلتر براساس قیمت :</div>
                                         <div class="widget-content">
-                                            <form method="get" action="#">
+                                            <form method="get">
                                                 <div class="price_slider_wrapper">
                                                     <div class="price_slider" style="display:none;"></div>
                                                     <div class="price_slider_amount" data-step="10">
-                                                        <input type="text" id="min_price" name="min_price" value="0" data-min="0" placeholder="حداقل قیمت" />
-                                                        <input type="text" id="max_price" name="max_price" value="1120000" data-max="1120000" placeholder="حداکثر قیمت" />
+                                                        <input type="text" id="min_price" name="startPrice" value="@Model.ProductCategory.StartPrice" data-min="0" placeholder="حداقل قیمت" />
+                                                        <input type="text" id="max_price" name="endPrice" value="@Model.ProductCategory.EndPrice" data-max="1120000" placeholder="حداکثر قیمت" />
+                                                        <input type="hidden" name="brandId" value="@Model.ProductCategory.BrandId" />
+                                                        <input type="hidden" name="carId" value="@Model.ProductCategory.CarId" />
+                                                        <input type="hidden" name="companyId" value="@Model.ProductCategory.CompanyId" />
+                                                        <input type="hidden" name="pageid" value="1" />
                                                         <button type="submit" class="button">فیلتر</button>
+                                                        
                                                         <div class="price_label" style="display:none;">قیمت: <span class="from"></span> &mdash; <span class="to"></span></div>
                                                         <div class="clear"></div>
+                                                        <a asp-page="/AllProduct" asp-route-pageId="1">حذف فیلتر</a>
                                                     </div>
                                                 </div>
                                             </form>
@@ -48,8 +57,32 @@
                                         <div class="widget_title">دسته های محصولات</div>
                                         <div class="widget-content">
                                             <ul class="product-categories">
-                                                @await Component.InvokeAsync("ProductCategoryIn")
+                                                @foreach (var item in ProductCategory.GetProductCategories())
+                                                {
+                                                    <li class="orderby-wrapper @((Model.ProductCategory.Id == item.Id)?"current-cat":"")">
 
+                                                <a asp-route-id="@item.Id" asp-route-pageid="1" asp-route-startPrice="@Model.ProductCategory.StartPrice" asp-route-endPrice="@Model.ProductCategory.EndPrice" asp-route-brandId="@Model.ProductCategory.BrandId" asp-route-carId="@Model.ProductCategory.CarId" asp-route-companyId="@Model.ProductCategory.CompanyId">@item.Name</a>
+                                                    
+                                                    </li>
+                                                }
+                                                @*@await Component.InvokeAsync("ProductCategoryIn")*@
+                                            </ul>
+                                        </div>
+                                    </aside>
+
+                                    <aside class="widget wc_product_categories">
+                                        <div class="widget_title">برند</div>
+                                        <div class="widget-content">
+                                            <ul class="product-categories">
+                                                @foreach (var item in Brand.GetBrand())
+                                                {
+                                                    <li class="orderby-wrapper @((Model.ProductCategory.BrandId == item.Id)?"current-cat":"")">
+
+                                                        <a asp-route-id="@Model.ProductCategory.Id" asp-route-pageid="1" asp-route-brandId="@item.Id" asp-route-startPrice="@Model.ProductCategory.StartPrice" asp-route-endPrice="@Model.ProductCategory.EndPrice" asp-route-carId="@Model.ProductCategory.CarId" asp-route-companyId="@Model.ProductCategory.CompanyId">@item.Name</a>
+
+                                                    </li>
+                                                }
+                                                @*@await Component.InvokeAsync("Brand")*@
                                             </ul>
                                         </div>
                                     </aside>
@@ -58,23 +91,26 @@
                                         <div class="widget_title">کمپانی</div>
                                         <div class="widget-content">
                                             <ul class="product-categories">
-                                                @await Component.InvokeAsync("Company")
+                                                @foreach (var item in Company.GetCompany())
+                                                {
+                                                    <li class="orderby-wrapper @((Model.ProductCategory.CompanyId == item.Id)?"current-cat":"")">
+                                                        <a asp-route-id="@Model.ProductCategory.Id" asp-route-pageid="1" asp-route-brandId="@Model.ProductCategory.BrandId" asp-route-startPrice="@Model.ProductCategory.StartPrice" asp-route-endPrice="@Model.ProductCategory.EndPrice" asp-route-carId="@Model.ProductCategory.CarId" asp-route-companyId="@item.Id">@item.Name</a>
+                                                    </li>
+                                                }
                                             </ul>
                                         </div>
                                     </aside>
-                                    <aside class="widget wc_product_categories">
-                                        <div class="widget_title">برند</div>
-                                        <div class="widget-content">
-                                            <ul class="product-categories">
-                                                @await Component.InvokeAsync("Brand")
-                                            </ul>
-                                        </div>
-                                    </aside>
+
                                     <aside class="widget wc_product_categories">
                                         <div class="widget_title">خودرو</div>
                                         <div class="widget-content">
                                             <ul class="product-categories">
-                                                @await Component.InvokeAsync("Car")
+                                                @foreach (var item in Car.GetCar())
+                                                {
+                                                    <li class="orderby-wrapper @((Model.ProductCategory.CarId == item.Id)?"current-cat":"")">
+                                                        <a asp-route-id="@Model.ProductCategory.Id" asp-route-pageid="1" asp-route-brandId="@Model.ProductCategory.BrandId" asp-route-startPrice="@Model.ProductCategory.StartPrice" asp-route-endPrice="@Model.ProductCategory.EndPrice" asp-route-carId="@item.Id" asp-route-companyId="@Model.ProductCategory.CompanyId">@item.Name</a>
+                                                    </li>
+                                                }
                                             </ul>
                                         </div>
                                     </aside>
@@ -85,6 +121,7 @@
                         <div class="content-wrap col-12 col-sm-12 col-md-12 col-lg-9 content-with-sidebar">
                             <header class="products-products-header block-title">
                                 <h1 class="products-products-header__title page-title title"><i class="small fal fa-poll-h"></i>@Model.ProductCategory.Name</h1>
+                                @*<h1 class="products-products-header__title page-title title"><i class="small fal fa-poll-h"></i>@Model.ProductCategory.Name</h1>*@
                             </header>
 
                             <div class="shop-control-bar clear">
@@ -138,7 +175,7 @@
                                                                 <bdi>@products.Price&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi>
                                                             </span>
                                                         </del>
-                                                        <ins><span class="products-Price-amount amount"><bdi>@products.PriceWithDiscount&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span></ins>
+                                                        <ins><span class="products-Price-amount amount"><bdi>@products.PriceWithDiscountForShow&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span></ins>
                                                     </span>
                                                     <a asp-page="/Product" asp-route-id="@products.Id" rel="bookmark" title="@products.Name">
                                                         <h2 class="products-loop-product__title">@products.Name</h2>
@@ -147,9 +184,12 @@
                                                         <ul class="add-to-links">
                                                             <li><div class="add_to_wishlist_wrap"><a href="#" class="add_to_wishlist archive_add_to_wishlist user_logged" title="افزودن به علاقه مندی ها"></a></div></li>
                                                             <li class="compare-button"><a href="#" class="button compare">مقایسه</a></li>
-                                                            <li><div class="add-to-cart-wrap">
+                                                            <li>
+                                                                <div class="add-to-cart-wrap">
                                                                     <input type="hidden" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="تعداد" size="4" inputmode="numeric" id="productCount" />
-                                                                <a href="#" class="button product_type_variable add_to_cart_button" onclick="addToCart('@products.Id', '@products.Name', '@Convert.ToDouble(products.PriceWithDiscount)', '@products.Picture')">انتخاب گزینه</a></div></li>
+                                                                    <a href="#" class="button product_type_variable add_to_cart_button" onclick="addToCart('@products.Id', '@products.Name', '@products.PriceWithDiscountForCart', '@products.Picture')">انتخاب گزینه</a>
+                                                                </div>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -177,10 +217,12 @@
                                                         <ul class="add-to-links">
                                                             <li><div class="add_to_wishlist_wrap"><a href="#" class="add_to_wishlist archive_add_to_wishlist user_logged" title="افزودن به علاقه مندی ها"></a></div></li>
                                                             <li class="compare-button"><a href="#" class="button compare">مقایسه</a></li>
-                                                            <li><div class="add-to-cart-wrap">
-    <input type="hidden" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="تعداد" size="4" inputmode="numeric" id="productCount" />
-    <a href="#" class="button product_type_variable add_to_cart_button" onclick="addToCart('@products.Id', '@products.Name', '@Convert.ToDouble(products.PriceWithDiscount)', '@products.Picture')">انتخاب گزینه</a>
-</div></li>
+                                                            <li>
+                                                                <div class="add-to-cart-wrap">
+                                                                    <input type="hidden" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="تعداد" size="4" inputmode="numeric" id="productCount" />
+                                                                    <a href="#" class="button product_type_variable add_to_cart_button" onclick="addToCart('@products.Id', '@products.Name', '@products.DoublePrice', '@products.Picture')">انتخاب گزینه</a>
+                                                                </div>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -193,15 +235,23 @@
                             </ul>
                             <nav class="products-pagination">
                                 <ul class="page-numbers">
-                                    <li class="disabled"><a aria-label="Previous" href="#" class="previous page-numbers"><span aria-hidden="true">«</span></a></li>
+                                    <li class="@(Model.ProductCategory.ActivePage == 1 ? "d-none" : "disabled")">
+                                    
+                                    <a aria-label="Previous" asp-page="/ProductCategory" asp-route-id="@Model.ProductCategory.Id" asp-route-pageid=@(Model.ProductCategory.ActivePage - 1) asp-route-brandId="@Model.ProductCategory.BrandId" asp-route-startPrice="@Model.ProductCategory.StartPrice" asp-route-endPrice="@Model.ProductCategory.EndPrice" asp-route-carId="@Model.ProductCategory.CarId" asp-route-companyId="@Model.ProductCategory.CompanyId" class="previous page-numbers"><span aria-hidden="true">«</span>
+                                        </a>
+                                    
+                                    </li>
+
                                     @for (int i = 1; i <= (Model.ProductCategory.PageCount / 40) + 1; i++)
                                     {
-
-                                        <li><a asp-page="/ProductCategory" asp-route-id="@Model.ProductCategory.Id" asp-route-pageid=@i  class="@((Model.ProductCategory.ActivePage == i)?"page-numbers current":"page-numbers") ">@i<span class="sr-only">(current)</span></a></li>
-                                        @*<li class="@(((int)ViewBag.PageID==i)?"active":"")"><a href="/Home/Index?pageid=@i">@i<span class="sr-only">(current)</span></a></li>*@
+                                        <li>                                    
+                                    <a asp-page="/ProductCategory" asp-route-id="@Model.ProductCategory.Id" asp-route-pageid=@i asp-route-brandId="@Model.ProductCategory.BrandId" asp-route-startPrice="@Model.ProductCategory.StartPrice" asp-route-endPrice="@Model.ProductCategory.EndPrice" asp-route-carId="@Model.ProductCategory.CarId" asp-route-companyId="@Model.ProductCategory.CompanyId" class="@((Model.ProductCategory.ActivePage == i)?"page-numbers current":"page-numbers")">@i<span class="sr-only">(current)</span></a>                    
+                                        </li>
                                     }
 
-                                    <li><a aria-label="Next" href="#"><span aria-hidden="true" class="next page-numbers">»</span></a></li>
+                                    <li>
+                                    <a aria-label="Next" asp-page="/ProductCategory" asp-route-id="@Model.ProductCategory.Id" asp-route-pageid=@(Model.ProductCategory.ActivePage + 1) asp-route-brandId="@Model.ProductCategory.BrandId" asp-route-startPrice="@Model.ProductCategory.StartPrice" asp-route-endPrice="@Model.ProductCategory.EndPrice" asp-route-carId="@Model.ProductCategory.CarId" asp-route-companyId="@Model.ProductCategory.CompanyId"><span aria-hidden="true" class="next page-numbers">»</span></a>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>

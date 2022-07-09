@@ -1,0 +1,17 @@
+D:\PakhshinooCore\code\Pakhshinoo\CommentManagement.Domain\bin\Release\net5.0\CommentManagement.Domain.deps.json
+D:\PakhshinooCore\code\Pakhshinoo\CommentManagement.Domain\bin\Release\net5.0\CommentManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\CommentManagement.Domain\bin\Release\net5.0\ref\CommentManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\CommentManagement.Domain\bin\Release\net5.0\CommentManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\CommentManagement.Domain\bin\Release\net5.0\0_Framework.dll
+D:\PakhshinooCore\code\Pakhshinoo\CommentManagement.Domain\bin\Release\net5.0\CommentManagement.Application.Contracts.dll
+D:\PakhshinooCore\code\Pakhshinoo\CommentManagement.Domain\bin\Release\net5.0\0_Framework.pdb
+D:\PakhshinooCore\code\Pakhshinoo\CommentManagement.Domain\bin\Release\net5.0\CommentManagement.Application.Contracts.pdb
+D:\PakhshinooCore\code\Pakhshinoo\CommentManagement.Domain\obj\Release\net5.0\CommentManagement.Domain.csproj.AssemblyReference.cache
+D:\PakhshinooCore\code\Pakhshinoo\CommentManagement.Domain\obj\Release\net5.0\CommentManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\PakhshinooCore\code\Pakhshinoo\CommentManagement.Domain\obj\Release\net5.0\CommentManagement.Domain.AssemblyInfoInputs.cache
+D:\PakhshinooCore\code\Pakhshinoo\CommentManagement.Domain\obj\Release\net5.0\CommentManagement.Domain.AssemblyInfo.cs
+D:\PakhshinooCore\code\Pakhshinoo\CommentManagement.Domain\obj\Release\net5.0\CommentManagement.Domain.csproj.CoreCompileInputs.cache
+D:\PakhshinooCore\code\Pakhshinoo\CommentManagement.Domain\obj\Release\net5.0\CommentManagement.Domain.csproj.CopyComplete
+D:\PakhshinooCore\code\Pakhshinoo\CommentManagement.Domain\obj\Release\net5.0\CommentManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\CommentManagement.Domain\obj\Release\net5.0\ref\CommentManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\CommentManagement.Domain\obj\Release\net5.0\CommentManagement.Domain.pdb

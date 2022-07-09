@@ -59,6 +59,9 @@ namespace DiscountManagement.Infrastructure.EFCore.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("IsSpecial")
+                        .HasColumnType("bit");
+
                     b.Property<long>("ProductId")
                         .HasColumnType("bigint");
 

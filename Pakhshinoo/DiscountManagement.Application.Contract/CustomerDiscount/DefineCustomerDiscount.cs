@@ -19,5 +19,6 @@ namespace DiscountManagement.Application.Contract.CustomerDiscount
         public string EndDate { get; set; }
         public string Reason { get; set; }
         public List<ProductViewModel> Products { get; set; }
+        public bool IsSpecial { get; set; }
     }
 }
