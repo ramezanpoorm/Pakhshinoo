@@ -48,11 +48,11 @@ function updateCart() {
 			<a href="#">${x.name}</a>
 			<div class="mini_cart_quantity_price_row">
 				<div class="price">
-		<span class="products-Price-amount amount"><bdi>&nbsp;<span class="products-Price-currencySymbol">تومان ${x.unitPrice}</span></bdi></span>
+		<span class="products-Price-amount amount"><bdi>&nbsp;<span class="products-Price-currencySymbol">تومان ${x.unitPrice * x.count}</span></bdi></span>
 				</div>
 		<div class="quantity">
 			<label class="screen-reader-text">${x.name}</label>
-		<input type="number" class="input-text qty text" step="1" min="1" max="" value="${x.count}" title="تعداد" size="4" placeholder="" inputmode="numeric">
+		<input type="number" class="input-text qty text" step="1" min="1" max="" value="${x.count}" title="تعداد" size="4" placeholder="" inputmode="text">
 			<div class="plus-minus">
 				<div class="increase elm_qty fal fa-plus"></div>
 				<div class="reduced elm_qty fal fa-minus"></div>
@@ -83,10 +83,13 @@ function changeCartItemCount(id, totalId, count) {
     const product = products[productIndex];
     const newPrice = parseInt(product.unitPrice) * parseInt(count);
     jQuery(`#${totalId}`).text(newPrice);
+
+    //jQuery(`#${totalJoz}`).text(total);
+    //jQuery(`#${totalJozSum}`).text(total);
     //products[productIndex].totalPrice = newPrice;
     jQuery.cookie(cookieName, JSON.stringify(products), { expires: 2, path: "/" });
     updateCart();
-
+    location.reload();
     //const data = {
     //    'productId': parseInt(id),
     //    'count': parseInt(count)

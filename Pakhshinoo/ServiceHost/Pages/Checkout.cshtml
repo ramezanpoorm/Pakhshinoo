@@ -1,0 +1,242 @@
+﻿@page
+@using _0_Framework.Application
+@model ServiceHost.Pages.CheckoutModel
+@{
+    ViewData["Title"] = "تکمیل فرایند خرید";
+}
+
+<div class="main-site-wrap">
+    <div class="mweb-site-mask"></div>
+    <div class="site-wrap-outer clear">
+
+        <div class="container-wrap page-shopping-cart">
+            <div class="container">
+                <div class="order-steps">
+                    <div class="checkout-breadcrumb">
+                        <div class="title-cart">
+                            <i class="fal fa-bags-shopping"></i>
+                            <a href="#">
+                                <h4>سبد خرید</h4>
+                            </a>
+                        </div>
+                        <div class="title-checkout">
+                            <i class="fal fa-file-invoice"></i>
+                            <a href="#">
+                                <h4 style="opacity:1;">جزئیات پرداخت</h4>
+                            </a>
+                        </div>
+                        <div class="title-thankyou">
+                            <i class="fal fa-receipt"></i>
+                            <h4>تکمیل سفارش</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div id="content" class="wc_page_body mweb_checkout_page">
+                    <div class="products">
+                        <div class="products-notices-wrapper"></div><div class="products-form-coupon-toggle">
+
+                            <div class="products-info">ارسال مرسوله برای بار اول رایگان</div>
+                        </div>
+
+
+                        <div class="products-notices-wrapper"></div>
+                        <form name="checkout" method="post" class="checkout products-checkout" action="#" enctype="multipart/form-data" novalidate="novalidate">
+                            <div class="products-NoticeGroup products-NoticeGroup-checkout">
+                                <ul class="products-error" role="alert">
+                                    <li><strong>نام صورتحساب</strong> یک فیلد الزامی است.</li>
+                                    <li><strong>نام خانوادگی صورتحساب</strong> یک فیلد الزامی است.</li>
+                                    <li><strong>استان صورتحساب</strong> یک فیلد الزامی است.</li>
+                                    <li><strong>شهر صورتحساب</strong> یک فیلد الزامی است.</li>
+                                    <li><strong>آدرس خیابان صورتحساب</strong> یک فیلد الزامی است.</li>
+                                    <li><strong>کدپستی (بدون فاصله و با اعداد انگلیسی) صورتحساب</strong> یک فیلد الزامی است.</li>
+                                    <li>لطفا یک آدرس حمل و نقل وارد نمائید.</li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-6">
+                                    <div class="col2-set" id="customer_details">
+                                        <div class="products-billing-fields">
+                                            <h3>صورت حساب و حمل و نقل</h3>
+                                            <div class="products-billing-fields__field-wrapper">
+                                                <p class="form-row form-row-first validate-required products-validated" data-priority="10">
+                                                    <label>نام&nbsp;<abbr class="required" title="ضروری">*</abbr></label>
+                                                    <span class="products-input-wrapper"><input type="text" class="input-text" name="first_name" placeholder="" value="" autocomplete="" /></span>
+                                                </p>
+                                                <p class="form-row form-row-last validate-required products-invalid" data-priority="20">
+                                                    <label class="">نام خانوادگی&nbsp;<abbr class="required" title="ضروری">*</abbr></label>
+                                                    <span class="products-input-wrapper"><input type="text" class="input-text" name="last_name" placeholder="" value="" autocomplete="" /></span>
+                                                </p>
+                                                <p class="form-row form-row-wide" data-priority="30">
+                                                    <label>نام شرکت&nbsp;<span class="optional">(اختیاری)</span></label>
+                                                    <span class="products-input-wrapper"><input type="text" class="input-text" name="company" placeholder="" value="" autocomplete="" /></span>
+                                                </p>
+                                                <p class="form-row country_field validate-required">
+                                                    <label>کشور / منطقه<abbr class="required" title="ضروری">*</abbr></label>
+                                                    <span class="products-input-wrapper">
+                                                        <input type="text" class="input-text" name="country" readonly="readonly" placeholder="" value="ایران" autocomplete="" />
+                                                    </span>
+                                                </p>
+                                                <p class="form-row country_field validate-required ir-select">
+                                                    <label>استان <abbr class="required" title="ضروری">*</abbr></label>
+                                                    <select class="ir-province"></select>
+                                                    <label>شهر <abbr class="required" title="ضروری">*</abbr></label>
+                                                    <select class="ir-city"></select>
+                                                </p>
+
+                                                <p class="form-row address-field validate-required" data-priority="300">
+                                                    <label>آدرس&nbsp;<abbr class="required" title="ضروری">*</abbr></label>
+                                                    <span class="products-input-wrapper"><input type="text" class="input-text" name="address" placeholder="از نقشه کمک بگیرید یا آدرس کامل خود را وارد نمایید" value="" autocomplete="" /></span>
+                                                </p>
+
+                                                <p class="form-row address-field validate-required validate-postcode" data-priority="90">
+                                                    <label>کدپستی (بدون فاصله و با اعداد انگلیسی)&nbsp;<abbr class="required" title="ضروری">*</abbr></label>
+                                                    <span class="products-input-wrapper"><input type="text" class="input-text" name="postcode" placeholder="" value="" autocomplete="" /></span>
+                                                </p>
+                                                <p class="form-row form-row-wide validate-required" data-priority="100">
+                                                    <label>تلفن&nbsp;<abbr class="required" title="ضروری">*</abbr></label>
+                                                    <span class="products-input-wrapper"><input type="tel" class="input-text" name="phone" placeholder="" value="" autocomplete="tel" /></span>
+                                                </p>
+                                                <p class="form-row form-row-wide validate-required" data-priority="110">
+                                                    <label>آدرس ایمیل&nbsp;<abbr class="required" title="ضروری">*</abbr></label>
+                                                    <span class="products-input-wrapper"><input type="email" class="input-text" name="email" placeholder="" value="" autocomplete="" /></span>
+                                                </p>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="products-shipping-fields"></div>
+                                        <div class="products-additional-fields">
+                                            <h3>اطلاعات بیشتر</h3>
+                                            <div class="products-additional-fields__field-wrapper">
+                                                <p class="form-row notes">
+                                                    <label>توضیحات سفارش&nbsp;<span class="optional">(اختیاری)</span></label>
+                                                    <span class="products-input-wrapper"><textarea name="order_comments" class="input-text " placeholder="یادداشت‌ها درباره سفارش شما، برای مثال نکات مهم درباره نحوه تحویل سفارش" rows="2" cols="5"></textarea></span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 left">
+                                    <h3 id="order_review_heading">سفارش شما</h3>
+                                    <div id="order_review" class="products-checkout-review-order">
+                                        <table class="shop_table products-checkout-review-order-table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="product-name">محصول</th>
+                                                    <th class="product-name">قیمت واحد</th>
+                                                    <th class="product-total">درصد تخفیف</th>
+                                                    <th class="product-total">مبلغ تخفیف</th>
+                                                    <th class="product-total">جمع جزء</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.Cart.Items)
+                                                {
+                                                    <tr class="cart_item">
+                                                        <td class="product-name">@item.Name&nbsp;<strong class="product-quantity">×&nbsp;@item.Count</strong></td>
+                                                        <td class="product-total">
+                                                            <span class="products-Price-amount amount">
+                                                                <bdi>@item.UnitPrice.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi>
+                                                            </span>
+                                                        </td>
+                                                        <td class="product-total">
+                                                            <span class="products-Price-amount amount">
+                                                                <bdi>@item.DiscountRate&nbsp;<span class="products-Price-currencySymbol">%</span></bdi>
+                                                            </span>
+                                                        </td>
+                                                        <td class="product-total">
+                                                            <span class="products-Price-amount amount">
+                                                                <bdi>@item.DiscountAmount.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi>
+                                                            </span>
+                                                        </td>
+                                                        <td class="product-total">
+                                                            <span class="products-Price-amount amount">
+                                                                <bdi>@item.TotalItemPrice.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                            <tfoot>
+                                                @*<tr class="cart-subtotal">
+                                                        <th>جمع جزء</th>
+                                                        <td><span class="products-Price-amount amount"><bdi>1,120,000&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span></td>
+                                                    </tr>*@
+
+
+
+                                                <tr class="order-total">
+                                                    <th>مبلغ نهایی</th>
+                                                    <td>
+                                                        <strong><span class="products-Price-amount amount"><bdi>@Model.Cart.TotalAmount.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span></strong>
+                                                    </td>
+                                                </tr>
+                                                <tr class="order-total">
+                                                    <th>جمع تخفیف</th>
+                                                    <td>
+                                                        <strong><span class="products-Price-amount amount"><bdi>@Model.Cart.DiscountAmount.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span></strong>
+                                                    </td>
+                                                </tr>
+                                                <tr class="order-total">
+                                                    <th>مبلغ قابل پرداخت</th>
+                                                    <td>
+                                                        <strong><span class="products-Price-amount amount"><bdi>@Model.Cart.PayAmount.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span></strong>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+
+                                        <p class="form-row form-row-wide mweb-hidden">
+                                            <label>تاریخ تحویل&nbsp;<span class="optional">(اختیاری)</span></label>
+                                            <span class="products-input-wrapper"><input type="text" class="input-text " name="order_preparation_time" placeholder="" value=""></span>
+                                        </p>
+                                        <div class="order_dtime_list">
+                                            <h3 class="order_dtime_title"><i class="fal fa-shipping-timed"></i> زمان ارسال این مرسوله را انتخاب نمائید</h3>
+                                            <p class="order_dtime_desc">زمان تقریبی تحویل طبق بازه انتخابی در هنگام ثبت سفارشات</p>
+                                            <div class="order_dtime_i is_today">
+                                                <div class="order_dtime_idate"><span>دوشنبه</span>12 مهر ماه</div>
+                                                <div class="order_dtime_itime"><input type="radio" name="delivery_times" value=""><label>ساعت 8 - 24</label></div>
+                                                <div class="order_dtime_idate"><span>سه شنبه</span>13 مهر ماه</div>
+                                                <div class="order_dtime_itime"><input type="radio" name="delivery_times" value=""><label>ساعت 8 - 24</label></div>
+                                            </div>
+                                        </div>
+
+                                        <div id="payment" class="products-checkout-payment">
+                                            <ul class="payment_methods methods">
+                                                <li class="payment_method_cheque">
+                                                    <input type="radio" class="input-radio" name="payment_method" value="cheque" checked="">
+                                                    <label for="payment_method_cheque">پرداخت آنلاین با درگاه بانک های شتاب</label>
+                                                    <div class="payment_box payment_method_cheque">
+                                                        <p>پس از پرداخت آنلاین سفارش شما ثبت میگردد</p>
+                                                    </div>
+                                                </li>
+                                                <li class="payment_method_cod">
+                                                    <input type="radio" class="input-radio" name="payment_method" value="cheque" checked="">
+                                                    <label for="payment_method_cod">پرداخت هنگام دریافت</label>
+                                                    <div class="payment_box payment_method_cod">
+                                                        <p>پرداخت نقدی پس از تحویل .</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="form-row place-order">
+                                                <button id="place_order" class="place_order_button" type="submit" class="button alt" name="products_checkout_place_order" value="ثبت سفارش">ثبت سفارش</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

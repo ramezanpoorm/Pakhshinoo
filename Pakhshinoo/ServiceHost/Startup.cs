@@ -1,5 +1,6 @@
 using _0_Framework.Application;
 using _0_Framework.Infrastructure;
+using _01_PakhshinoQuery.Contract;
 using _01_PakhshinoQuery.Contract.Brand;
 using _01_PakhshinoQuery.Query;
 using AccountManagement.Configuration;

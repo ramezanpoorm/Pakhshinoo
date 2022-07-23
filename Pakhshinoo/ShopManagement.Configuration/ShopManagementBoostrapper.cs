@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Infrastructure;
+using _01_PakhshinoQuery.Contract;
 using _01_PakhshinoQuery.Contract.Brand;
 using _01_PakhshinoQuery.Contract.Car;
 using _01_PakhshinoQuery.Contract.Company;
@@ -12,6 +13,7 @@ using ShopManagement.Application;
 using ShopManagement.Application.Contracts.Brand;
 using ShopManagement.Application.Contracts.Car;
 using ShopManagement.Application.Contracts.Company;
+using ShopManagement.Application.Contracts.Order;
 using ShopManagement.Application.Contracts.Product;
 using ShopManagement.Application.Contracts.ProductCategory;
 using ShopManagement.Application.Contracts.ProductPicture;
@@ -65,6 +67,8 @@ namespace ShopManagement.Configuration
             service.AddTransient<IBrandQuery, BrandQuery>();
             service.AddTransient<ICarQuery, CarQuery>();
             service.AddTransient<ICompanyQuery, CompanyQuery>();
+            service.AddTransient<ICartCalculatorService, CartCalculatorService>();
+            service.AddTransient<ICartService, CartService>();
 
             service.AddTransient<IPermissionExposer, ShopPermissionExposer>();
 

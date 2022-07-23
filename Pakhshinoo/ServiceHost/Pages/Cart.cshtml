@@ -31,8 +31,10 @@
                         <div class="products-notices-wrapper"></div>
                         <div class="row">
                             <div class="col-12 col-sm-12 col-lg-9">
-                                @*<form class="products-cart-form clear" action="#" method="post">*@
-
+                                @foreach (var items in Model.CartItemsForInventory.Where(x => !x.IsInStock))
+                                {
+                                    <div class="alert alert-danger">کالای @items.Name در انبار کمتر از تعداد درخواستی موجود است!</div>    
+                                }
                                     <table class="shop_table shop_table_responsive cart products-cart-form__contents" cellspacing="0">
                                         <thead>
                                             <tr>
@@ -68,7 +70,7 @@
                                                     <td class="product-quantity" data-title="تعداد">
                                                         <div class="quantity">
                                                             <label class="screen-reader-text">@item.Name</label>
-                                                            <input type="number" class="input-text qty text" step="1" min="0" max="" value="@item.Count" title="تعداد" size="4" placeholder="" inputmode="numeric">
+                                                            <input type="number" class="input-text qty text" step="1" min="0" max="" value="@item.Count" title="تعداد" size="4" placeholder="" inputmode="numeric" onchange="changeCartItemCount('@item.Id', 'totalItemPrice-@item.Id', this.value)">
                                                             <div class="plus-minus">
                                                                 <div class="increase elm_qty fal fa-plus"></div>
                                                                 <div class="reduced elm_qty fal fa-minus"></div>
@@ -77,12 +79,12 @@
                                                     </td>
 
                                                     <td class="product-subtotal">
-                                                        <span class="products-Price-amount amount"><bdi>@item.TotalItemPrice.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span>
+                                                        <span class="products-Price-amount amount" id="totalItemPrice-@item.Id"><bdi>@item.TotalItemPrice.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span>
                                                     </td>
 
                                                 </tr>
 
-                                                total = item.TotalItemPrice + total;
+                                                //total = (item.TotalItemPrice * item.Count) + total;
          }
 
 
@@ -99,8 +101,6 @@
                                         <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="کد تخفیف">
                                         <button type="submit" class="button" name="apply_coupon" value="اعمال کدتخفیف">اعمال کدتخفیف</button>
                                     </div>
-                                @*</form>*@
-
 
                             </div>
 
@@ -113,17 +113,17 @@
                                                 <tbody>
                                                     <tr class="cart-subtotal">
                                                         <th>جمع جزء</th>
-                                                        <td><span class="products-Price-amount amount"><bdi>@total.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span></td>
+                                                        <td><span class="products-Price-amount amount" id="totalJoz"><bdi>@Model.Cart.TotalAmount.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span></td>
                                                     </tr>
                                                     <tr class="order-total">
                                                         <th>مجموع</th>
-                                                        <td><strong><span class="products-Price-amount amount"><bdi>@total.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span></strong> </td>
+                                                        <td><strong><span class="products-Price-amount amount" id="totalJozSum"><bdi>@Model.Cart.PayAmount.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span></strong> </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                             <div class="wc-proceed-to-checkout">
-                                                <a href="#" class="checkout-button button alt wc-forward">
-                                                    ادامه جهت تسویه حساب
+                                                <a asp-page-handler="GoToCheckOut" class="checkout-button button alt wc-forward">
+                                                    تکمیل فرایند خرید
                                                 </a>
                                             </div>
                                         </div>
