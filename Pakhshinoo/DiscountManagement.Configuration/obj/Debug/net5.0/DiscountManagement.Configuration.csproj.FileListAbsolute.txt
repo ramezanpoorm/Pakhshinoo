@@ -27,3 +27,9 @@ D:\PakhshinooCore\code\Pakhshinoo\DiscountManagement.Configuration\obj\Debug\net
 D:\PakhshinooCore\code\Pakhshinoo\DiscountManagement.Configuration\obj\Debug\net5.0\DiscountManagement.Configuration.dll
 D:\PakhshinooCore\code\Pakhshinoo\DiscountManagement.Configuration\obj\Debug\net5.0\ref\DiscountManagement.Configuration.dll
 D:\PakhshinooCore\code\Pakhshinoo\DiscountManagement.Configuration\obj\Debug\net5.0\DiscountManagement.Configuration.pdb
+D:\PakhshinooCore\code\Pakhshinoo\DiscountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\DiscountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\DiscountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\DiscountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contract.pdb
+D:\PakhshinooCore\code\Pakhshinoo\DiscountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\DiscountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb

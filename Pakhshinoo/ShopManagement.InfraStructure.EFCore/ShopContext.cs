@@ -4,6 +4,7 @@ using ShopManagement.Domain.CarAgg;
 using ShopManagement.Domain.CarProductAgg;
 using ShopManagement.Domain.CompanyAgg;
 using ShopManagement.Domain.CompanyProductAgg;
+using ShopManagement.Domain.OrderAgg;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManagement.Domain.ProductPictureAgg;
@@ -23,7 +24,7 @@ namespace ShopManagement.InfraStructure.EFCore
         public DbSet<Company> Companies { get; set; }
         public DbSet<CompanyProduct> CompanyProducts { get; set; }
         public DbSet<CarProduct> CarProducts { get; set; }
-
+        public DbSet<Order> Orders { get; set; }
         public ShopContext(DbContextOptions<ShopContext> options):base(options)
         {
 

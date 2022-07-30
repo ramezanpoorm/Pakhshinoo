@@ -26,3 +26,9 @@ D:\PakhshinooCore\code\Pakhshinoo\InventoryMangement.InfraStructure.EFCore\obj\D
 D:\PakhshinooCore\code\Pakhshinoo\InventoryMangement.InfraStructure.EFCore\obj\Debug\net5.0\ref\InventoryMangement.InfraStructure.EFCore.dll
 D:\PakhshinooCore\code\Pakhshinoo\InventoryMangement.InfraStructure.EFCore\obj\Debug\net5.0\InventoryMangement.InfraStructure.EFCore.pdb
 D:\PakhshinooCore\code\Pakhshinoo\InventoryMangement.InfraStructure.EFCore\obj\Debug\net5.0\InventoryMangement.InfraStructure.EFCore.genruntimeconfig.cache
+D:\PakhshinooCore\code\Pakhshinoo\InventoryMangement.InfraStructure.EFCore\bin\Debug\net5.0\AccountManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\InventoryMangement.InfraStructure.EFCore\bin\Debug\net5.0\AccountManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\InventoryMangement.InfraStructure.EFCore\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\InventoryMangement.InfraStructure.EFCore\bin\Debug\net5.0\AccountManagement.Application.Contract.pdb
+D:\PakhshinooCore\code\Pakhshinoo\InventoryMangement.InfraStructure.EFCore\bin\Debug\net5.0\AccountManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\InventoryMangement.InfraStructure.EFCore\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb

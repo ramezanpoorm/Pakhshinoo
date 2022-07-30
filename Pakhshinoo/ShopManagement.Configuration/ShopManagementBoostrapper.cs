@@ -22,10 +22,13 @@ using ShopManagement.Configuration.Permissions;
 using ShopManagement.Domain.BrandAgg;
 using ShopManagement.Domain.CarAgg;
 using ShopManagement.Domain.CompanyAgg;
+using ShopManagement.Domain.OrderAgg;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManagement.Domain.ProductPictureAgg;
+using ShopManagement.Domain.Services;
 using ShopManagement.Domain.SliderAgg;
+using ShopManagement.Infrastructure.InventoryAcl;
 using ShopManagement.InfraStructure.EFCore;
 using ShopManagement.InfraStructure.EFCore.Repository;
 using System;
@@ -52,6 +55,9 @@ namespace ShopManagement.Configuration
             service.AddTransient<ISlideApplication, SlideApplication>();
             service.AddTransient<ISlideRepository, SlideRepository>();
 
+            service.AddTransient<IOrderApplication, OrderApplication>();
+            service.AddTransient<IOrderRepository, OrderRepository>();
+
             service.AddTransient<ICarApplication, CarApplication>();
             service.AddTransient<ICarRepository, CarRepository>();
 
@@ -68,9 +74,10 @@ namespace ShopManagement.Configuration
             service.AddTransient<ICarQuery, CarQuery>();
             service.AddTransient<ICompanyQuery, CompanyQuery>();
             service.AddTransient<ICartCalculatorService, CartCalculatorService>();
-            service.AddTransient<ICartService, CartService>();
+            service.AddSingleton<ICartService, CartService>();
 
             service.AddTransient<IPermissionExposer, ShopPermissionExposer>();
+            service.AddTransient<IShopInventoryAcl, ShopInventoryAcl>();
 
             service.AddDbContext<ShopContext>(x => x.UseSqlServer(connectionString));
         }

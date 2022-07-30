@@ -1,5 +1,6 @@
 ﻿@page
 @using _0_Framework.Application
+@using ShopManagement.Application.Contracts
 @model ServiceHost.Pages.CheckoutModel
 @{
     ViewData["Title"] = "تکمیل فرایند خرید";
@@ -42,7 +43,7 @@
 
 
                         <div class="products-notices-wrapper"></div>
-                        <form name="checkout" method="post" class="checkout products-checkout" action="#" enctype="multipart/form-data" novalidate="novalidate">
+                        <form name="checkout" method="post" class="checkout products-checkout">
                             <div class="products-NoticeGroup products-NoticeGroup-checkout">
                                 <ul class="products-error" role="alert">
                                     <li><strong>نام صورتحساب</strong> یک فیلد الزامی است.</li>
@@ -207,23 +208,19 @@
 
                                         <div id="payment" class="products-checkout-payment">
                                             <ul class="payment_methods methods">
-                                                <li class="payment_method_cheque">
-                                                    <input type="radio" class="input-radio" name="payment_method" value="cheque" checked="">
-                                                    <label for="payment_method_cheque">پرداخت آنلاین با درگاه بانک های شتاب</label>
-                                                    <div class="payment_box payment_method_cheque">
-                                                        <p>پس از پرداخت آنلاین سفارش شما ثبت میگردد</p>
-                                                    </div>
-                                                </li>
-                                                <li class="payment_method_cod">
-                                                    <input type="radio" class="input-radio" name="payment_method" value="cheque" checked="">
-                                                    <label for="payment_method_cod">پرداخت هنگام دریافت</label>
-                                                    <div class="payment_box payment_method_cod">
-                                                        <p>پرداخت نقدی پس از تحویل .</p>
-                                                    </div>
-                                                </li>
+                                                @foreach (var method in PaymentMethod.GetList())
+                                                {
+                                                    <li class="payment_method_cheque">
+                                                        <input id="payment_@method.Id" type="radio" class="input-radio" name="paymentmethod" value="@method.Id" @(PaymentMethod.GetList().First().Id == method.Id ? "checked" : "")>
+                                                        <label for="payment_@method.Id">@method.Name</label>
+                                                        <div class="payment_box payment_method_cheque">
+                                                            <p>@method.Description</p>
+                                                        </div>
+                                                    </li>
+                                                }                                                
                                             </ul>
                                             <div class="form-row place-order">
-                                                <button id="place_order" class="place_order_button" type="submit" class="button alt" name="products_checkout_place_order" value="ثبت سفارش">ثبت سفارش</button>
+                                                <button asp-page-handler="Pay" id="place_order" class="place_order_button" class="button alt" name="products_checkout_place_order" value="ثبت سفارش">ثبت سفارش</button>
                                             </div>
                                         </div>
 

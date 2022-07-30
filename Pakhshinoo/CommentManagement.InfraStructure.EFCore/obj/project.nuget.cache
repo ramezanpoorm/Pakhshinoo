@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "avve02EUMe6T7E79bnhQrdFWmIrzqMZOdnarU1cYslxxVJOhrbh9JBWxh2GJUz7NkjTqxJMU2xgjanjWvd/Zew==",
+  "dgSpecHash": "lzb0opVp2yfVg5H3JcTwwFNxKp6EzN054YmuRqJb72pXGWrkTP5BozKfg3gIJI1i04M9c4mu5sKFKMyABAAeyg==",
   "success": true,
   "projectFilePath": "D:\\PakhshinooCore\\code\\Pakhshinoo\\CommentManagement.InfraStructure.EFCore\\CommentManagement.InfraStructure.EFCore.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,7 @@
     "C:\\Users\\Maysam\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Maysam\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Maysam\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Maysam\\.nuget\\packages\\restsharp\\106.11.4\\restsharp.106.11.4.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

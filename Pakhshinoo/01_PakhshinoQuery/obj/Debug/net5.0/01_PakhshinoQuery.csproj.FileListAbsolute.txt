@@ -43,3 +43,9 @@ D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\CommentMana
 D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\CommentManagement.InfraStructure.EFCore.pdb
 D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\CommentManagement.Application.Contracts.pdb
 D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\CommentManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\AccountManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\AccountManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\AccountManagement.Application.Contract.pdb
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\AccountManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\01_PakhshinoQuery\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb

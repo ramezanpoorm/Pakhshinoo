@@ -1,4 +1,5 @@
 using _0_Framework.Application;
+using _0_Framework.Application.ZarinPal;
 using _0_Framework.Infrastructure;
 using _01_PakhshinoQuery.Contract;
 using _01_PakhshinoQuery.Contract.Brand;
@@ -44,6 +45,7 @@ namespace ServiceHost
             services.AddSingleton<IPasswordHasher, PasswordHasher>();
             services.AddTransient<IFileUploader, FileUploader>();
             services.AddTransient<IAuthHelper, AuthHelper>();
+            services.AddTransient<IZarinPalFactory, ZarinPalFactory>();
             //services.AddTransient<IBrandQuery, BrandQuery>();
 
             services.Configure<CookiePolicyOptions>(options =>

@@ -289,3 +289,9 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\CommentManagement
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\CommentManagement.Domain.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\CommentManagement.InfraStructure.EFCore.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Pages\Checkout.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\RestSharp.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Pages\PaymentResult.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\ShopManagement.Infrastructure.InventoryAcl.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\ShopManagement.Infrastructure.InventoryAcl.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Orders\Index.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Orders\Items.cshtml.g.cs
