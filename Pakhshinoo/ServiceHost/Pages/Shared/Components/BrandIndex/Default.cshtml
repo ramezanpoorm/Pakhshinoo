@@ -1,0 +1,52 @@
+﻿@model List<_01_PakhshinoQuery.Contract.Brand.BrandQueryModel>
+
+<section class="elementor-section elementor-top-section elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+    <div class="elementor-container elementor-column-gap-narrow">
+        <div class="elementor-row">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element">
+                <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                        <div class="elementor-element swiper-slider-nav-both elementor-widget elementor-widget-block-brand-slider">
+                            <div class="elementor-widget-container">
+                                <div class="mweb-block-wrap">
+                                    <div class="block-title">
+                                        <div class="title"><i class="fal fa-flute"></i>برخی از برندها</div>
+                                    </div>
+                                    <div class="block-content-wrap">
+                                        <div class="block-content-inner clear mweb-swiper">
+                                            <div class="swiper-slider swiper-container" dir="rtl"
+                                                 data-slider='{"slidesPerView":1,"spaceBetween":15,"watchSlidesVisibility":true,"loop":true,"autoplay":true,"touchMoveStopPropagation":true,"pagination":{"el":".mweb-swiper-pagination","clickable":true},"navigation":{"nextEl":".mweb-swiper-next","prevEl":".mweb-swiper-prev"},"breakpoints":{"575":{"slidesPerView":1},"768":{"slidesPerView":2},"1024":{"slidesPerView":7}}}'>
+                                                <div class="swiper-wrapper">
+                                                    @foreach (var item in Model)
+                                                    {
+                                                    <div class="swiper-slide">
+                                                        <div class="item support_info">
+                                                            <a href="@item.Url" target="_blank" title="">
+                                                                <div class="is-image">
+                                                                    <a target="_blank" href="@item.Url" title="@item.Name">
+                                                                        <img width="162" height="78" src="~/ProductPictures/@item.Picture" class="attachment-brand size-brand" alt="" />
+                                                                    </a>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    }
+                                                </div>
+                                                <div class="mweb-swiper-next"><i class="fal fa-angle-right"></i></div>
+                                                <div class="mweb-swiper-prev"><i class="fal fa-angle-left"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

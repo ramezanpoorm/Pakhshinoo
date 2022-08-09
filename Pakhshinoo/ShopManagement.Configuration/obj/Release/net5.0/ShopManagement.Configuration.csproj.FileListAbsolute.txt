@@ -50,3 +50,11 @@ D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.
 D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\CommentManagement.Application.Contracts.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\CommentManagement.Domain.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\CommentManagement.InfraStructure.EFCore.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\AccountManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\AccountManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\AccountManagement.Infrastructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\ShopManagement.Infrastructure.InventoryAcl.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\ShopManagement.Infrastructure.InventoryAcl.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\AccountManagement.Application.Contract.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\AccountManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.Configuration\bin\Release\net5.0\AccountManagement.Infrastructure.EFCore.pdb

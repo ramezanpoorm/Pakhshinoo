@@ -69,14 +69,39 @@ namespace ShopManagement.Application
             return _productRepository.GetProducts();
         }
 
+        public void IncVisit(long id)
+        {
+            var operation = new OpretaionResult();
+            var product = _productRepository.Get(id);
+            //if (product == null)
+            //    return operation.Failed(ApplicationMessages.RecordNotFound);
+            
+            product.VisitIncrease();
+            _productRepository.SaveChanges();
+            //return operation.Successeded();
+        }
+
         public OpretaionResult NotSpecial(long id)
         {
             var operation = new OpretaionResult();
-            var productPicture = _productRepository.Get(id);
-            if (productPicture == null)
+            var product = _productRepository.Get(id);
+            if (product == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            productPicture.NotSpecial();
+            product.NotSpecial();
+            _productRepository.SaveChanges();
+            return operation.Successeded();
+        }
+
+        public OpretaionResult NotSpecialAll()
+        {
+            var operation = new OpretaionResult();
+            var product = _productRepository.GetProducts();
+            foreach (var item in product)
+            {
+                item.IsSpecial = false;
+            }
+            
             _productRepository.SaveChanges();
             return operation.Successeded();
         }
@@ -89,11 +114,11 @@ namespace ShopManagement.Application
         public OpretaionResult Special(long id)
         {
             var operation = new OpretaionResult();
-            var productPicture = _productRepository.Get(id);
-            if (productPicture == null)
+            var product = _productRepository.Get(id);
+            if (product == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            productPicture.Special();
+            product.Special();
             _productRepository.SaveChanges();
             return operation.Successeded();
         }

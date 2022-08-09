@@ -19,7 +19,9 @@ namespace ShopManagement.InfraStructure.EFCore.Repository
             return _shopContext.Brands.Select(x => new BrandViewModel
             {
                 Id = x.Id,
-                Name = x.Name
+                Name = x.Name,
+                Picture = x.Picture,
+                Url = x.Url
             }).ToList();
         }
 
@@ -30,6 +32,7 @@ namespace ShopManagement.InfraStructure.EFCore.Repository
                 Id = x.Id,
                 Description = x.Description,
                 Name = x.Name,
+                Url=x.Url
             }).FirstOrDefault(x => x.Id == id);
         }
 
@@ -43,7 +46,9 @@ namespace ShopManagement.InfraStructure.EFCore.Repository
             var query = _shopContext.Brands.Select(x => new BrandViewModel
             {
                 Id = x.Id,
-                Name = x.Name
+                Name = x.Name,
+                Picture = x.Picture,
+                Url = x.Url
             });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))

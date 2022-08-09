@@ -20,3 +20,9 @@ D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.InfraStructure.EFCore\obj\Relea
 D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.InfraStructure.EFCore\obj\Release\net5.0\ref\ShopManagement.InfraStructure.EFCore.dll
 D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.InfraStructure.EFCore\obj\Release\net5.0\ShopManagement.InfraStructure.EFCore.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.InfraStructure.EFCore\obj\Release\net5.0\ShopManagement.InfraStructure.EFCore.genruntimeconfig.cache
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.InfraStructure.EFCore\bin\Release\net5.0\AccountManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.InfraStructure.EFCore\bin\Release\net5.0\AccountManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.InfraStructure.EFCore\bin\Release\net5.0\AccountManagement.Infrastructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.InfraStructure.EFCore\bin\Release\net5.0\AccountManagement.Infrastructure.EFCore.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.InfraStructure.EFCore\bin\Release\net5.0\AccountManagement.Application.Contract.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ShopManagement.InfraStructure.EFCore\bin\Release\net5.0\AccountManagement.Domain.pdb

@@ -23,6 +23,24 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="Picture" class="control-label">عکس</label>
+                    <input type="file" class="form-control" asp-for="Picture" accept="image/*">
+                    <span asp-validation-for="Picture" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="Url" class="control-label">عنوان</label>
+                    <input type="text" class="form-control" asp-for="Url">
+                    <span asp-validation-for="Url" class="error"></span>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>

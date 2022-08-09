@@ -1,9 +1,5 @@
 ﻿using _0_Framework.Application;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShopManagement.Application.Contracts.Product
 {
@@ -16,5 +12,7 @@ namespace ShopManagement.Application.Contracts.Product
         List<ProductViewModel> Search(ProductSearchModel searchModel);
         OpretaionResult Special(long id);
         OpretaionResult NotSpecial(long id);
+        OpretaionResult NotSpecialAll();
+        void IncVisit(long id);
     }
 }

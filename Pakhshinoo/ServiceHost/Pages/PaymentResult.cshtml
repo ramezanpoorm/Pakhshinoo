@@ -4,6 +4,122 @@
     ViewData["Title"] = "نتیجه پرداخت";
 }
 
+<div class="main-site-wrap">
+    <div class="mweb-site-mask"></div>
+    <div class="site-wrap-outer clear">
+        <div class="container-wrap page-shopping-cart">
+            <div class="container">
+                <div class="order-steps">
+                    <div class="checkout-breadcrumb">
+                        <div class="title-cart">
+                            <i class="fal fa-bags-shopping"></i>
+                            <a href="#">
+                                <h4>سبد خرید</h4>
+                            </a>
+                        </div>
+                        <div class="title-checkout">
+                            <i class="fal fa-file-invoice"></i>
+                            <a href="#">
+                                <h4 style="opacity:1;">جزئیات پرداخت</h4>
+                            </a>
+                        </div>
+                        <div class="title-thankyou">
+                            <i class="fal fa-receipt"></i>
+                            <h4 style="opacity:1;">تکمیل سفارش</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div id="content" class="wc_page_body mweb_checkout_page">
+                    <div class="products">
+                        <div class="products-order">
+                            <p class="products-notice products-notice--success products-thankyou-order-received">متشکریم، سفارش شما دریافت شد.</p>
+                            <ul class="products-order-overview products-thankyou-order-details order_details">
+                                <li class="products-order-overview__order order">شماره سفارش:<strong>@Model.Result.IssueTrackingNo</strong></li>
+                                <li class="products-order-overview__date date">تاریخ:<strong>14 مهر 1400</strong></li>
+                                <li class="products-order-overview__email email">ایمیل:<strong>youremail@gmail.com</strong></li>
+                                <li class="products-order-overview__total total">
+                                    قیمت نهایی:<strong>
+                                        <span class="products-Price-amount amount">
+                                            <bdi>1,120,000&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi>
+                                        </span>
+                                    </strong>
+                                </li>
+                                <li class="products-order-overview__payment-method method">روش پرداخت:<strong>پرداخت انلاین</strong></li>
+                            </ul>
+
+                            <div class="receipt_divider"></div>
+                            <div class="method_pay"><i class="fal fa-file-invoice-dollar"></i></div>
+                            <section class="products-order-details">
+                                <h2 class="products-order-details__title">مشخصات سفارش</h2>
+                                <table class="products-table products-table--order-details shop_table order_details">
+                                    <thead>
+                                        <tr>
+                                            <th class="products-table__product-name product-name">محصول</th>
+                                            <th class="products-table__product-table product-total">مجموع</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="products-table__line-item order_item">
+                                            <td class="products-table__product-name product-name">
+                                                <a href="#">رینگ آلومینیومی چرخ رنو مدل 230414 سایز 16 اینچ</a> <strong class="product-quantity">×&nbsp;1</strong>
+                                            </td>
+
+                                            <td class="products-table__product-total product-total">
+                                                <span class="products-Price-amount amount"><bdi>1,120,000&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span>
+                                            </td>
+
+                                        </tr>
+
+                                    </tbody>
+
+                                    <tfoot>
+                                        <tr>
+                                            <th scope="row">جمع كل سبد خريد:</th>
+                                            <td><span class="products-Price-amount amount">1,120,000&nbsp;<span class="products-Price-currencySymbol">تومان</span></span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">حمل و نقل:</th>
+                                            <td>تحویل محلی</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">روش پرداخت: </th>
+                                            <td>پرداخت انلاین</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">قیمت نهایی:</th>
+                                            <td><span class="products-Price-amount amount">1,120,000&nbsp;<span class="products-Price-currencySymbol">تومان</span></span></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+
+                            </section>
+
+
+                            <section class="products-customer-details">
+                                <h2 class="products-column__title">آدرس صورتحساب</h2>
+                                <address>
+                                    <strong>نام خریدار</strong>
+                                    <br>
+                                    آدرس در این مکان قرار می گیرد
+                                    <br>کد پستی: 11111111444111
+                                    <p class="products-customer-details--phone">09194060357</p>
+                                    <p class="products-customer-details--email">youremail@gmail.com</p>
+                                </address>
+
+                            </section>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="breadcrumb-area section-space--half">
     <div class="container wide">
         <div class="row">

@@ -1,0 +1,76 @@
+﻿@model List<ShopManagement.Application.Contracts.Order.OrderItemViewModel>
+
+<section class="elementor-section elementor-top-section elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+    <div class="elementor-container elementor-column-gap-narrow">
+        <div class="elementor-row">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element">
+                <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-widget elementor-widget-carousel-onsale-product">
+                            <div class="elementor-widget-container">
+                                <div class="block-title has_url">
+                                    <div class="title"><i class="fal fa-box"></i>پرفروش ترین ها</div>
+                                    <a href="#" class="bk_view_more" title="پرفروش ترین ها"><i class="fal fa-angle-left"></i>مشاهده همه</a>
+                                </div>
+                                <div class="block-content-wrap">
+                                    <div class="block-content-inner clear row product-type-1">
+                                        <div class="col-12 col-sm-12 col-md-8 col-lg-9">
+                                            <div class="mweb-swiper">
+                                                <div class="swiper-slider swiper-container" dir="rtl"
+                                                     data-slider='{"slidesPerView":1,"spaceBetween":15,"watchSlidesVisibility":true,"loop":true,"autoplay":true," touchMoveStopPropagation":true,"breakpoints":{"575":{"slidesPerView":1},"768":{"slidesPerView":2},"1024":{"slidesPerView":"4"}}}'>
+                                                    <div class="swiper-wrapper">
+                                                        @foreach (var item in Model)
+                                                        {
+                                                            <div class="swiper-slide">
+                                                                <div class="item deal_ended">
+                                                                    <div class="item-area item_general clear">
+                                                                        <div class="product-image-area">
+                                                                            <a class="product-image" asp-page="/Product" asp-route-id="@item.ProductId" title="@item.Product">
+                                                                                <div class="product-label label-circle">
+                                                                                    <div class="circle"></div>
+                                                                                    <span>@item.DiscountRate%</span>
+                                                                                </div>
+                                                                                <img width="185" height="185" src="~/ProductPictures/@item.ProductPicture" />
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="product-detail-area">
+                                                                            <span class="price">
+                                                                                <del aria-hidden="true"><span class="amount"><bdi>@item.UnitPrice&nbsp;<span>تومان</span></bdi></span></del>
+                                                                                <ins><span class="amount"><bdi>@item.UnitPrice&nbsp;<span>تومان</span></bdi></span></ins>
+                                                                            </span>
+                                                                            <h3 class="product-name">
+                                                                                <a asp-page="/Product" asp-route-id="@item.ProductId" title="@item.Product"> @item.Product</a>
+                                                                            </h3>
+                                                                            <div class="actions">
+                                                                                <ul class="add-to-links">
+                                                                                    <li><div class="add_to_wishlist_wrap"><a href="#" class="add_to_wishlist"></a></div></li>
+                                                                                    <li class="compare-button"><a href="#" class="button compare">مقایسه</a></li>
+                                                                                    <li><div class="add-to-cart-wrap"><a href="#" class="button add_to_cart_button">افزودن به سبد</a></div></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-none d-md-block col-12 col-sm-12 col-md-4 col-lg-3 deal_left_side">
+                                            <div class="deal_left_timer">
+                                                <img src="~/Theme/assets/img/suggest.png" alt="انواع قطعات خودرو">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

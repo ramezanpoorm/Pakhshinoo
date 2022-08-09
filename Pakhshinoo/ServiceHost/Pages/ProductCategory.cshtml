@@ -32,9 +32,13 @@
                                                         <input type="hidden" name="carId" value="@Model.ProductCategory.CarId" />
                                                         <input type="hidden" name="companyId" value="@Model.ProductCategory.CompanyId" />
                                                         <input type="hidden" name="pageid" value="1" />
+
+
+                                                        <div class="price_label" style="display:none;">
+                                                            <span class="from"></span>
+                                                            <span class="to"></span>
+                                                        </div>
                                                         <button type="submit" class="button">فیلتر</button>
-                                                        
-                                                        <div class="price_label" style="display:none;">قیمت: <span class="from"></span> &mdash; <span class="to"></span></div>
                                                         <div class="clear"></div>
                                                         <a asp-page="/AllProduct" asp-route-pageId="1">حذف فیلتر</a>
                                                     </div>
@@ -61,8 +65,8 @@
                                                 {
                                                     <li class="orderby-wrapper @((Model.ProductCategory.Id == item.Id)?"current-cat":"")">
 
-                                                <a asp-route-id="@item.Id" asp-route-pageid="1" asp-route-startPrice="@Model.ProductCategory.StartPrice" asp-route-endPrice="@Model.ProductCategory.EndPrice" asp-route-brandId="@Model.ProductCategory.BrandId" asp-route-carId="@Model.ProductCategory.CarId" asp-route-companyId="@Model.ProductCategory.CompanyId">@item.Name</a>
-                                                    
+                                                        <a asp-route-id="@item.Id" asp-route-pageid="1" asp-route-startPrice="@Model.ProductCategory.StartPrice" asp-route-endPrice="@Model.ProductCategory.EndPrice" asp-route-brandId="@Model.ProductCategory.BrandId" asp-route-carId="@Model.ProductCategory.CarId" asp-route-companyId="@Model.ProductCategory.CompanyId">@item.Name</a>
+
                                                     </li>
                                                 }
                                                 @*@await Component.InvokeAsync("ProductCategoryIn")*@
@@ -236,21 +240,22 @@
                             <nav class="products-pagination">
                                 <ul class="page-numbers">
                                     <li class="@(Model.ProductCategory.ActivePage == 1 ? "d-none" : "disabled")">
-                                    
-                                    <a aria-label="Previous" asp-page="/ProductCategory" asp-route-id="@Model.ProductCategory.Id" asp-route-pageid=@(Model.ProductCategory.ActivePage - 1) asp-route-brandId="@Model.ProductCategory.BrandId" asp-route-startPrice="@Model.ProductCategory.StartPrice" asp-route-endPrice="@Model.ProductCategory.EndPrice" asp-route-carId="@Model.ProductCategory.CarId" asp-route-companyId="@Model.ProductCategory.CompanyId" class="previous page-numbers"><span aria-hidden="true">«</span>
+
+                                        <a aria-label="Previous" asp-page="/ProductCategory" asp-route-id="@Model.ProductCategory.Id" asp-route-pageid=@(Model.ProductCategory.ActivePage - 1) asp-route-brandId="@Model.ProductCategory.BrandId" asp-route-startPrice="@Model.ProductCategory.StartPrice" asp-route-endPrice="@Model.ProductCategory.EndPrice" asp-route-carId="@Model.ProductCategory.CarId" asp-route-companyId="@Model.ProductCategory.CompanyId" class="previous page-numbers">
+                                            <span aria-hidden="true">«</span>
                                         </a>
-                                    
+
                                     </li>
 
                                     @for (int i = 1; i <= (Model.ProductCategory.PageCount / 40) + 1; i++)
                                     {
-                                        <li>                                    
-                                    <a asp-page="/ProductCategory" asp-route-id="@Model.ProductCategory.Id" asp-route-pageid=@i asp-route-brandId="@Model.ProductCategory.BrandId" asp-route-startPrice="@Model.ProductCategory.StartPrice" asp-route-endPrice="@Model.ProductCategory.EndPrice" asp-route-carId="@Model.ProductCategory.CarId" asp-route-companyId="@Model.ProductCategory.CompanyId" class="@((Model.ProductCategory.ActivePage == i)?"page-numbers current":"page-numbers")">@i<span class="sr-only">(current)</span></a>                    
+                                        <li>
+                                            <a asp-page="/ProductCategory" asp-route-id="@Model.ProductCategory.Id" asp-route-pageid=@i asp-route-brandId="@Model.ProductCategory.BrandId" asp-route-startPrice="@Model.ProductCategory.StartPrice" asp-route-endPrice="@Model.ProductCategory.EndPrice" asp-route-carId="@Model.ProductCategory.CarId" asp-route-companyId="@Model.ProductCategory.CompanyId" class="@((Model.ProductCategory.ActivePage == i)?"page-numbers current":"page-numbers")">@i<span class="sr-only">(current)</span></a>
                                         </li>
                                     }
 
                                     <li>
-                                    <a aria-label="Next" asp-page="/ProductCategory" asp-route-id="@Model.ProductCategory.Id" asp-route-pageid=@(Model.ProductCategory.ActivePage + 1) asp-route-brandId="@Model.ProductCategory.BrandId" asp-route-startPrice="@Model.ProductCategory.StartPrice" asp-route-endPrice="@Model.ProductCategory.EndPrice" asp-route-carId="@Model.ProductCategory.CarId" asp-route-companyId="@Model.ProductCategory.CompanyId"><span aria-hidden="true" class="next page-numbers">»</span></a>
+                                        <a aria-label="Next" asp-page="/ProductCategory" asp-route-id="@Model.ProductCategory.Id" asp-route-pageid=@(Model.ProductCategory.ActivePage + 1) asp-route-brandId="@Model.ProductCategory.BrandId" asp-route-startPrice="@Model.ProductCategory.StartPrice" asp-route-endPrice="@Model.ProductCategory.EndPrice" asp-route-carId="@Model.ProductCategory.CarId" asp-route-companyId="@Model.ProductCategory.CompanyId"><span aria-hidden="true" class="next page-numbers">»</span></a>
                                     </li>
                                 </ul>
                             </nav>

@@ -31,8 +31,8 @@ namespace ShopManagement.Domain.ProductAgg
         public string MetaDescription { get; private set; }
         public string Slug { get; private set; }
         public bool IsSpecial { get; private set; }
-        public ProductCategory Category { get; private set; }
-        
+        public int VisitCount { get; private set; }
+        public ProductCategory Category { get; private set; }        
         public Brand Brand { get; private set; }
         public List<CarProduct> CarProducts { get; private set; }
         public List<CompanyProduct> CompanyProducts { get; private set; }
@@ -54,6 +54,7 @@ namespace ShopManagement.Domain.ProductAgg
             Keywords = keywords;
             MetaDescription = metaDescription;
             IsSpecial = false;
+            VisitCount = 0;
             BrandId = brandId;
         }
 
@@ -81,6 +82,11 @@ namespace ShopManagement.Domain.ProductAgg
         public void NotSpecial()
         {
             IsSpecial = false;
+        }
+
+        public void VisitIncrease()
+        {
+            VisitCount = VisitCount + 1;
         }
 
     }

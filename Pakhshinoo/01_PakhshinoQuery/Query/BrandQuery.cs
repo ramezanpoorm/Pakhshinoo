@@ -20,6 +20,8 @@ namespace _01_PakhshinoQuery.Query
             {
                 Id = x.Id,
                 Name = x.Name,
+                Picture = x.Picture,
+                Url = x.Url
             }).ToList();
         }
     }

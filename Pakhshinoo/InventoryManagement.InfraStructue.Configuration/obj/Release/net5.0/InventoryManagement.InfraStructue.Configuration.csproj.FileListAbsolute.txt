@@ -27,3 +27,9 @@ D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.InfraStructue.Configuratio
 D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.InfraStructue.Configuration\obj\Release\net5.0\InventoryManagement.InfraStructue.Configuration.dll
 D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.InfraStructue.Configuration\obj\Release\net5.0\ref\InventoryManagement.InfraStructue.Configuration.dll
 D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.InfraStructue.Configuration\obj\Release\net5.0\InventoryManagement.InfraStructue.Configuration.pdb
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.InfraStructue.Configuration\bin\Release\net5.0\AccountManagement.Application.Contract.dll
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.InfraStructue.Configuration\bin\Release\net5.0\AccountManagement.Domain.dll
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.InfraStructue.Configuration\bin\Release\net5.0\AccountManagement.Infrastructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.InfraStructue.Configuration\bin\Release\net5.0\AccountManagement.Application.Contract.pdb
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.InfraStructue.Configuration\bin\Release\net5.0\AccountManagement.Domain.pdb
+D:\PakhshinooCore\code\Pakhshinoo\InventoryManagement.InfraStructue.Configuration\bin\Release\net5.0\AccountManagement.Infrastructure.EFCore.pdb

@@ -295,3 +295,13 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\ShopManagement.In
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\bin\Debug\net5.0\ShopManagement.Infrastructure.InventoryAcl.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Orders\Index.cshtml.g.cs
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Orders\Items.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Pages\AllSpecialProduct.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\Orders\Default.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\ProductCompany\Create.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\ProductCompany\Edit.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\ProductCompany\Index.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\MostVisit\Default.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\BrandIndex\Default.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\CarProduct\Create.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\CarProduct\Edit.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\CarProduct\Index.cshtml.g.cs

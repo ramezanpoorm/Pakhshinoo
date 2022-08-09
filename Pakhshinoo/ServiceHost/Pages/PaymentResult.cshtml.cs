@@ -13,7 +13,7 @@ namespace ServiceHost.Pages
         public PaymentResult Result;
         public void OnGet(PaymentResult result)
         {
-            Result = result;
+            Result = result;           
         }
     }
 }

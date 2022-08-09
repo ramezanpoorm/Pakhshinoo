@@ -9,5 +9,7 @@
         public double UnitPrice { get; set; }
         public int DiscountRate { get; set; }
         public long OrderId { get; set; }
+        public string ProductPicture { get; set; }
+        public int Sum { get; set; }
     }
 }

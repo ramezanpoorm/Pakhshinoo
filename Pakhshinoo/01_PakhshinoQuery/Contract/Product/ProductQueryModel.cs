@@ -35,6 +35,7 @@ namespace _01_PakhshinoQuery.Contract.Product
         public double StartPrice { get; set; }
         public double EndPrice { get; set; }
         public string EndDate { get; set; }
+        public int MostVisit { get; set; }
         public List<ProductPictureQueryModel> Pictures { get; set; }
         public List<CommentQueryModel> Comments { get; set; }
     }

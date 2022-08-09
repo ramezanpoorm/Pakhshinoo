@@ -1,0 +1,47 @@
+﻿@model ShopManagement.Application.Contracts.CarProduct.EditCarProduct
+@{
+}
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">ویرایش</h4>
+</div>
+
+<form asp-page="./Index" asp-page-handler="Edit"
+      method="post"
+      data-ajax="true"
+      data-callback=""
+      data-action="Refresh">
+    <div class="modal-body">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="ProductId" class="control-label">محصول</label>
+                    <select class="form-control" asp-for="ProductId" asp-items='new SelectList(Model.Product,"Id","Name")'>
+                        <option value="0">محصول ...</option>
+                    </select>
+                    <span asp-validation-for="ProductId" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="CarId" class="control-label">خودرو</label>
+                    <select class="form-control" asp-for="CarId" asp-items='new SelectList(Model.Car,"Id","Name")'>
+                        <option value="0">کمپانی ...</option>
+                    </select>
+                    <span asp-validation-for="ProductId" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <input type="hidden" asp-for="id" value="@Model.id" />
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
+        <button type="submit" class="btn btn-info waves-effect waves-light">ویرایش</button>
+    </div>
+</form>

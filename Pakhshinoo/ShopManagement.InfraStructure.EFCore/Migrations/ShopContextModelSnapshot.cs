@@ -37,6 +37,12 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("Picture")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Brand");
@@ -181,6 +187,38 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
                     b.ToTable("Orders");
                 });
 
+            modelBuilder.Entity("ShopManagement.Domain.OrderAgg.OrderItem", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("DiscountRate")
+                        .HasColumnType("int");
+
+                    b.Property<long>("OrderId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.Property<double>("UnitPrice")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.ToTable("OrderItems");
+                });
+
             modelBuilder.Entity("ShopManagement.Domain.ProductAgg.Product", b =>
                 {
                     b.Property<long>("Id")
@@ -245,6 +283,9 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
 
                     b.Property<double>("UnitPrice")
                         .HasColumnType("float");
+
+                    b.Property<int>("VisitCount")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -428,46 +469,15 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("ShopManagement.Domain.OrderAgg.Order", b =>
+            modelBuilder.Entity("ShopManagement.Domain.OrderAgg.OrderItem", b =>
                 {
-                    b.OwnsMany("ShopManagement.Domain.OrderAgg.OrderItem", "Items", b1 =>
-                        {
-                            b1.Property<long>("Id")
-                                .ValueGeneratedOnAdd()
-                                .HasColumnType("bigint")
-                                .UseIdentityColumn();
+                    b.HasOne("ShopManagement.Domain.OrderAgg.Order", "Order")
+                        .WithMany("Items")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                            b1.Property<int>("Count")
-                                .HasColumnType("int");
-
-                            b1.Property<DateTime>("CreateDate")
-                                .HasColumnType("datetime2");
-
-                            b1.Property<int>("DiscountRate")
-                                .HasColumnType("int");
-
-                            b1.Property<long>("OrderId")
-                                .HasColumnType("bigint");
-
-                            b1.Property<long>("ProductId")
-                                .HasColumnType("bigint");
-
-                            b1.Property<double>("UnitPrice")
-                                .HasColumnType("float");
-
-                            b1.HasKey("Id");
-
-                            b1.HasIndex("OrderId");
-
-                            b1.ToTable("OrderItems");
-
-                            b1.WithOwner("Order")
-                                .HasForeignKey("OrderId");
-
-                            b1.Navigation("Order");
-                        });
-
-                    b.Navigation("Items");
+                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("ShopManagement.Domain.ProductAgg.Product", b =>
@@ -513,6 +523,11 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
             modelBuilder.Entity("ShopManagement.Domain.CompanyAgg.Company", b =>
                 {
                     b.Navigation("CompanyProducts");
+                });
+
+            modelBuilder.Entity("ShopManagement.Domain.OrderAgg.Order", b =>
+                {
+                    b.Navigation("Items");
                 });
 
             modelBuilder.Entity("ShopManagement.Domain.ProductAgg.Product", b =>

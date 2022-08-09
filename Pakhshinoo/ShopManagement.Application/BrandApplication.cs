@@ -9,10 +9,12 @@ namespace ShopManagement.Application
     public class BrandApplication : IBrandApplication
     {
         private readonly IBrandRepository _brandRepository;
+        private readonly IFileUploader _fileUploader;
 
-        public BrandApplication(IBrandRepository brandRepository)
+        public BrandApplication(IBrandRepository brandRepository, IFileUploader fileUploader)
         {
             _brandRepository = brandRepository;
+            _fileUploader = fileUploader;
         }
         public OpretaionResult Create(CreateBrand command)
         {
@@ -20,7 +22,10 @@ namespace ShopManagement.Application
             if (_brandRepository.Exists(x => x.Name == command.Name))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
-            var brand = new Brand(command.Name, command.Description);
+            var path = $"ProductPictures";
+            var picturePath = _fileUploader.Upload(command.Picture, path);
+
+            var brand = new Brand(command.Name, command.Description, picturePath, command.Url);
             _brandRepository.Create(brand);
             _brandRepository.SaveChanges();
             return operation.Successeded();
@@ -37,7 +42,10 @@ namespace ShopManagement.Application
             if (_brandRepository.Exists(x => x.Name == command.Name && x.Id != command.Id))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
-            car.Edit(command.Name, command.Description);
+            var path = $"ProductPictures";
+            var picturePath = _fileUploader.Upload(command.Picture, path);
+
+            car.Edit(command.Name, command.Description, picturePath, command.Url);
 
             _brandRepository.SaveChanges();
             return operation.Successeded();

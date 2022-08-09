@@ -381,6 +381,7 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwr
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\Theme\assets\css\IRANSansWeb_Medium.woff
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\Theme\assets\css\left_time_bg.png
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\Theme\assets\css\Loader.gif
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\Theme\assets\css\pakhshinooproduct.jpg
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\Theme\assets\css\revicons.eot
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\Theme\assets\css\revicons.svg
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\wwwroot\Theme\assets\css\revicons.ttf
@@ -497,6 +498,7 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Micr
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Nancy.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Newtonsoft.Json.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\RestSharp.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\System.Composition.AttributedModel.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\System.Composition.Convention.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\System.Composition.Hosting.dll
@@ -604,6 +606,7 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Shop
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ShopManagement.Configuration.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ShopManagement.Domain.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ShopManagement.InfraStructure.EFCore.dll
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ShopManagement.Infrastructure.InventoryAcl.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\AccountManagement.Configuration.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\BlogManagement.Configuration.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\CommentManagement.Application.Contracts.pdb
@@ -636,5 +639,6 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\Shop
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ShopManagement.Application.Contracts.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ShopManagement.Domain.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ShopManagement.InfraStructure.EFCore.pdb
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ShopManagement.Infrastructure.InventoryAcl.pdb
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ServiceHost.Views.dll
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\PubTmp\Out\ServiceHost.Views.pdb

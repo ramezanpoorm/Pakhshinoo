@@ -25,6 +25,7 @@ namespace ShopManagement.InfraStructure.EFCore
         public DbSet<CompanyProduct> CompanyProducts { get; set; }
         public DbSet<CarProduct> CarProducts { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
         public ShopContext(DbContextOptions<ShopContext> options):base(options)
         {
 

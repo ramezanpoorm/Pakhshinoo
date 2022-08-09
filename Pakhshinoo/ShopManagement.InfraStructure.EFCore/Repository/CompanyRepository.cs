@@ -15,7 +15,7 @@ namespace ShopManagement.InfraStructure.EFCore.Repository
         }
         public List<CompanyViewModel> GetCompanies()
         {
-            return _shopContext.Brands.Select(x => new CompanyViewModel
+            return _shopContext.Companies.Select(x => new CompanyViewModel
             {
                 Id = x.Id,
                 Name = x.Name

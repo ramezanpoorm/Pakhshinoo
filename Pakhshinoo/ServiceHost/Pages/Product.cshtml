@@ -114,7 +114,6 @@
                                                             <div class="reduced elm_qty fal fa-minus"></div>
                                                         </div>
                                                     </div>
-                                                    <a type="button" class="single_add_to_cart_button button alt" asp-page="/ProductCategory" asp-route-id="@Model.Product.CategoryId">بازگشت به دسته بندی مرتبط</a>
 
                                                     @if (Model.Product.HasDiscount)
                                                     {
@@ -162,6 +161,7 @@
                                         <div class="info_box hide_tablet hide_mobile"><i class="fal fa-certificate"></i><span>ضمانت اصل بودن</span></div>
                                         <div class="info_box hide_tablet hide_mobile"><i class="fal fa-map"></i><span>ارسال به تمام نقاط</span></div>
                                         <div class="info_box hide_tablet hide_mobile"><i class="fal fa-gift"></i><span>بسته بندی زیبا</span></div>
+                                        <div class="info_box no_avl"><a asp-page="/ProductCategory" asp-route-id="@Model.Product.CategoryId"><i class="fal fa-undo"></i><span>بازگشت به دسته بندی مرتبط</span></a></div>
 
                                     </div>
                                 </div>
@@ -276,9 +276,10 @@
                                                             <button class="comment_login"><i class="fal fa-comment"></i>افزودن دیدگاه جدید</button>
                                                         </p>
                                                     }
-                                                    else { 
+                                                    else
+                                                    {
                                                         <form method="post" id="commentform" class="comment-form" novalidate="">
-                                                            
+
 
                                                             <p class="comment-form-comment">
                                                                 <label for="comment">دیدگاه شما <span class="required">*</span>@authHelper.CurrentAccountInfo().Fullname</label>
@@ -294,7 +295,7 @@
                                                             </p>
                                                         </form>
                                                     }
-                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -309,7 +310,7 @@
                                                 <p class="products-noreviews">@comment.Name</p>
                                                 <p>@comment.Message</p>
                                             }
-                                            </div>
+                                        </div>
                                     </div>
 
                                 </div>

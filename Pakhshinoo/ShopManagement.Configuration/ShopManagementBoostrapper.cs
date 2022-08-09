@@ -12,16 +12,20 @@ using Microsoft.Extensions.DependencyInjection;
 using ShopManagement.Application;
 using ShopManagement.Application.Contracts.Brand;
 using ShopManagement.Application.Contracts.Car;
+using ShopManagement.Application.Contracts.CarProduct;
 using ShopManagement.Application.Contracts.Company;
 using ShopManagement.Application.Contracts.Order;
 using ShopManagement.Application.Contracts.Product;
 using ShopManagement.Application.Contracts.ProductCategory;
+using ShopManagement.Application.Contracts.ProductCompany;
 using ShopManagement.Application.Contracts.ProductPicture;
 using ShopManagement.Application.Contracts.Slide;
 using ShopManagement.Configuration.Permissions;
 using ShopManagement.Domain.BrandAgg;
 using ShopManagement.Domain.CarAgg;
+using ShopManagement.Domain.CarProductAgg;
 using ShopManagement.Domain.CompanyAgg;
+using ShopManagement.Domain.CompanyProductAgg;
 using ShopManagement.Domain.OrderAgg;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
@@ -66,6 +70,12 @@ namespace ShopManagement.Configuration
 
             service.AddTransient<ICompanyApplication, CompanyApplication>();
             service.AddTransient<ICompanyRepository, CompanyRepository>();
+
+            service.AddTransient<IProductCompanyApplication, ProductCompanyApplicatipon>();
+            service.AddTransient<ICompanyProductRepository, ProductCompanyRepository>();
+
+            service.AddTransient<ICarProductApplication, CarProductApplication>();
+            service.AddTransient<ICarProductRepository, CarProductRepository>();
 
             service.AddTransient<ISlideQuery, SlideQuery>();
             service.AddTransient<IProductCategoryQuery, ProductCategoryQuery>();
