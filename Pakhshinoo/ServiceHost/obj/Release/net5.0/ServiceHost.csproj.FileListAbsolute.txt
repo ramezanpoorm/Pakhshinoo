@@ -305,3 +305,7 @@ D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\Razor\Pages\Sha
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\Razor\Areas\Administrator\Pages\Shop\CarProduct\Create.cshtml.g.cs
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\Razor\Areas\Administrator\Pages\Shop\CarProduct\Edit.cshtml.g.cs
 D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\Razor\Areas\Administrator\Pages\Shop\CarProduct\Index.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\Razor\Pages\EditProfile.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\Razor\Pages\Profile.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\Razor\Pages\Shared\_ProfileLayout.cshtml.g.cs
+D:\PakhshinooCore\code\Pakhshinoo\ServiceHost\obj\Release\net5.0\Razor\Areas\Administrator\Pages\Setting\Index.cshtml.g.cs

@@ -1,5 +1,6 @@
 ﻿@page
 @model ServiceHost.Pages.PaymentResultModel
+@inject _0_Framework.Application.IAuthHelper authHelper
 @{
     ViewData["Title"] = "نتیجه پرداخت";
 }
@@ -42,7 +43,7 @@
                                 <li class="products-order-overview__total total">
                                     قیمت نهایی:<strong>
                                         <span class="products-Price-amount amount">
-                                            <bdi>1,120,000&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi>
+                                            <bdi>@Model.Order.TotalAmount&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi>
                                         </span>
                                     </strong>
                                 </li>
@@ -62,35 +63,30 @@
                                     </thead>
 
                                     <tbody>
-                                        <tr class="products-table__line-item order_item">
-                                            <td class="products-table__product-name product-name">
-                                                <a href="#">رینگ آلومینیومی چرخ رنو مدل 230414 سایز 16 اینچ</a> <strong class="product-quantity">×&nbsp;1</strong>
-                                            </td>
+                                        @foreach (var item in Model.OrderItems)
+                                        {
+                                            <tr class="products-table__line-item order_item">
+                                                <td class="products-table__product-name product-name">
+                                                    <a href="#">@item.Product</a> <strong class="product-quantity">×&nbsp;@item.Count</strong>
+                                                </td>
 
-                                            <td class="products-table__product-total product-total">
-                                                <span class="products-Price-amount amount"><bdi>1,120,000&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span>
-                                            </td>
+                                                <td class="products-table__product-total product-total">
+                                                    <span class="products-Price-amount amount"><bdi>@(item.UnitPrice * item.Count)&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span>
+                                                </td>
 
-                                        </tr>
-
+                                            </tr>
+                                        }
                                     </tbody>
 
                                     <tfoot>
-                                        <tr>
-                                            <th scope="row">جمع كل سبد خريد:</th>
-                                            <td><span class="products-Price-amount amount">1,120,000&nbsp;<span class="products-Price-currencySymbol">تومان</span></span></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">حمل و نقل:</th>
-                                            <td>تحویل محلی</td>
-                                        </tr>
+
                                         <tr>
                                             <th scope="row">روش پرداخت: </th>
                                             <td>پرداخت انلاین</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">قیمت نهایی:</th>
-                                            <td><span class="products-Price-amount amount">1,120,000&nbsp;<span class="products-Price-currencySymbol">تومان</span></span></td>
+                                            <td><span class="products-Price-amount amount">@Model.Order.TotalAmount&nbsp;<span class="products-Price-currencySymbol">تومان</span></span></td>
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -101,12 +97,12 @@
                             <section class="products-customer-details">
                                 <h2 class="products-column__title">آدرس صورتحساب</h2>
                                 <address>
-                                    <strong>نام خریدار</strong>
-                                    <br>
+                                    <strong>@authHelper.CurrentAccountInfo().Fullname</strong>
+                                    @*<br>
                                     آدرس در این مکان قرار می گیرد
-                                    <br>کد پستی: 11111111444111
-                                    <p class="products-customer-details--phone">09194060357</p>
-                                    <p class="products-customer-details--email">youremail@gmail.com</p>
+                                    <br>کد پستی: 11111111444111*@
+                                    <p class="products-customer-details--phone">@authHelper.CurrentAccountInfo().Mobile</p>
+                                    @*<p class="products-customer-details--email">youremail@gmail.com</p>*@
                                 </address>
 
                             </section>

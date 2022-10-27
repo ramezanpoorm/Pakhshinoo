@@ -53,6 +53,20 @@ namespace ShopManagement.Application
             return _companyRepository.GetDetails(id);
         }
 
+        public void Removed(long id)
+        {
+            var company = _companyRepository.Get(id);
+            company.Removed();
+            _companyRepository.SaveChanges();
+        }
+
+        public void Restore(long id)
+        {
+            var company = _companyRepository.Get(id);
+            company.NotRemoved();
+            _companyRepository.SaveChanges();
+        }
+
         public List<CompanyViewModel> Search(CompanySearchModel searchModel)
         {
             return _companyRepository.Search(searchModel);

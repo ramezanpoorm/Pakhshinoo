@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -36,7 +36,8 @@ namespace ServiceHost.Pages
                 return RedirectToPage("/Index");
 
             LoginMessage = result.Message;
-            return RedirectToPage("/Account");
+            return null;
+            //return RedirectToPage("/Account");
         }
 
         public IActionResult OnGetLogout()
@@ -49,9 +50,10 @@ namespace ServiceHost.Pages
         {
             var result = _accountApplication.Create(command);
             if (result.IsSuccesseded)
-                return RedirectToPage("/Account");
+                return RedirectToPage("/Index");
             RegisterMessage = result.Message;
-            return RedirectToPage("/Account");
+            return null;
+            //return RedirectToPage("/Account");
         }
     }
 }

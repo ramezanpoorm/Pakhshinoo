@@ -30,7 +30,8 @@ namespace ShopManagement.Application
             var slug = command.Slug.Slugify();
 
             var categoryName = _productCategoryRepository.GetNameById(command.CategoryId);
-            var path = $"{categoryName}//{command.Name}";
+            //var path = $"{categoryName}//{command.Name}";
+            var path = $"ProductPictures";
             var picturePath = _fileUploader.Upload(command.Picture, path);
             var product = new Product(command.Name, command.Code, command.ShortDescription, command.Description, picturePath, command.PictureAlt, command.PictureTitle, command.CategoryId, slug, command.Keywords, command.MetaDescription, command.BrandId);
             _productRepository.Create(product);
@@ -41,6 +42,7 @@ namespace ShopManagement.Application
         public OpretaionResult Edit(EditProduct command)
         {
             var operation = new OpretaionResult();
+            string picturePath = "";
             var product = _productRepository.GetProductWithCategory(command.Id);
 
             if (product == null)
@@ -51,9 +53,16 @@ namespace ShopManagement.Application
 
             var slug = command.Slug.Slugify();
 
-            var path = $"{product.Category.Name}/{command.Name}";
-            var picturePath = _fileUploader.Upload(command.Picture, path);
-            product.Edit(command.Name, command.Code, command.ShortDescription, command.Description, picturePath, command.PictureAlt, command.PictureTitle, command.CategoryId, slug, command.Keywords, command.MetaDescription);
+            //var path = $"{product.Category.Name}/{command.Name}";
+            var path = $"ProductPictures";
+
+            if (command.Picture == null)
+                picturePath = product.Picture;
+            else
+                picturePath = _fileUploader.Upload(command.Picture, path);
+
+            //var picturePath = _fileUploader.Upload(command.Picture, path);
+            product.Edit(command.Name, command.Code, command.ShortDescription, command.Description, picturePath, command.PictureAlt, command.PictureTitle, command.CategoryId, slug, command.Keywords, command.MetaDescription, command.BrandId);
 
             _productRepository.SaveChanges();
             return operation.Successeded();
@@ -66,7 +75,7 @@ namespace ShopManagement.Application
 
         public List<ProductViewModel> GetProducts()
         {
-            return _productRepository.GetProducts();
+            return _productRepository.GetProducts().Where(x => x.IsRemoved == false).OrderByDescending(x=>x.Id).ToList();
         }
 
         public void IncVisit(long id)
@@ -104,6 +113,20 @@ namespace ShopManagement.Application
             
             _productRepository.SaveChanges();
             return operation.Successeded();
+        }
+
+        public void Removed(long id)
+        {
+            var product = _productRepository.Get(id);
+            product.Removed();
+            _productRepository.SaveChanges();
+        }
+
+        public void Restore(long id)
+        {
+            var product = _productRepository.Get(id);
+            product.NotRemoved();
+            _productRepository.SaveChanges();
         }
 
         public List<ProductViewModel> Search(ProductSearchModel searchModel)

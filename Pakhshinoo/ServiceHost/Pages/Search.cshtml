@@ -1,5 +1,272 @@
 ﻿@page
-@model ServiceHost.Pages.SearchModel
+@model ServiceHost.Pages.Search
+@inject _01_PakhshinoQuery.Contract.ProductCategory.IProductCategoryQuery ProductCategory
+@inject _01_PakhshinoQuery.Contract.Brand.IBrandQuery Brand
+@inject _01_PakhshinoQuery.Contract.Car.ICarQuery Car
+@inject _01_PakhshinoQuery.Contract.Company.ICompanyQuery Company
 @{
-    ViewData["Title"] = "نتیجه جستجو";
+    ViewData["Title"] = "نتایج جستجو";
 }
+
+<div class="main-site-wrap">
+    <div class="mweb-site-mask"></div>
+    <div class="site-wrap-outer clear">
+        <div id="container">
+            <div id="content" role="main">
+                <div class="container">
+                    <nav class="products-breadcrumb"><a asp-page="./index">خانه</a>/نتیجه جستجو برای @Model.Value</nav>
+                    @if(Model.AllProducts.Count == 0)
+                    { <br /><br /><br /><center><p style="font-weight:bold; color:red">نتیجه ای برای جستجو  مورد نظر یافت نشد</p></center>}
+            else { 
+                    <div class="row is-sidebar-left">
+                        <div id="sidebar" class="sidebar-wrap col-12 col-sm-12 col-md-12 col-lg-3 clearfix">
+                            <div class="mweb-sidebar-sticky">
+                                <div class="sidebar-inner">
+                                    <aside class="widget products widget_price_filter">
+                                        <div class="widget_title">فیلتر براساس قیمت :</div>
+                                        <div class="widget-content">
+                                            <form method="get">
+                                                <div class="price_slider_wrapper">
+                                                    <div class="price_slider" style="display:none;"></div>
+                                                    <div class="price_slider_amount" data-step="10">
+                                                        <input type="text" id="min_price" name="startPrice" value="@Model.AllProducts.FirstOrDefault().StartPrice" data-min="0" placeholder="حداقل قیمت" />
+                                                        <input type="text" id="max_price" name="endPrice" value="@Model.AllProducts.FirstOrDefault().EndPrice" data-max="1120000" placeholder="حداکثر قیمت" />
+                                                        <input type="hidden" name="brandId" value="@Model.AllProducts.FirstOrDefault().BrandId" />
+                                                        <input type="hidden" name="carId" value="@Model.AllProducts.FirstOrDefault().CarId" />
+                                                        <input type="hidden" name="companyId" value="@Model.AllProducts.FirstOrDefault().CompanyId" />
+                                                        <input type="hidden" name="pageid" value="1" />
+
+                                                        <div class="price_label" style="display:none;">
+                                                            <span class="from"></span>
+                                                            <span class="to"></span>
+                                                        </div>
+                                                        <button type="submit" class="button">فیلتر</button>
+                                                        <div class="clear"></div>
+                                                        <a asp-page="/AllProduct" asp-route-pageId="1">حذف فیلتر</a>
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                    </aside>
+
+                                    <aside class="widget widget_telegram_wg">
+                                        <div>
+                                            <a href="#" target="_blank">
+                                                <div class="telegram_head"><i class="fab fa-telegram-plane"></i>کانال تلگرام</div>
+                                                <div class="telegram_info"><p>اخبار مقالات و تخفیفات گروهی را دنبال کنید</p><span>Pakhshino</span></div>
+                                            </a>
+                                        </div>
+                                    </aside>
+
+                                    <aside class="widget products widget_product_categories">
+                                        <div class="widget_title">دسته های محصولات</div>
+                                        <div class="widget-content">
+                                            <ul class="product-categories">
+                                                @foreach (var item in ProductCategory.GetProductCategories())
+                                                {
+                                                    <li class="orderby-wrapper @((Model.AllProducts.FirstOrDefault().Id == item.Id)?"current-cat":"")">
+
+                                                        <a asp-route-categoryId="@item.Id" asp-route-pageid="1" asp-route-startPrice="@Model.AllProducts.FirstOrDefault().StartPrice" asp-route-endPrice="@Model.AllProducts.FirstOrDefault().EndPrice" asp-route-brandId="@Model.AllProducts.FirstOrDefault().BrandId" asp-route-carId="@Model.AllProducts.FirstOrDefault().CarId" asp-route-companyId="@Model.AllProducts.FirstOrDefault().CompanyId">@item.Name</a>
+
+                                                    </li>
+                                                }
+                                                @*@await Component.InvokeAsync("ProductCategoryIn")*@
+                                            </ul>
+                                        </div>
+                                    </aside>
+
+                                    <aside class="widget wc_product_categories">
+                                        <div class="widget_title">برند</div>
+                                        <div class="widget-content">
+                                            <ul class="product-categories">
+                                                @foreach (var item in Brand.GetBrand())
+                                                {
+                                                    <li class="orderby-wrapper @((Model.AllProducts.FirstOrDefault().BrandId == item.Id)?"current-cat":"")">
+
+                                                        <a asp-route-categoryId="@Model.AllProducts.FirstOrDefault().CategoryId" asp-route-pageid="1" asp-route-brandId="@item.Id" asp-route-startPrice="@Model.AllProducts.FirstOrDefault().StartPrice" asp-route-endPrice="@Model.AllProducts.FirstOrDefault().EndPrice" asp-route-carId="@Model.AllProducts.FirstOrDefault().CarId" asp-route-companyId="@Model.AllProducts.FirstOrDefault().CompanyId">@item.Name</a>
+
+                                                    </li>
+                                                }
+                                                @*@await Component.InvokeAsync("Brand")*@
+                                            </ul>
+                                        </div>
+                                    </aside>
+
+                                    <aside class="widget wc_product_categories">
+                                        <div class="widget_title">کمپانی</div>
+                                        <div class="widget-content">
+                                            <ul class="product-categories">
+                                                @foreach (var item in Company.GetCompany())
+                                                {
+                                                    <li class="orderby-wrapper @((Model.AllProducts.FirstOrDefault().CompanyId == item.Id)?"current-cat":"")">
+                                                        <a asp-route-categoryId="@Model.AllProducts.FirstOrDefault().CategoryId" asp-route-pageid="1" asp-route-brandId="@Model.AllProducts.FirstOrDefault().BrandId" asp-route-startPrice="@Model.AllProducts.FirstOrDefault().StartPrice" asp-route-endPrice="@Model.AllProducts.FirstOrDefault().EndPrice" asp-route-carId="@Model.AllProducts.FirstOrDefault().CarId" asp-route-companyId="@item.Id">@item.Name</a>
+                                                    </li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    </aside>
+
+                                    <aside class="widget wc_product_categories">
+                                        <div class="widget_title">خودرو</div>
+                                        <div class="widget-content">
+                                            <ul class="product-categories">
+                                                @foreach (var item in Car.GetCar())
+                                                {
+                                                    <li class="orderby-wrapper @((Model.AllProducts.FirstOrDefault().CarId == item.Id)?"current-cat":"")">
+                                                        <a asp-route-categoryId="@Model.AllProducts.FirstOrDefault().CategoryId" asp-route-pageid="1" asp-route-brandId="@Model.AllProducts.FirstOrDefault().BrandId" asp-route-startPrice="@Model.AllProducts.FirstOrDefault().StartPrice" asp-route-endPrice="@Model.AllProducts.FirstOrDefault().EndPrice" asp-route-carId="@item.Id" asp-route-companyId="@Model.AllProducts.FirstOrDefault().CompanyId">@item.Name</a>
+                                                    </li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    </aside>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-wrap col-12 col-sm-12 col-md-12 col-lg-9 content-with-sidebar">
+                            <header class="products-products-header block-title">
+                                <h1 class="products-products-header__title page-title title"><i class="small fal fa-poll-h"></i>همه محصولات</h1>
+                                @*<h1 class="products-products-header__title page-title title"><i class="small fal fa-poll-h"></i>@Model.ProductCategory.Name</h1>*@
+                            </header>
+
+                            <div class="shop-control-bar clear">
+                                <div class="products-notices-wrapper"></div>
+                                <p class="products-result-count">نمایش دادن همه نتایج</p>
+                            </div>
+
+                            <div class="wd_filter_wrap mweb-swiper">
+                                <div class="swiper-slider swiper-container" dir='rtl' data-slider="{&quot;slidesPerView&quot;:1,&quot;spaceBetween&quot;:0,&quot;watchSlidesVisibility&quot;:true,&quot;loop&quot;:false,&quot;autoplay&quot;:false,&quot;touchMoveStopPropagation&quot;:true,&quot;breakpoints&quot;:{&quot;575&quot;:{&quot;slidesPerView&quot;:1},&quot;768&quot;:{&quot;slidesPerView&quot;:2},&quot;1024&quot;:{&quot;slidesPerView&quot;:4}}}">
+                                    <div class="swiper-wrapper">
+
+                                        <div id="yith-woo-ajax-navigation-sort-by-2" class="widget swiper-slide wd_filter yith-products-ajax-product-filter yith-wcan-sort-by">
+                                            <div class="wd_title">ترتیب محصولات: <i class="fal fa-plus-circle"></i></div>
+                                            <div class="widget-content">
+                                                <ul class="orderby">
+                                                    <li class="orderby-wrapper"><a class="orderby-item" href="#">مرتب‌سازی بر اساس ارزانترین</a></li>
+                                                    <li class="orderby-wrapper"><a class="orderby-item" href="#">مرتب‌سازی بر اساس گرانترین</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="swiper-slide" style="display:none">
+                                            <div id="yith-woo-ajax-reset-navigation" class="widget wd_filter yith-products-ajax-product-filter yith-woo-ajax-reset-navigation yith-woo-ajax-navigation products widget_layered_nav" style="display:none"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <ul class="products row columns-4 prdtype_2">
+
+                                @foreach (var products in Model.AllProducts)
+                                {
+                                    @if (products.HasDiscount)
+                                    {
+                                        <li class="item col-12 col-sm-6 col-md-4 col-lg-3 product type-product status-publish instock product_cat-inner-car-interior">
+                                            <div class="item-area item_general clear">
+                                                <div class="product-image-area">
+                                                    <a class="product-image" asp-page="/Product" asp-route-id="@products.Id">
+                                                        <div class="product-label label-circle"><div class="circle"></div><span>@products.DiscountRate</span></div>
+                                                        <div class="prd_color_list"></div><img src="~/ProductPictures/@products.Picture" />
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-area">
+                                                    <span class="price">
+                                                        <del aria-hidden="true">
+                                                            <span class="products-Price-amount amount">
+                                                                <bdi>@products.Price&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi>
+                                                            </span>
+                                                        </del>
+                                                        <ins><span class="products-Price-amount amount"><bdi>@products.PriceWithDiscountForShow&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span></ins>
+                                                    </span>
+                                                    <a asp-page="/Product" asp-route-id="@products.Id" rel="bookmark" title="@products.Name">
+                                                        <h2 class="products-loop-product__title">@products.Name</h2>
+                                                    </a>
+                                                    <div class="actions">
+                                                        <ul class="add-to-links">
+                                                            <li><div class="add_to_wishlist_wrap"><a href="#" class="add_to_wishlist archive_add_to_wishlist user_logged" title="افزودن به علاقه مندی ها"></a></div></li>
+                                                            <li class="compare-button"><a href="#" class="button compare">مقایسه</a></li>
+                                                            <li>
+                                                                <div class="add-to-cart-wrap">
+                                                                    <input type="hidden" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="تعداد" size="4" inputmode="numeric" id="productCount" />
+                                                                    @*<a href="#" class="button product_type_variable add_to_cart_button" onclick="addToCart('@products.Id', '@products.Name', '@Convert.ToDouble(products.PriceWithDiscount)', '@products.Picture')">انتخاب گزینه</a>*@
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    }
+                                    else
+                                    {
+                                        <li class="item col-12 col-sm-6 col-md-4 col-lg-3 product type-product status-publish instock product_cat-inner-car-interior">
+                                            <div class="item-area item_general clear">
+                                                <div class="product-image-area">
+                                                    <a class="product-image" asp-page="/Product" asp-route-id="@products.Id">
+                                                        <img src="~/ProductPictures/@products.Picture" alt="" />
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-area">
+                                                    <span class="price">
+                                                        <span class="products-Price-amount amount">
+                                                            <bdi>@products.Price&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi>
+                                                        </span>
+                                                    </span>
+                                                    <a asp-page="/Product" asp-route-id="@products.Id"><h2 class="products-loop-product__title">@products.Name</h2></a>
+                                                    <div class="actions">
+                                                        <ul class="add-to-links">
+                                                            <li><div class="add_to_wishlist_wrap"><a href="#" class="add_to_wishlist archive_add_to_wishlist user_logged" title="افزودن به علاقه مندی ها"></a></div></li>
+                                                            <li class="compare-button"><a href="#" class="button compare">مقایسه</a></li>
+                                                            <li>
+                                                                <div class="add-to-cart-wrap">
+                                                                    <input type="hidden" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="تعداد" size="4" inputmode="numeric" id="productCount" />
+                                                                    <a href="#" class="button product_type_variable add_to_cart_button" onclick="addToCart('@products.Id', '@products.Name', '@products.PriceWithDiscountForCart', '@products.Picture')">انتخاب گزینه</a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    }
+                                }
+
+                            </ul>
+                            <nav class="products-pagination">
+                                <ul class="page-numbers">
+                                    <li class="@(Model.AllProducts.FirstOrDefault().ActivePage == 1 ? "d-none" : "disabled")">
+
+                                        <a aria-label="Previous" asp-page="/AllProduct" asp-route-categoryId="@Model.AllProducts.FirstOrDefault().CategoryId" asp-route-pageid=@(Model.AllProducts.FirstOrDefault().ActivePage - 1) asp-route-brandId="@Model.AllProducts.FirstOrDefault().BrandId" asp-route-startPrice="@Model.AllProducts.FirstOrDefault().StartPrice" asp-route-endPrice="@Model.AllProducts.FirstOrDefault().EndPrice" asp-route-carId="@Model.AllProducts.FirstOrDefault().CarId" asp-route-companyId="@Model.AllProducts.FirstOrDefault().CompanyId" class="previous page-numbers">
+                                            <span aria-hidden="true">«</span>
+                                        </a>
+
+                                    </li>
+
+                                    @for (int i = 1; i <= (Model.AllProducts.FirstOrDefault().PageCount / 80) + 1; i++)
+                                    {
+                                        <li>
+                                            <a asp-page="/AllProduct" asp-route-categoryId="@Model.AllProducts.FirstOrDefault().CategoryId" asp-route-pageid=@i asp-route-brandId="@Model.AllProducts.FirstOrDefault().BrandId" asp-route-startPrice="@Model.AllProducts.FirstOrDefault().StartPrice" asp-route-endPrice="@Model.AllProducts.FirstOrDefault().EndPrice" asp-route-carId="@Model.AllProducts.FirstOrDefault().CarId" asp-route-companyId="@Model.AllProducts.FirstOrDefault().CompanyId" class="@((Model.AllProducts.FirstOrDefault().ActivePage == i)?"page-numbers current":"page-numbers")">@i<span class="sr-only">(current)</span></a>
+                                        </li>
+                                    }
+
+                                    <li>
+                                        <a aria-label="Next" asp-page="/AllProduct" asp-route-categoryId="@Model.AllProducts.FirstOrDefault().CategoryId" asp-route-pageid=@(Model.AllProducts.FirstOrDefault().ActivePage + 1) asp-route-brandId="@Model.AllProducts.FirstOrDefault().BrandId" asp-route-startPrice="@Model.AllProducts.FirstOrDefault().StartPrice" asp-route-endPrice="@Model.AllProducts.FirstOrDefault().EndPrice" asp-route-carId="@Model.AllProducts.FirstOrDefault().CarId" asp-route-companyId="@Model.AllProducts.FirstOrDefault().CompanyId"><span aria-hidden="true" class="next page-numbers">»</span></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+
+                    </div>}
+                </div>
+            </div>
+        </div><!-- ./ container -->
+    </div>
+</div><!--#main-site-wrap-->

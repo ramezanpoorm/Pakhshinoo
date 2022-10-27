@@ -42,6 +42,7 @@ namespace ShopManagement.InfraStructure.EFCore.Repository
             var query = _shopContext.Cars.Select(x => new CarViewModel
             {
                 Id = x.Id,
+                IsRemoved = x.IsRemoved,
                 Name = x.Name
             });
 

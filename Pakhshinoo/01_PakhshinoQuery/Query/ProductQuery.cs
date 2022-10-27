@@ -37,9 +37,9 @@ namespace _01_PakhshinoQuery.Query
         public ProductQueryModel GetDetails(long id)
         {
             var inventory = _inventoryContext.Inventory.Select(x => new { x.ProductId, x.UnitPrice, x.InStock }).ToList();
-            var discounts = _discountContext.CustomerDiscounts.Where(x => x.StartDate < DateTime.Now && x.EndDate > DateTime.Now).Select(x => new { x.DiscountRate, x.ProductId }).ToList();
+            var discounts = _discountContext.CustomerDiscounts.Where(x => x.StartDate < DateTime.Now && x.EndDate > DateTime.Now).Select(x => new { x.DiscountRate, x.ProductId }).AsNoTracking().ToList();
 
-            var product = _context.Products.Include(x => x.ProductPictures).Include(x => x.Category).Select(product => new ProductQueryModel
+            var product = _context.Products.Where(x => x.IsRemoved == false).Include(x => x.ProductPictures).Include(x => x.Category).Select(product => new ProductQueryModel
             {
                 Id = product.Id,
                 Category = product.Category.Name,
@@ -56,7 +56,7 @@ namespace _01_PakhshinoQuery.Query
                 MetaDescription = product.MetaDescription,
                 ShortDescription = product.ShortDescription,
                 Pictures = MapProductPictures(product.ProductPictures)
-            }).FirstOrDefault(x => x.Id == id);
+            }).AsNoTracking().FirstOrDefault(x => x.Id == id);
 
             if (product == null)
                 return new ProductQueryModel();
@@ -95,7 +95,7 @@ namespace _01_PakhshinoQuery.Query
                     Message = x.Message,
                     Name = x.Name,
                     CreationDate = x.CreateDate.ToFarsi()
-                }).OrderByDescending(x => x.Id).ToList();
+                }).AsNoTracking().OrderByDescending(x => x.Id).ToList();
 
             return product;
         }
@@ -117,7 +117,7 @@ namespace _01_PakhshinoQuery.Query
             var inventory = _inventoryContext.Inventory.Select(x => new { x.ProductId, x.UnitPrice }).ToList();
             var discounts = _discountContext.CustomerDiscounts.Where(x => x.StartDate < DateTime.Now && x.EndDate > DateTime.Now).Select(x => new { x.DiscountRate, x.ProductId }).ToList();
 
-            var products = _context.Products.Include(x => x.Category).Select(product => new ProductQueryModel
+            var products = _context.Products.Where(x => x.IsRemoved == false).Include(x => x.Category).Select(product => new ProductQueryModel
             {
                 Id = product.Id,
                 Category = product.Category.Name,
@@ -127,7 +127,7 @@ namespace _01_PakhshinoQuery.Query
                 PictureTitle = product.PictureTitle,
                 Slug = product.Slug,
                 IsSpecial = product.IsSpecial
-            }).OrderByDescending(x => x.Id).Take(6).ToList();
+            }).AsNoTracking().OrderByDescending(x => x.Id).Take(6).ToList();
 
             foreach (var product in products)
             {
@@ -157,9 +157,9 @@ namespace _01_PakhshinoQuery.Query
         public List<ProductQueryModel> GetSpecialProducts()
         {
             var inventory = _inventoryContext.Inventory.Select(x => new { x.ProductId, x.UnitPrice }).ToList();
-            var discounts = _discountContext.CustomerDiscounts.Where(x => x.StartDate < DateTime.Now && x.EndDate > DateTime.Now).Select(x => new { x.DiscountRate, x.ProductId, x.EndDate, x.IsSpecial }).ToList();
+            var discounts = _discountContext.CustomerDiscounts.Where(x => x.StartDate < DateTime.Now && x.EndDate > DateTime.Now).Select(x => new { x.DiscountRate, x.ProductId, x.EndDate, x.IsSpecial }).AsNoTracking().ToList();
 
-            var products = _context.Products.Include(x => x.Category).Select(product => new ProductQueryModel
+            var products = _context.Products.Where(x => x.IsRemoved == false).Include(x => x.Category).Select(product => new ProductQueryModel
             {
                 Id = product.Id,
                 Category = product.Category.Name,
@@ -168,7 +168,7 @@ namespace _01_PakhshinoQuery.Query
                 PictureAlt = product.PictureAlt,
                 PictureTitle = product.PictureTitle,
                 Slug = product.Slug,
-            }).ToList();
+            }).AsNoTracking().ToList();
 
             foreach (var product in products)
             {
@@ -206,7 +206,7 @@ namespace _01_PakhshinoQuery.Query
             var discounts = _discountContext.CustomerDiscounts.Where(x => x.StartDate < DateTime.Now && x.EndDate > DateTime.Now).Select(x => new { x.DiscountRate, x.ProductId }).ToList();
 
 
-            var products = _context.Products.Where(s => s.UnitPrice >= startPrice && (categoryId == 0 || s.CategoryId == categoryId) && s.UnitPrice <= endPrice && (brandId == 0 || s.BrandId == brandId) && (carId == 0 || s.CarProducts.Where(p => p.ProductId == s.Id && p.CarId == carId).Any()) && (companyId == 0 || s.CompanyProducts.Where(p => p.ProductId == s.Id && p.CompanyId == companyId).Any())).Include(x => x.Category).Select(product => new ProductQueryModel
+            var products = _context.Products.Where(s => s.UnitPrice >= startPrice && s.IsRemoved == false && (categoryId == 0 || s.CategoryId == categoryId) && s.UnitPrice <= endPrice && (brandId == 0 || s.BrandId == brandId) && (carId == 0 || s.CarProducts.Where(p => p.ProductId == s.Id && p.CarId == carId).Any()) && (companyId == 0 || s.CompanyProducts.Where(p => p.ProductId == s.Id && p.CompanyId == companyId).Any())).Include(x => x.Category).Select(product => new ProductQueryModel
             {
                 StartPrice = startPrice,
                 EndPrice = endPrice,
@@ -224,7 +224,7 @@ namespace _01_PakhshinoQuery.Query
                 CarId = carId,
                 CategoryId = categoryId,
                 PageCount = _context.Products.Where(s => s.UnitPrice >= startPrice && s.UnitPrice <= endPrice && (categoryId == 0 || s.CategoryId == categoryId) && (brandId == 0 || s.BrandId == brandId) && (carId == 0 || s.CarProducts.Where(p => p.ProductId == s.Id && p.CarId == carId).Any()) && (companyId == 0 || s.CompanyProducts.Where(p => p.ProductId == s.Id && p.CompanyId == companyId).Any())).ToList().Count
-            }).Skip(skip).Take(80).ToList();
+            }).AsNoTracking().Skip(skip).Take(80).ToList();
 
             foreach (var product in products)
             {
@@ -269,7 +269,7 @@ namespace _01_PakhshinoQuery.Query
         {
             int skip = (pageid - 1) * 80;
             var inventory = _inventoryContext.Inventory.Select(x => new { x.ProductId, x.UnitPrice }).ToList();
-            var discounts = _discountContext.CustomerDiscounts.Where(x => x.StartDate < DateTime.Now && x.EndDate > DateTime.Now).Select(x => new { x.DiscountRate, x.ProductId, x.EndDate, x.IsSpecial }).ToList();
+            var discounts = _discountContext.CustomerDiscounts.Where(x => x.StartDate < DateTime.Now && x.EndDate > DateTime.Now).Select(x => new { x.DiscountRate, x.ProductId, x.EndDate, x.IsSpecial }).AsNoTracking().ToList();
 
             _productApplication.NotSpecialAll();
             
@@ -278,7 +278,7 @@ namespace _01_PakhshinoQuery.Query
                 _productApplication.Special(dis.ProductId);                
             }
 
-            var products = _context.Products.Where(s => s.UnitPrice >= startPrice && (categoryId == 0 || s.CategoryId == categoryId) && s.UnitPrice <= endPrice && (brandId == 0 || s.BrandId == brandId) && (carId == 0 || s.CarProducts.Where(p => p.ProductId == s.Id && p.CarId == carId).Any()) && (companyId == 0 || s.CompanyProducts.Where(p => p.ProductId == s.Id && p.CompanyId == companyId).Any()) && s.IsSpecial == true).Include(x => x.Category).Select(product => new ProductQueryModel
+            var products = _context.Products.Where(s => s.UnitPrice >= startPrice && s.IsRemoved == false && (categoryId == 0 || s.CategoryId == categoryId) && s.UnitPrice <= endPrice && (brandId == 0 || s.BrandId == brandId) && (carId == 0 || s.CarProducts.Where(p => p.ProductId == s.Id && p.CarId == carId).Any()) && (companyId == 0 || s.CompanyProducts.Where(p => p.ProductId == s.Id && p.CompanyId == companyId).Any()) && s.IsSpecial == true).Include(x => x.Category).Select(product => new ProductQueryModel
             {
                 StartPrice = startPrice,
                 EndPrice = endPrice,
@@ -295,7 +295,7 @@ namespace _01_PakhshinoQuery.Query
                 CarId = carId,
                 CategoryId = categoryId,
                 PageCount = _context.Products.Where(s => s.UnitPrice >= startPrice && s.UnitPrice <= endPrice && (categoryId == 0 || s.CategoryId == categoryId) && (brandId == 0 || s.BrandId == brandId) && (carId == 0 || s.CarProducts.Where(p => p.ProductId == s.Id && p.CarId == carId).Any()) && (companyId == 0 || s.CompanyProducts.Where(p => p.ProductId == s.Id && p.CompanyId == companyId).Any()) && s.IsSpecial == true).ToList().Count
-            }).Skip(skip).Take(80).ToList();
+            }).AsNoTracking().Skip(skip).Take(80).ToList();
 
             foreach (var product in products)
             {
@@ -327,8 +327,8 @@ namespace _01_PakhshinoQuery.Query
 
         public List<OrderItemViewModel> GetOrderItemsIndex()
         {
-            var products = _context.Products.Select(x => new { x.Id, x.Name, x.Picture }).ToList();
-            var order = _context.OrderItems.ToList();
+            var products = _context.Products.Where(x => x.IsRemoved == false).Select(x => new { x.Id, x.Name, x.Picture }).ToList();
+            var order = _context.OrderItems.AsNoTracking().ToList();
 
 
             //var items = order.Items.GroupBy(c => new { c.DiscountRate, c.ProductId, c.UnitPrice }).Select(x => new OrderItemViewModel
@@ -357,7 +357,7 @@ namespace _01_PakhshinoQuery.Query
 
         public List<OrderItemViewModel> GetOrderItems()
         {
-            var products = _context.Products.Select(x => new { x.Id, x.Name }).ToList();
+            var products = _context.Products.Where(x => x.IsRemoved == false).Select(x => new { x.Id, x.Name }).ToList();
             var order = _context.Orders.FirstOrDefault();
             
 
@@ -392,7 +392,7 @@ namespace _01_PakhshinoQuery.Query
                 _productApplication.Special(dis.ProductId);
             }
 
-            var products = _context.Products.Where(s => s.UnitPrice >= startPrice && (categoryId == 0 || s.CategoryId == categoryId) && s.UnitPrice <= endPrice && (brandId == 0 || s.BrandId == brandId) && (carId == 0 || s.CarProducts.Where(p => p.ProductId == s.Id && p.CarId == carId).Any()) && (companyId == 0 || s.CompanyProducts.Where(p => p.ProductId == s.Id && p.CompanyId == companyId).Any())).OrderByDescending(d => d.VisitCount).Include(x => x.Category).Select(product => new ProductQueryModel
+            var products = _context.Products.Where(s => s.UnitPrice >= startPrice && s.IsRemoved == false && (categoryId == 0 || s.CategoryId == categoryId) && s.UnitPrice <= endPrice && (brandId == 0 || s.BrandId == brandId) && (carId == 0 || s.CarProducts.Where(p => p.ProductId == s.Id && p.CarId == carId).Any()) && (companyId == 0 || s.CompanyProducts.Where(p => p.ProductId == s.Id && p.CompanyId == companyId).Any())).OrderByDescending(d => d.VisitCount).Include(x => x.Category).Select(product => new ProductQueryModel
             {
                 StartPrice = startPrice,
                 EndPrice = endPrice,
@@ -409,7 +409,7 @@ namespace _01_PakhshinoQuery.Query
                 CarId = carId,
                 CategoryId = categoryId,
                 PageCount = _context.Products.Where(s => s.UnitPrice >= startPrice && s.UnitPrice <= endPrice && (categoryId == 0 || s.CategoryId == categoryId) && (brandId == 0 || s.BrandId == brandId) && (carId == 0 || s.CarProducts.Where(p => p.ProductId == s.Id && p.CarId == carId).Any()) && (companyId == 0 || s.CompanyProducts.Where(p => p.ProductId == s.Id && p.CompanyId == companyId).Any())).ToList().Count
-            }).Skip(skip).Take(80).ToList();
+            }).Skip(skip).Take(80).AsNoTracking().ToList();
 
             foreach (var product in products)
             {
@@ -444,7 +444,7 @@ namespace _01_PakhshinoQuery.Query
             var inventory = _inventoryContext.Inventory.Select(x => new { x.ProductId, x.UnitPrice }).ToList();
             var discounts = _discountContext.CustomerDiscounts.Where(x => x.StartDate < DateTime.Now && x.EndDate > DateTime.Now).Select(x => new { x.DiscountRate, x.ProductId }).ToList();
 
-            var products = _context.Products.Include(x => x.Category).Select(product => new ProductQueryModel
+            var products = _context.Products.Where(x => x.IsRemoved == false).Include(x => x.Category).Select(product => new ProductQueryModel
             {
                 Id = product.Id,
                 Category = product.Category.Name,
@@ -455,7 +455,7 @@ namespace _01_PakhshinoQuery.Query
                 Slug = product.Slug,
                 IsSpecial = product.IsSpecial,
                 MostVisit = product.VisitCount
-            }).OrderByDescending(x => x.MostVisit).Take(3).ToList();
+            }).OrderByDescending(x => x.MostVisit).Take(3).AsNoTracking().ToList();
 
             foreach (var product in products)
             {
@@ -477,6 +477,56 @@ namespace _01_PakhshinoQuery.Query
                         product.PriceWithDiscountForCart = (price - discountAmount);
                     }
 
+                }
+            }
+            return products;
+        }
+
+        public List<ProductQueryModel> Search(string value, int pageid, long brandId, double startPrice, double endPrice, long carId, long companyId, long categoryId)
+        {
+            var inventory = _inventoryContext.Inventory.Select(x =>
+                new { x.ProductId, x.UnitPrice }).ToList();
+            var discounts = _discountContext.CustomerDiscounts
+                .Where(x => x.StartDate < DateTime.Now && x.EndDate > DateTime.Now)
+                .Select(x => new { x.DiscountRate, x.ProductId, x.EndDate }).AsNoTracking().ToList();
+
+            var query = _context.Products.Where(x=>x.IsRemoved == false)
+                .Include(x => x.Category)
+                .Select(product => new ProductQueryModel
+                {
+                    Id = product.Id,
+                    Category = product.Category.Name,
+                    Name = product.Name,
+                    Picture = product.Picture,
+                    PictureAlt = product.PictureAlt,
+                    PictureTitle = product.PictureTitle,
+                    ShortDescription = product.ShortDescription,
+                    Slug = product.Slug
+                }).AsNoTracking();
+
+            if (!string.IsNullOrWhiteSpace(value))
+                //value = value.Replace("ی", "ئ");
+                query = query.Where(x => x.Name.Contains(value) || x.ShortDescription.Contains(value));
+
+            var products = query.OrderByDescending(x => x.Id).ToList();
+
+            if (products.Count != 0)
+            {
+                foreach (var product in products)
+                {
+                    var productInventory = inventory.FirstOrDefault(x => x.ProductId == product.Id);
+                    if (productInventory != null)
+                    {
+                        var price = productInventory.UnitPrice;
+                        product.Price = price.ToMoney();
+                        var discount = discounts.FirstOrDefault(x => x.ProductId == product.Id);
+                        if (discount == null) continue;
+
+                        var discountRate = discount.DiscountRate;
+                        product.DiscountRate = discountRate;
+                        product.HasDiscount = discountRate > 0;
+                        var discountAmount = Math.Round((price * discountRate) / 100);
+                    }
                 }
             }
             return products;

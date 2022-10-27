@@ -35,14 +35,26 @@ namespace ServiceHost.Areas.Administrator.Pages.Shop.Company
 
         public IActionResult OnGetEdit(long Id)
         {
-            var car = _companyApplication.GetDetails(Id);
-            return Partial("Edit", car);
+            var company = _companyApplication.GetDetails(Id);
+            return Partial("Edit", company);
         }
 
         public JsonResult OnPostEdit(EditCompany command)
         {
             var result = _companyApplication.Edit(command);
             return new JsonResult(result);
+        }
+
+        public IActionResult OnGetRemove(long id)
+        {
+            _companyApplication.Removed(id);
+            return RedirectToPage("./Index");
+        }
+
+        public IActionResult OnGetRestore(long id)
+        {
+            _companyApplication.Restore(id);
+            return RedirectToPage("./Index");
         }
     }
 }

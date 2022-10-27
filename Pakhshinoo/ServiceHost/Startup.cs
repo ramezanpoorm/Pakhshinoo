@@ -18,6 +18,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ShopManagement.Configuration;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace ServiceHost
 {
@@ -75,6 +77,7 @@ namespace ServiceHost
 
                 options.AddPolicy("Account",
                     builder => builder.RequireRole(new List<string> { Roles.Administrator }));
+
                 options.AddPolicy("Inventory",
                     builder => builder.RequireRole(new List<string> { Roles.Administrator }));
             });
@@ -89,6 +92,11 @@ namespace ServiceHost
                     options.Conventions.AuthorizeAreaFolder("Administration", "/Accounts", "Account");
                     options.Conventions.AuthorizeAreaFolder("Administration", "/Inventory", "Inventory");
                 });
+
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            //services.AddMvc();
+            //services.AddControllers(options => options.EnableEndpointRouting = false);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -117,6 +125,9 @@ namespace ServiceHost
             {
                 endpoints.MapRazorPages();                
             });
+
+            //app.UseMvc();
+            
         }
     }
 }

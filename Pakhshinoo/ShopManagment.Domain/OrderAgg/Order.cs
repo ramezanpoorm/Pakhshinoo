@@ -45,7 +45,6 @@ namespace ShopManagement.Domain.OrderAgg
 
         public void SetIssueTrackingNo(string number)
         {
-
             IssueTrackingNo = number;
         }
 

@@ -6,5 +6,6 @@
         public string Name { get; set; }
         public string Picture { get; set; }
         public string Url { get; set; }
+        public bool IsRemoved { get; set; }
     }
 }

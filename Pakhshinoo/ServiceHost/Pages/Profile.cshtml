@@ -1,0 +1,111 @@
+﻿@page
+@model ServiceHost.Pages.ProfileModel
+@{
+}
+@{
+    Layout = "Shared/_ProfileLayout";
+    ViewData["title"] = "پروفایل";
+}
+
+<div class="col-12 col-sm-12 col-md-12 col-lg-9">
+    <div class="products-MyAccount-content">
+        <div class="products-notices-wrapper"></div>
+        <div class="my_acc_top scrolling-wrapper">
+            <div class="my_acc_user_info my_acc_completed"><i class="fal fa-hand-holding-box"></i><strong>0</strong><span>سفارش تکمیل شده</span></div>
+            <div class="my_acc_user_info my_acc_pending"><i class="fal fa-money-check-alt"></i><strong>0</strong><span>سفارش در انتظار پرداخت</span></div>
+            <div class="my_acc_user_info my_acc_processing"><i class="fal fa-box-full"></i><strong>0</strong><span>سفارش در حال انجام</span></div>
+            <div class="my_acc_user_info my_acc_on-hold"><i class="fal fa-paste"></i><strong>1</strong><span>سفارش در انتظار بررسی</span></div>
+            <div class="my_acc_user_info my_acc_cancelled"><i class="fal fa-file-times"></i><strong>0</strong><span>سفارش لغو شده</span></div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6">
+                <aside class="widget">
+                    <div class="widget_title">اطلاعات شخصی<a class="widget_link" href="#">ویرایش اطلاعات</a></div>
+                    <div class="widget-content user_detail_dashboad">
+                        <div><strong>نام و نام خانوادگی</strong><span>محسن همایونی</span></div>
+                        <div><strong>شماره موبایل</strong><span>09194060357</span></div>
+                        <div><strong>ایمیل</strong><span>youremail@yahoo.com</span></div>
+                        <div><strong>عضویت</strong><span>07 مهر 1400</span></div>
+                        <div><strong>شهر</strong><span>تهران</span></div>
+                        <div><strong>کد پستی</strong><span>11111111444111</span></div>
+                        <div><strong>آدرس</strong><span>خیابانی در تهران که خوب است ولی نه زیاد</span></div>
+                    </div>
+                </aside>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6">
+                <aside class="widget">
+                    <div class="widget_title">آخرین علاقه مندی ها<a class="widget_link" href="#">مشاهده همه</a></div>
+                    <div class="widget-content user_wishlist_dashboad">
+                        <div class="no_wishlist">لیست علاقه مندی ها خالی می باشد</div>
+
+                        <div class="horizontal_scroll_css">
+                            <div class="item">
+                                <div class="item-area item_general general_mobile">
+                                    <div class="product-image-area">
+                                        <a class="product-image" href="#">
+                                            <img src="img/765454-185x185.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="product-detail-area">
+                                        <h3 class="product-name">پخش کننده خودرو مدل 404TF</h3>
+                                        <div class="wishlist_act">
+                                            <a class="wl_goto_p" href="#" target="_blank">مشاهده</a>
+                                            <div class="add_to_wishlist_wrap"><a href="#" class="add_to_wishlist single_add_to_wishlist user_logged" title="حذف از علاقه مندی ها">حذف</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-area item_general general_mobile">
+                                    <div class="product-image-area">
+                                        <a class="product-image" href="#">
+                                            <img src="img/987666-185x185.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="product-detail-area">
+                                        <h3 class="product-name">چراغ جلو و چراغ عقب فن آوران پرتو الوند مدل RADFAR 131 مناسب برای پراید 131 بسته 4 عددی</h3>
+                                        <div class="wishlist_act">
+                                            <a class="wl_goto_p" href="#" target="_blank">مشاهده</a>
+                                            <div class="add_to_wishlist_wrap"><a href="#" class="add_to_wishlist single_add_to_wishlist user_logged" title="حذف از علاقه مندی ها">حذف</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <div class="widget dashboard_order_list clear">
+            <div class="widget_title">آخرین سفارشات <a class="widget_link" href="#">مشاهده همه</a></div>
+            <div class="widget-content">
+                <div class="morder_item clear">
+                    <div class="column"><span class="or_id">کدسفارش :: 2110</span></div>
+                    <div class="column"><span class="or_date">14 مهر 1400</span></div>
+                    <div class="column"><span class="or_status ors_on-hold">در انتظار بررسی</span></div>
+                    <div class="column">
+                        <span class="or_price">
+                            <span class="products-Price-amount amount">
+                                <bdi>1,120,000&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="column"><span class="or_view">مشاهده جزئیات<i class="fal fa-angle-down"></i></span></div>
+                </div>
+                <div class="morder_item_detail">
+                    <a class="summary_order_product" href="#" target="_blank">
+                        <img src="img/Untitled-1-185x185.jpg" class="attachment-products_thumbnail size-products_thumbnail" alt="" />
+                        <h4>رینگ آلومینیومی چرخ رنو مدل 230414 سایز 16 اینچ</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6"></div>
+            <div class="col-12 col-sm-12 col-md-6"></div>
+        </div>
+    </div>
+</div>

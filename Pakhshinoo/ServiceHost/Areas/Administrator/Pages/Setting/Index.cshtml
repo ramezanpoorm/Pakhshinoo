@@ -1,0 +1,171 @@
+﻿@page
+@model ServiceHost.Areas.Administrator.Pages.Setting.IndexModel
+@{
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">تنظیمات</h3>
+            </div>
+            <div class="panel-body">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="setting.PhoneNumber" class="control-label">تلفن</label>
+                                <input type="text" class="form-control" name="PhoneNumber" asp-for="setting.PhoneNumber">
+                                <span asp-validation-for="setting.PhoneNumber" class="error"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="setting.EmailAddress" class="control-label">پست الکترونیکی</label>
+                                <input type="text" class="form-control" name="EmailAddress" asp-for="setting.EmailAddress">
+                                <span asp-validation-for="setting.EmailAddress" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="setting.Instagram" class="control-label">اینستاگرام</label>
+                                <input type="text" class="form-control" name="Instagram" asp-for="setting.Instagram">
+                                <span asp-validation-for="setting.Instagram" class="error"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="setting.Telegram" class="control-label">تلگرام</label>
+                                <input type="text" class="form-control" name="Telegram" asp-for="setting.Telegram">
+                                <span asp-validation-for="setting.Telegram" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label asp-for="setting.Address" class="control-label">آدرس</label>
+                                <input type="text" class="form-control" name="Address" asp-for="setting.Address">
+                                <span asp-validation-for="setting.Address" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="setting.Percent9" class="control-label">وضعیت محاسبه 9 درصد</label>
+                                <input type="checkbox" class="form-control" name="Percent9" asp-for="setting.Percent9">
+                                <span asp-validation-for="setting.Percent9" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="setting.Banner1Title" class="control-label">عنوان بنر یک</label>
+                                <input type="text" class="form-control" name="Banner1Title" asp-for="setting.Banner1Title">
+                                <span asp-validation-for="setting.Banner1Title" class="error"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="setting.Banner1Link" class="control-label">لینک بنر یک</label>
+                                <input type="text" class="form-control" name="Banner1Link" asp-for="setting.Banner1Link">
+                                <span asp-validation-for="setting.Banner1Link" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="setting.Banner1Des" class="control-label">توضیحات بنر یک</label>
+                                <input type="text" class="form-control" name="Banner1Des" asp-for="setting.Banner1Des">
+                                <span asp-validation-for="setting.Banner1Des" class="error"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="setting.Banner1Pic" class="control-label">تصویر بنر یک</label>
+                                <input type="file" class="form-control" name="Banner1Pic" asp-for="setting.Banner1Pic">
+                                <span asp-validation-for="setting.Banner1Pic" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="setting.Banner2Title" class="control-label">عنوان بنر دو</label>
+                                <input type="text" class="form-control" name="Banner2Title" asp-for="setting.Banner2Title">
+                                <span asp-validation-for="setting.Banner2Title" class="error"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="setting.Banner2Link" class="control-label">لینک بنر دو</label>
+                                <input type="text" class="form-control" name="Banner2Title" asp-for="setting.Banner2Link">
+                                <span asp-validation-for="setting.Banner2Link" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="setting.Banner2Des" class="control-label">توضیحات بنر دو</label>
+                                <input type="text" class="form-control" name="Banner2Des" asp-for="setting.Banner2Des">
+                                <span asp-validation-for="setting.Banner2Des" class="error"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="setting.Banner2Pic" class="control-label">تصویر بنر دو</label>
+                                <input type="file" class="form-control" name="Banner2Pic" asp-for="setting.Banner2Pic">
+                                <span asp-validation-for="setting.Banner2Pic" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="setting.Banner3Title" class="control-label">عنوان بنر سه</label>
+                                <input type="text" class="form-control" name="Banner3Title" asp-for="setting.Banner3Title">
+                                <span asp-validation-for="setting.Banner3Title" class="error"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="setting.Banner3Link" class="control-label">لینک بنر سه</label>
+                                <input type="text" class="form-control" name="Banner3Link" asp-for="setting.Banner3Link">
+                                <span asp-validation-for="setting.Banner3Link" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="setting.Banner3Des" class="control-label">توضیحات بنر سه</label>
+                                <input type="text" class="form-control" name="Banner3Des" asp-for="setting.Banner3Des">
+                                <span asp-validation-for="setting.Banner3Des" class="error"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="setting.Banner3Pic" class="control-label">تصویر بنر سه</label>
+                                <input type="file" class="form-control" name="Banner3Pic" asp-for="setting.Banner3Pic">
+                                <span asp-validation-for="setting.Banner3Pic" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="hidden" asp-for="setting.Id" name="Id" value="@Model.setting.Id" />
+
+                    <button type="submit" class="btn btn-info waves-effect waves-light">ویرایش</button>
+                    <a asp-page="./Index" class="btn btn-dark waves-effect waves-light m-b-5">بازگشت</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

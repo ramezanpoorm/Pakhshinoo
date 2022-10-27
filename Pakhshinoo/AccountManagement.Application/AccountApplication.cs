@@ -3,6 +3,7 @@ using _0_Framework.Application;
 using AccountManagement.Application.Contract.Account;
 using AccountManagement.Application.Contracts.Account;
 using AccountManagement.Domain.AccountAgg;
+using AccountManagement.Domain.ProfileAgg;
 using AccountManagement.Domain.RoleAgg;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,17 +14,19 @@ namespace AccountManagement.Application
     {
         private readonly IFileUploader _fileUploader;
         private readonly IAccountRepository _accountRepository;
+        private readonly IProfileRepository _profileRepository;
         private readonly IPasswordHasher _passwordHasher;
         private readonly IAuthHelper _authHelper;
         private readonly IRoleRepository _roleRepository;
 
-        public AccountApplication(IAccountRepository accountRepository, IPasswordHasher passwordHasher, IFileUploader fileUploader, IAuthHelper authHelper, IRoleRepository roleRepository)
+        public AccountApplication(IAccountRepository accountRepository, IPasswordHasher passwordHasher, IFileUploader fileUploader, IAuthHelper authHelper, IRoleRepository roleRepository, IProfileRepository profileRepository)
         {
             _authHelper = authHelper;
             _accountRepository = accountRepository;
             _passwordHasher = passwordHasher;
             _fileUploader = fileUploader;
             _roleRepository = roleRepository;
+            _profileRepository = profileRepository;
         }
 
         public OpretaionResult ChangePassword(ChangePassword command)
@@ -56,6 +59,11 @@ namespace AccountManagement.Application
 
             _accountRepository.Create(account);
             _accountRepository.SaveChanges();
+
+            var profile = new Profile(account.Id, null, null, null, null, null, null, null, false, null);
+            _profileRepository.Create(profile);
+            _profileRepository.SaveChanges();
+
             return operation.Successeded();
         }
 

@@ -32,27 +32,28 @@ namespace ShopManagement.InfraStructure.EFCore.Repository
                 MetaDescription = x.MetaDescription,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
-                ShortDescription = x.ShortDescription
+                ShortDescription = x.ShortDescription,
+                BrandId = x.BrandId
             }).FirstOrDefault(x => x.Id == Id);
         }
 
         public List<ProductViewModel> GetProducts()
         {
-            return _context.Products.Select(x => new ProductViewModel
+            return _context.Products.OrderByDescending(x => x.Id).Select(x => new ProductViewModel
             {
                 Id = x.Id,
                 Name = x.Name
-            }).ToList();
+            }).OrderByDescending(x => x.Id).ToList();
         }
 
         public Product GetProductWithCategory(long id)
         {
-            return _context.Products.Include(x => x.Category).FirstOrDefault(x => x.Id == id);
+            return _context.Products.OrderByDescending(x => x.Id).Include(x => x.Category).FirstOrDefault(x => x.Id == id && x.IsRemoved == false);
         }
 
         public List<ProductViewModel> Search(ProductSearchModel searchModel)
         {
-            var query = _context.Products.Include(x => x.Category).Select(x => new ProductViewModel
+            var query = _context.Products.OrderByDescending(x => x.Id).Include(x => x.Category).Include(x => x.Brand).Select(x => new ProductViewModel
             {
                 Id = x.Id,
                 Name = x.Name,
@@ -61,6 +62,9 @@ namespace ShopManagement.InfraStructure.EFCore.Repository
                 Code = x.Code,
                 Picture = x.Picture,
                 IsSpecial = x.IsSpecial,
+                IsRemoved = x.IsRemoved,
+                BrandId = x.BrandId,
+                Brand = x.Brand.Name,
                 CreationDate = x.CreateDate.ToFarsi()
             });
 
@@ -73,7 +77,12 @@ namespace ShopManagement.InfraStructure.EFCore.Repository
             if (searchModel.CategoryId != 0)
                 query = query.Where(x => x.CategoryId == searchModel.CategoryId);
 
-            return query.OrderByDescending(x => x.Id).ToList();
+            if (searchModel.BrandId != 0)
+                query = query.Where(x => x.BrandId == searchModel.BrandId);
+
+            query = query.Where(x => x.IsRemoved == searchModel.IsRemoved);
+
+            return query.ToList();
         }
     }
 }

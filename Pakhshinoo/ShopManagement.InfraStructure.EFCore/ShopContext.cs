@@ -8,6 +8,7 @@ using ShopManagement.Domain.OrderAgg;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManagement.Domain.ProductPictureAgg;
+using ShopManagement.Domain.SettingAgg;
 using ShopManagement.Domain.SliderAgg;
 using ShopManagement.InfraStructure.EFCore.Mapping;
 
@@ -26,6 +27,7 @@ namespace ShopManagement.InfraStructure.EFCore
         public DbSet<CarProduct> CarProducts { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<Setting> Settings { get; set; }
         public ShopContext(DbContextOptions<ShopContext> options):base(options)
         {
 

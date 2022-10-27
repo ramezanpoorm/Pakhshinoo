@@ -3,5 +3,6 @@
     public class CompanySearchModel
     {
         public string Name { get; set; }
+        public bool IsRemoved { get; set; }
     }
 }

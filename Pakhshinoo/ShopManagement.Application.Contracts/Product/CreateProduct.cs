@@ -1,5 +1,6 @@
 ﻿using _0_Framework.Application;
 using Microsoft.AspNetCore.Http;
+using ShopManagement.Application.Contracts.Brand;
 using ShopManagement.Application.Contracts.ProductCategory;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,7 @@ namespace ShopManagement.Application.Contracts.Product
         public string MetaDescription { get; set; }
         public string Slug { get; set; }
         public List<ProductCategoryViewModel> Categories { get; set; }
+        public List<BrandViewModel> Brands { get; set; }
         public long BrandId { get; set; }
     }
 }

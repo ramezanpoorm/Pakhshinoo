@@ -23,11 +23,11 @@ namespace ShopManagement.Application
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             var slug = command.Slug.Slugify();
-
-            var picturePath = $"{command.Name}";
+            var picturePath = $"ProductPictures";
+            //var picturePath = $"{command.Name}";
             var pictureName = _fileUploader.Upload(command.Picture, picturePath);
 
-            var productCategory = new ProductCategory(command.Name, command.Description, pictureName, command.PictureAlt,command.PictureTitle, command.Keywords, command.MetaDescription, command.Slug);
+            var productCategory = new ProductCategory(command.Name, command.Description, command.Picture.FileName, command.PictureAlt,command.PictureTitle, command.Keywords, command.MetaDescription, command.Slug);
 
             _productCategoryRepository.Create(productCategory);
             _productCategoryRepository.SaveChanges();
@@ -47,10 +47,11 @@ namespace ShopManagement.Application
 
             var slug = command.Slug.Slugify();
 
-            var picturePath = $"{command.Name}";
+            //var picturePath = $"{command.Name}";
+            var picturePath = $"ProductPictures";
             var fileName = _fileUploader.Upload(command.Picture, picturePath);
 
-            productCategory.Edit(command.Name, command.Description, fileName, command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription, slug);
+            productCategory.Edit(command.Name, command.Description, command.Picture.FileName, command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription, slug);
             _productCategoryRepository.SaveChanges();
             return operation.Successeded();
         }

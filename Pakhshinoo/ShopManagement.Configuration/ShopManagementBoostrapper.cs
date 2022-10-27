@@ -3,6 +3,7 @@ using _01_PakhshinoQuery.Contract;
 using _01_PakhshinoQuery.Contract.Brand;
 using _01_PakhshinoQuery.Contract.Car;
 using _01_PakhshinoQuery.Contract.Company;
+using _01_PakhshinoQuery.Contract.Oredr;
 using _01_PakhshinoQuery.Contract.Product;
 using _01_PakhshinoQuery.Contract.ProductCategory;
 using _01_PakhshinoQuery.Contract.Slide;
@@ -19,6 +20,7 @@ using ShopManagement.Application.Contracts.Product;
 using ShopManagement.Application.Contracts.ProductCategory;
 using ShopManagement.Application.Contracts.ProductCompany;
 using ShopManagement.Application.Contracts.ProductPicture;
+using ShopManagement.Application.Contracts.Setting;
 using ShopManagement.Application.Contracts.Slide;
 using ShopManagement.Configuration.Permissions;
 using ShopManagement.Domain.BrandAgg;
@@ -31,15 +33,11 @@ using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManagement.Domain.ProductPictureAgg;
 using ShopManagement.Domain.Services;
+using ShopManagement.Domain.SettingAgg;
 using ShopManagement.Domain.SliderAgg;
 using ShopManagement.Infrastructure.InventoryAcl;
 using ShopManagement.InfraStructure.EFCore;
 using ShopManagement.InfraStructure.EFCore.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShopManagement.Configuration
 {
@@ -68,6 +66,9 @@ namespace ShopManagement.Configuration
             service.AddTransient<IBrandApplication, BrandApplication>();
             service.AddTransient<IBrandRepository, BrandRepository>();
 
+            service.AddTransient<ISettingApplication, SettingApplication>();
+            service.AddTransient<ISettingRepository, SettingRepository>();
+
             service.AddTransient<ICompanyApplication, CompanyApplication>();
             service.AddTransient<ICompanyRepository, CompanyRepository>();
 
@@ -82,9 +83,11 @@ namespace ShopManagement.Configuration
             service.AddTransient<IProductQuery, ProductQuery>();
             service.AddTransient<IBrandQuery, BrandQuery>();
             service.AddTransient<ICarQuery, CarQuery>();
+            service.AddTransient<IOrderQuery, OrderQuery>();
             service.AddTransient<ICompanyQuery, CompanyQuery>();
             service.AddTransient<ICartCalculatorService, CartCalculatorService>();
             service.AddSingleton<ICartService, CartService>();
+
 
             service.AddTransient<IPermissionExposer, ShopPermissionExposer>();
             service.AddTransient<IShopInventoryAcl, ShopInventoryAcl>();

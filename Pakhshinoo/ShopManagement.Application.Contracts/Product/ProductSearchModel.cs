@@ -5,5 +5,7 @@
         public string Name { get; set; }
         public string Code { get; set; }
         public long CategoryId  { get; set; }
+        public bool IsRemoved { get; set; }
+        public long BrandId { get; set; }
     }
 }

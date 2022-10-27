@@ -1,4 +1,5 @@
 ﻿@inject _0_Framework.Application.IAuthHelper authHelper
+@inject ShopManagement.Application.Contracts.Setting.ISettingApplication setting
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html dir="rtl" lang="fa-IR">
@@ -27,7 +28,7 @@
     <link rel="apple-touch-icon" href="~/Theme/assets/img/logo-fal-blue-1-1.webp" />
     <meta name="msapplication-TileImage" content="~/Theme/assets/img/logo-fal-blue-1-1.webp" />
     <link rel="stylesheet" id="style-css" href="~/Theme/assets/css/styles.css?ver=9.0.1" type="text/css" media="all" />
-    
+
 </head>
 <body class="rtl home page-template product-template-default single-product products style_tabs_three">
     <div class="togglesidebar cart_sidebar">
@@ -35,11 +36,11 @@
             <div class="cart_sidebar_head">
                 <div class="fal fa-times cart_sidebar_close close_sidebar" data-class="open_cart_sidebar"></div>
                 <strong>سبد خرید</strong>
-                <div class="cart_count" id="#cart_items_count2">0</div>
+                @*<div class="cart_count" id="#cart_items_count2">0</div>*@
             </div>
             <div class="widget_shopping_cart_content">
                 <ul class="products-mini-cart cart_list product_list_widget" id="cart_items_wrapper">
-                    @*<p class="mini-cart__empty-message">هیچ محصولی در سبد خرید نیست.</p>*@
+                    <p class="mini-cart__empty-message">هیچ محصولی در سبد خرید نیست.</p>
                 </ul>
                 <div class="mini_cart_bottom">
 
@@ -54,7 +55,7 @@
     </div>
 
     @*@await Component.InvokeAsync("LoginRegister")*@
-    
+
     <header role="banner" class="head_4 head_5">
         <div class="container">
             <div class="row">
@@ -66,10 +67,11 @@
                     </div>
                 </div>
                 <div class="col-md-5 hide_mobile">
-                    <form class="search_wrap elm_has_cat_btn" id="ajax-form-search" method="get" action="#">
-                        <i class="search_clear fal fa-times"></i><i class="search_icon fal fa-search"></i><input type="text" id="search-form-text" class="search-field" value="" name="s" placeholder="کلید واژه مورد نظر ..." />
-                        <button>جستجو</button>
-                        <input type="hidden" name="post_type" value="product" /><input type="hidden" id="search_cat_id" name="cat_id" value="" />
+                    <form class="search_wrap elm_has_cat_btn" id="ajax-form-search" method="get" action="/Search">
+                        <i class="search_clear fal fa-times"></i><i class="search_icon fal fa-search"></i>
+                        <input type="text" id="value" class="search-field" name="value" placeholder="کلید واژه مورد نظر ..." />
+                        <input type="submit" value="جستجو" />
+                        @*<input type="hidden" name="post_type" value="product" /><input type="hidden" id="search_cat_id" name="cat_id" value="" />*@
                         <div id="ajax-search-result"></div>
                     </form>
                 </div>
@@ -82,28 +84,28 @@
                     }
                     else
                     {
-                <div class="sign-in hs_icon user_login">
-                    <span>خوش آمدید @authHelper.CurrentAccountInfo().Fullname.</span>
-                    
-                    <div class="my-account">
-                        <ul class="menu">
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">حساب کاربری</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">سبد خرید</a></li>
-                            <li><a asp-page="/account" asp-page-handler="Logout">خروج</a></li>
-                        </ul>
-                    </div>
-                </div>
-                    }	
+                        <div class="sign-in hs_icon user_login">
+                            <span>خوش آمدید @authHelper.CurrentAccountInfo().Fullname.</span>
+
+                            <div class="my-account">
+                                <ul class="menu">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a asp-page="\profile">حساب کاربری</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="\Cart">سبد خرید</a></li>
+                                    <li><a asp-page="/account" asp-page-handler="Logout">خروج</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    }
 
                     <!-- ./user_login -->
 
                     <a href="#" class="d-none d-sm-block head_wishlist_btn hs_icon"><i class="fal fa-heart"></i></a>
-                    <a href="https://www.instagram.com/pakhshinoo" class="d-none d-lg-block hs_icon instagram" title="ما در شبکه اجتماعی"> <i class="fab fa-instagram"></i> </a>
+                    <a href="@setting.GetDetails(2)." class="d-none d-lg-block hs_icon instagram" title="ما در شبکه اجتماعی"> <i class="fab fa-instagram"></i> </a>
                     <!-- ./top_icons -->
                     <div class="d-none d-sm-block hs_icon phone">
                         <i class="fal fa-phone"></i>
                         <div class="head_phone">
-                            <p><a href="tel:+982146886036">02146886036</a></p><p><a href="mailto:info@pakhshinoo.com">info@pakhshinoo.com</a></p>
+                            <p><a href="tel:+@setting.GetDetails(2).PhoneNumber">@setting.GetDetails(2).PhoneNumber</a></p><p><a href="mailto:@setting.GetDetails(2).EmailAddress">info@pakhshinoo.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -126,9 +128,9 @@
                                 @await Component.InvokeAsync("ProductCategory")
                             </li>
 
-                            <li class="level-0 menu-item-object-page">
-                                <a href="/Pakhshinoo.xlsx"><span class="menu-item-text">دانلود اکسل لیست محصولات</span></a>
-                            </li>
+                            @*<li class="level-0 menu-item-object-page">
+                                    <a href="/Pakhshinoo.xlsx"><span class="menu-item-text">دانلود اکسل لیست محصولات</span></a>
+                                </li>*@
 
                             <li class="level-0 menu-item-object-product_cat menu-item-has-children">
                                 <a><span class="menu-item-text">دانشنامه</span></a>
@@ -162,7 +164,7 @@
                                     </li>
                                     <li class="level-0 menu-item-object-product_cat menu-item-has-children">
                                         <a><span class="menu-item-text">دانشنامه</span></a>
-										@await Component.InvokeAsync("ArticleCategory")
+                                        @await Component.InvokeAsync("ArticleCategory")
                                     </li>
 
                                     <li class="level-0 menu-item-object-page">
@@ -192,7 +194,7 @@
             <li><a href="#" class="compare_sticky" title="مقایسه"><i class="fal fa-exchange"></i><span>0</span></a></li>
             <li>
                 <a href="#" class="get_sidebar" data-class="open_cart_sidebar" title="سبد خرید">
-                    <i class="fal fa-shopping-bag"></i><span id="toolbox_cart">0 </span>
+                    @*<i class="fal fa-shopping-bag"></i><span id="toolbox_cart">0 </span>*@
                 </a>
             </li>
             <li><a href="#" class="gototop" title="رفتن به بالا"><i class="fal fa-arrow-up"></i></a></li>
@@ -314,8 +316,8 @@
                     <div class="footer_list">
                         <div class="title_list">خدمات مشتریان</div>
                         <ul class="menu">
-							<li class="menu-item menu-item-type-post_type"><a href="/index">صفحه اصلی</a></li>
-							<li class="menu-item menu-item-type-custom"><a href="/about-us">درباره ما</a></li>
+                            <li class="menu-item menu-item-type-post_type"><a href="/index">صفحه اصلی</a></li>
+                            <li class="menu-item menu-item-type-custom"><a href="/about-us">درباره ما</a></li>
                             <li class="menu-item menu-item-type-post_type"><a href="/contact-us">تماس با ما</a></li>
                             <li class="menu-item menu-item-type-custom"><a href="/Account">ورود | ثبت‌نام</a></li>
                             <li class="menu-item menu-item-type-custom"><a href="/faq">رویه‌های بازگرداندن کالا</a></li>
@@ -333,12 +335,12 @@
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
                     <div class="contact_us_wrap type_3">
                         <h5>ارتباط با ما</h5>
-                        <div class="contact_item"><i class="fal fa-map-marked-alt"></i><span>تهران - شهر قدس - 45 متری کلهر - بالاتراز راهنمایی رانندگی - پلاک 17</span></div>
-                        <div class="contact_item phone"><i class="fal fa-phone-volume"></i><strong>021</strong>46886036</div>
-                        <div class="contact_item email">info@pakhshinoo.com</div>
+                        <div class="contact_item"><i class="fal fa-map-marked-alt"></i><span>@setting.GetDetails(2).Address</span></div>
+                        <div class="contact_item phone"><i class="fal fa-phone-volume"></i><strong>021</strong>@setting.GetDetails(2).PhoneNumber</div>
+                        <div class="contact_item email">@setting.GetDetails(2).EmailAddress</div>
                         <div class="clear"></div>
-                        <a class="footer_social_l telegram" href="#"><i class="fab fa-telegram-plane"></i> Telegram</a>
-                        <a class="footer_social_l instagram" href="https://www.instagram.com/pakhshinoo"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a class="footer_social_l telegram" href="@setting.GetDetails(2).Telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                        <a class="footer_social_l instagram" href="@setting.GetDetails(2).Instagram"><i class="fab fa-instagram"></i> Instagram</a>
                     </div>
                 </div>
 
@@ -352,6 +354,7 @@
             </div>
         </div>
     </footer>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="~/Theme/assets/js/jquery.min.js"></script>
     <script src="~/Theme/assets/js/main-header.js"></script>
     <script src="~/Theme/assets/js/plugins.js"></script>

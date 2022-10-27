@@ -34,18 +34,21 @@ namespace ShopManagement.Application
         public OpretaionResult Edit(EditBrand command)
         {
             var operation = new OpretaionResult();
-            var car = _brandRepository.Get(command.Id);
-
-            if (car == null)
+            var brand = _brandRepository.Get(command.Id);
+            string picturePath = "";
+            if (brand == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
             if (_brandRepository.Exists(x => x.Name == command.Name && x.Id != command.Id))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             var path = $"ProductPictures";
-            var picturePath = _fileUploader.Upload(command.Picture, path);
+            if (command.Picture == null)
+                picturePath = brand.Picture;
+            else
+                picturePath = _fileUploader.Upload(command.Picture, path);
 
-            car.Edit(command.Name, command.Description, picturePath, command.Url);
+            brand.Edit(command.Name, command.Description, picturePath, command.Url);
 
             _brandRepository.SaveChanges();
             return operation.Successeded();
@@ -59,6 +62,20 @@ namespace ShopManagement.Application
         public EditBrand GetDetails(long id)
         {
             return _brandRepository.GetDetails(id);
+        }
+
+        public void Removed(long id)
+        {
+            var brand = _brandRepository.Get(id);
+            brand.Removed();
+            _brandRepository.SaveChanges();
+        }
+
+        public void Restore(long id)
+        {
+            var brand = _brandRepository.Get(id);
+            brand.NotRemoved();
+            _brandRepository.SaveChanges();
         }
 
         public List<BrandViewModel> Search(BrandSearchModel searchModel)

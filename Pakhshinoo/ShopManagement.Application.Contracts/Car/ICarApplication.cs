@@ -11,5 +11,7 @@ namespace ShopManagement.Application.Contracts.Car
         EditCar GetDetails(long id);
         List<CarViewModel> GetCar();
         List<CarViewModel> Search(CarSearchModel searchModel);
+        void Removed(long id);
+        void Restore(long id);
     }
 }

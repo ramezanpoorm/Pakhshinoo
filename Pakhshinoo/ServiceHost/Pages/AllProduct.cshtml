@@ -14,7 +14,7 @@
         <div id="container">
             <div id="content" role="main">
                 <div class="container">
-                    <nav class="products-breadcrumb"><a asp-page="./index">خانه</a>&nbsp;&#47;&nbsp;</nav>
+                    <nav class="products-breadcrumb"><a asp-page="./index">خانه</a>&nbsp;همه محصولات;&nbsp;</nav>
                     <div class="row is-sidebar-left">
                         <div id="sidebar" class="sidebar-wrap col-12 col-sm-12 col-md-12 col-lg-3 clearfix">
                             <div class="mweb-sidebar-sticky">
@@ -159,7 +159,7 @@
 
                             <ul class="products row columns-4 prdtype_2">
 
-                                @foreach (var products in Model.AllProducts)
+                                @foreach (var products in Model.AllProducts.OrderByDescending(x=>x.Id))
                                 {
                                     @if (products.HasDiscount)
                                     {

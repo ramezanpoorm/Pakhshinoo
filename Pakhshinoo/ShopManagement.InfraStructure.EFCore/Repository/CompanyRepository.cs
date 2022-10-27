@@ -42,6 +42,7 @@ namespace ShopManagement.InfraStructure.EFCore.Repository
             var query = _shopContext.Companies.Select(x => new CompanyViewModel
             {
                 Id = x.Id,
+                IsRemoved = x.IsRemoved,
                 Name = x.Name
             });
 

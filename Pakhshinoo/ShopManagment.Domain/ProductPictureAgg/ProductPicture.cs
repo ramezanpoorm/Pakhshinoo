@@ -26,7 +26,8 @@ namespace ShopManagement.Domain.ProductPictureAgg
         {
             ProductId = productId;
             if (!string.IsNullOrWhiteSpace(picture))
-                Picture = picture;
+
+            Picture = picture;
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;
         }

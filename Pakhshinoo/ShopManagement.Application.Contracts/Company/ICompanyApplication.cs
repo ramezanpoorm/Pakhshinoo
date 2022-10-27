@@ -11,5 +11,7 @@ namespace ShopManagement.Application.Contracts.Company
         EditCompany GetDetails(long id);
         List<CompanyViewModel> GetCompany();
         List<CompanyViewModel> Search(CompanySearchModel searchModel);
+        void Removed(long id);
+        void Restore(long id);
     }
 }

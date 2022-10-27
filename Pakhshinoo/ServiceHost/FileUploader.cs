@@ -20,7 +20,7 @@ namespace ServiceHost
         {
             if (file == null) return "";
 
-            var directoryPath = $"{_webHostEnviroment.WebRootPath}\\ProductPictures\\{path}";
+            var directoryPath = $"{_webHostEnviroment.WebRootPath}\\{path}";
 
             if (!Directory.Exists(directoryPath))
                 Directory.CreateDirectory(directoryPath);
@@ -31,7 +31,7 @@ namespace ServiceHost
             using (var output = System.IO.File.Create(filePath))
             {
                 file.CopyTo(output);
-                return $"{path}/{fileName}";
+                return $"{fileName}";
             }
         }
     }

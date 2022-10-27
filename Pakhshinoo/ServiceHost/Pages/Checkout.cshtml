@@ -1,6 +1,7 @@
 ﻿@page
 @using _0_Framework.Application
 @using ShopManagement.Application.Contracts
+@inject ShopManagement.Application.Contracts.Setting.ISettingApplication setting
 @model ServiceHost.Pages.CheckoutModel
 @{
     ViewData["Title"] = "تکمیل فرایند خرید";
@@ -93,6 +94,10 @@
                                                 <tr>
                                                     <th class="product-name">مبلغ نهایی</th>
                                                     <th class="product-name">جمع تخفیف</th>
+                                                    @*@if (setting.GetDetails(2).Percent9)
+                                                    {
+                                                        <th class="product-name">مالیات بر ارزش افزوده</th>    
+                                                    }*@
                                                     <th class="product-total">مبلغ قابل پرداخت</th>
                                                 </tr>
                                             </thead>
@@ -104,9 +109,17 @@
                                                     <td>
                                                         <strong><span class="products-Price-amount amount"><bdi>@Model.Cart.DiscountAmount.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span></strong>
                                                     </td>
+                                                    @*@if (setting.GetDetails(2).Percent9)
+                                                    {
+                                                        <td>
+                                                            <strong><span class="products-Price-amount amount"><bdi>(@Model.Cart.TotalAmount * (@setting.GetDetails(2).Percent9 / 100))&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span></strong>
+                                                        </td>
+
+
                                                     <td>
-                                                        <strong><span class="products-Price-amount amount"><bdi>@Model.Cart.PayAmount.ToMoney()&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span></strong>
+                                                        <strong><span class="products-Price-amount amount"><bdi>@Model.Cart.PayAmount + (@Model.Cart.TotalAmount * (@setting.GetDetails(2).Percent9 / 100))&nbsp;<span class="products-Price-currencySymbol">تومان</span></bdi></span></strong>
                                                     </td>
+                                                    }*@
                                                 </tr>
                                             </tbody>
                                         </table>

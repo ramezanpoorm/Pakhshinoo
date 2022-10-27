@@ -16,7 +16,7 @@ namespace _01_PakhshinoQuery.Query
 
         public List<CompanyQueryModel> GetCompany()
         {
-            return _shopContext.Companies.Select(x => new CompanyQueryModel
+            return _shopContext.Companies.Where(x => x.IsRemoved == false).Select(x => new CompanyQueryModel
             {
                 Id = x.Id,
                 Name = x.Name

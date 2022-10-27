@@ -30,19 +30,24 @@
                                         <div class="product-images">
                                             <div class="swiper-container" dir="rtl">
                                                 <div class="swiper-wrapper">
-                                                    @*<div class="swiper-slide img products-product-gallery__image">
-                                                            <img src="~/ProductPictures/@Model.Product.Picture" class="img-responsive products-main-image" alt="@Model.Product.PictureAlt" />
-                                                        </div>*@
-
-                                                    @foreach (var picture in Model.Product.Pictures)
+                                                    @if (Model.Product.Pictures.Count == 0)
                                                     {
                                                         <div class="swiper-slide img products-product-gallery__image">
-                                                            <img src="~/ProductPictures/@picture.Picture" class="img-responsive products-main-image" alt="@picture.PictureAlt" title="@picture.PictureTitle" />
+                                                            <img src="~/ProductPictures/@Model.Product.Picture" class="img-responsive products-main-thumb" alt="@Model.Product.PictureAlt" title="@Model.Product.PictureTitle" />
                                                         </div>
                                                     }
+                                                    else
+                                                    {
 
+                                                        @foreach (var picture in Model.Product.Pictures)
+                                                        {
+                                                            <div class="swiper-slide img products-product-gallery__image">
+                                                                <img src="~/ProductPictures/@picture.Picture" class="img-responsive products-main-image" alt="@picture.PictureAlt" title="@picture.PictureTitle" />
+                                                            </div>
+                                                        }
 
-                                                </div>
+                                                    }
+                                                    </div>
                                             </div>
                                         </div>
 
@@ -56,17 +61,25 @@
                                             <div class="swiper-container" dir="rtl">
                                                 <div class="swiper-wrapper">
 
-                                                    @foreach (var picture in Model.Product.Pictures)
+                                                    @if (Model.Product.Pictures.Count == 0)
                                                     {
-                                                        <div class="swiper-slide img products-product-gallery__image">
-                                                            <img src="~/ProductPictures/@picture.Picture" class="img-responsive products-main-thumb" alt="@picture.PictureAlt" title="@picture.PictureTitle" />
+                                                    <div class="swiper-slide img products-product-gallery__image">
+                                                        <img src="~/ProductPictures/@Model.Product.Picture" class="img-responsive products-main-thumb" alt="@Model.Product.PictureAlt" title="@Model.Product.PictureTitle" />
+                                                    </div>
+                                                            }
+                                                            else
+                                                            {
+                                                            @foreach (var picture in Model.Product.Pictures)
+                                                            {
+                                                                <div class="swiper-slide img products-product-gallery__image">
+                                                                    <img src="~/ProductPictures/@picture.Picture" class="img-responsive products-main-thumb" alt="@picture.PictureAlt" title="@picture.PictureTitle" />
+                                                                </div>
+                                                            }
+                                                            }
                                                         </div>
-                                                    }
-
-                                                </div>
-                                                <div class="swiper-button-next swiper-button-v1-next"></div>
-                                                <div class="swiper-button-prev swiper-button-v1-prev"></div>
-                                            </div>
+                                                        <div class="swiper-button-next swiper-button-v1-next"></div>
+                                                        <div class="swiper-button-prev swiper-button-v1-prev"></div>
+                                                    </div>
                                         </div>
                                     </div>
 

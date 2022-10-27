@@ -54,6 +54,20 @@ namespace ShopManagement.Application
             return _carRepository.GetDetails(id);
         }
 
+        public void Removed(long id)
+        {
+            var car = _carRepository.Get(id);
+            car.Removed();
+            _carRepository.SaveChanges();
+        }
+
+        public void Restore(long id)
+        {
+            var car = _carRepository.Get(id);
+            car.NotRemoved();
+            _carRepository.SaveChanges();
+        }
+
         public List<CarViewModel> Search(CarSearchModel searchModel)
         {
             return _carRepository.Search(searchModel);

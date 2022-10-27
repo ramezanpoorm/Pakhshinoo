@@ -16,7 +16,7 @@ namespace _01_PakhshinoQuery.Query
 
         public List<BrandQueryModel> GetBrand()
         {
-            return _shopContext.Brands.Select(x => new BrandQueryModel
+            return _shopContext.Brands.Where(x => x.IsRemoved == false).Select(x => new BrandQueryModel
             {
                 Id = x.Id,
                 Name = x.Name,

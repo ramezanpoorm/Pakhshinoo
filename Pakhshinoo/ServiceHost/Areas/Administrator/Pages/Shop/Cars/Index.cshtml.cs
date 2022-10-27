@@ -41,5 +41,17 @@ namespace ServiceHost.Areas.Administrator.Pages.Shop.Cars
             var result = _carApplication.Edit(command);
             return new JsonResult(result);
         }
+
+        public IActionResult OnGetRemove(long id)
+        {
+            _carApplication.Removed(id);
+            return RedirectToPage("./Index");
+        }
+
+        public IActionResult OnGetRestore(long id)
+        {
+            _carApplication.Restore(id);
+            return RedirectToPage("./Index");
+        }
     }
 }

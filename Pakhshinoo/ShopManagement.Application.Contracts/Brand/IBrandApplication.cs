@@ -11,5 +11,7 @@ namespace ShopManagement.Application.Contracts.Brand
         EditBrand GetDetails(long id);
         List<BrandViewModel> GetBrand();
         List<BrandViewModel> Search(BrandSearchModel searchModel);
+        void Removed(long id);
+        void Restore(long id);
     }
 }

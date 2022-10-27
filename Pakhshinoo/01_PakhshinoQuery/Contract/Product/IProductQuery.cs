@@ -17,5 +17,6 @@ namespace _01_PakhshinoQuery.Contract.Product
         List<OrderItemViewModel> GetOrderItems();
         List<ProductQueryModel> GetMostVisitProducts(int pageid, long brandId, double startPrice, double endPrice, long carId, long companyId, long categoryId);
         List<ProductQueryModel> GetMostVisitProductsIndex();
+        List<ProductQueryModel> Search(string value, int pageid, long brandId, double startPrice, double endPrice, long carId, long companyId, long categoryId);
     }
 }

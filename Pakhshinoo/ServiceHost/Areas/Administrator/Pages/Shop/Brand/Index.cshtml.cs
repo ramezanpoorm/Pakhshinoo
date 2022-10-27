@@ -32,14 +32,25 @@ namespace ServiceHost.Areas.Administrator.Pages.Shop.Brand
 
         public IActionResult OnGetEdit(long Id)
         {
-            var car = _brandApplication.GetDetails(Id);
-            return Partial("Edit", car);
+            var brand = _brandApplication.GetDetails(Id);
+            return Partial("Edit", brand);
         }
 
         public JsonResult OnPostEdit(EditBrand command)
         {
             var result = _brandApplication.Edit(command);
             return new JsonResult(result);
+        }
+        public IActionResult OnGetRemove(long id)
+        {
+            _brandApplication.Removed(id);
+            return RedirectToPage("./Index");
+        }
+
+        public IActionResult OnGetRestore(long id)
+        {
+            _brandApplication.Restore(id);
+            return RedirectToPage("./Index");
         }
     }
 }

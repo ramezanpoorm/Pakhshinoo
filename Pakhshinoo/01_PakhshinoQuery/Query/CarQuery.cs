@@ -15,7 +15,7 @@ namespace _01_PakhshinoQuery.Query
         }
         public List<CarQueryModel> GetCar()
         {
-            return _shopContext.Cars.Select(x => new CarQueryModel
+            return _shopContext.Cars.Where(x => x.IsRemoved == false).Select(x => new CarQueryModel
             {
                 Id = x.Id,
                 Name = x.Name

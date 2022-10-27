@@ -1,0 +1,77 @@
+﻿@page
+@model ServiceHost.Pages.EditProfileModel
+@{
+}
+@{
+    Layout = "Shared/_ProfileLayout";
+    ViewData["title"] = "ویرایش پروفایل";
+}
+<div class="col-12 col-sm-12 col-md-12 col-lg-9">
+    <div class="products-MyAccount-content-orders">
+        <div class="products-notices-wrapper"></div>
+        <div class="widget wd_static"><div class="widget_title">آدرس صورتحساب</div><div class="widget-content"></div></div>
+
+        <form class="products-EditAccountForm edit-account" method="post">
+            <div class="products-address-fields">
+                <div class="products-address-fields__field-wrapper">
+
+                    <p class="form-row form-row-first validate-required" data-priority="10">
+                        <label>نام&nbsp;<abbr class="required" title="ضروری">*</abbr></label>
+                        <span class="products-input-wrapper"><input type="text" class="input-text" name="first_name" placeholder="" value="" autocomplete="" /></span>
+                    </p>
+                    <p class="form-row form-row-last validate-required" data-priority="20">
+                        <label class="">نام خانوادگی&nbsp;<abbr class="required" title="ضروری">*</abbr></label>
+                        <span class="products-input-wrapper"><input type="text" class="input-text" name="last_name" placeholder="" value="" autocomplete="" /></span>
+                    </p>
+                    <p class="form-row form-row-wide" data-priority="30">
+                        <label>نام شرکت&nbsp;<span class="optional">(اختیاری)</span></label>
+                        <span class="products-input-wrapper"><input type="text" class="input-text" name="company" placeholder="" value="" autocomplete="" /></span>
+                    </p>
+
+                    <p class="form-row country_field validate-required">
+                        <label>کشور / منطقه<abbr class="required" title="ضروری">*</abbr></label>
+                        <span class="products-input-wrapper">
+                            <input type="text" class="input-text" name="country" readonly="readonly" placeholder="" value="ایران" autocomplete="" />
+                        </span>
+                    </p>
+
+
+                    <p class="form-row country_field validate-required ir-select">
+                        <label>استان <abbr class="required" title="ضروری">*</abbr></label>
+                        <select class="ir-province"></select>
+                        <label>شهر <abbr class="required" title="ضروری">*</abbr></label>
+                        <select class="ir-city"></select>
+                    </p>
+
+
+
+                    <p class="form-row address-field validate-required" data-priority="300">
+                        <label>آدرس&nbsp;<abbr class="required" title="ضروری">*</abbr></label>
+                        <span class="products-input-wrapper"><input type="text" class="input-text" name="address" placeholder="از نقشه کمک بگیرید یا آدرس کامل خود را وارد نمایید" value="" autocomplete="" /></span>
+                    </p>
+
+                    <p class="form-row address-field validate-required validate-postcode" data-priority="90">
+                        <label>کدپستی (بدون فاصله و با اعداد انگلیسی)&nbsp;<abbr class="required" title="ضروری">*</abbr></label>
+                        <span class="products-input-wrapper"><input type="text" class="input-text" name="postcode" placeholder="" value="" autocomplete="" /></span>
+                    </p>
+                    <p class="form-row form-row-wide validate-required" data-priority="100">
+                        <label>تلفن&nbsp;<abbr class="required" title="ضروری">*</abbr></label>
+                        <span class="products-input-wrapper"><input type="tel" class="input-text" name="phone" placeholder="" value="" autocomplete="tel" /></span>
+                    </p>
+                    <p class="form-row form-row-wide validate-required" data-priority="110">
+                        <label>آدرس ایمیل&nbsp;<abbr class="required" title="ضروری">*</abbr></label>
+                        <span class="products-input-wrapper"><input type="email" class="input-text" name="email" placeholder="" value="" autocomplete="" /></span>
+                    </p>
+
+                </div>
+                <p>
+                    <button type="submit" class="products-Button button" name="save_address" value="ذخیره تغییرات">ذخیره تغییرات</button>
+                </p>
+            </div>
+
+        </form>
+
+
+
+    </div>
+</div>

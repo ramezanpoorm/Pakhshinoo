@@ -28,7 +28,8 @@ namespace BlogManagement.Application
 
             var slug = command.Slug.Slugify();
             var categorySlug = _articleCategoryRepository.GetSlugBy(command.CategoryId);
-            var path = $"{categorySlug}/{slug}";
+            //var path = $"{categorySlug}/{slug}";
+            var path = $"ProductPictures";
             var pictureName = _fileUploader.Upload(command.Picture, path);
             var publishDate = command.PublishDate.ToGeorgianDateTime();
 
@@ -53,7 +54,8 @@ namespace BlogManagement.Application
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             var slug = command.Slug.Slugify();
-            var path = $"{article.Category.Slug}/{slug}";
+            //var path = $"{article.Category.Slug}/{slug}";
+            var path = $"ProductPictures";
             var pictureName = _fileUploader.Upload(command.Picture, path);
             var publishDate = command.PublishDate.ToGeorgianDateTime();
 

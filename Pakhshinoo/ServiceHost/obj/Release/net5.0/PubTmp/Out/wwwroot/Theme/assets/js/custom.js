@@ -48,7 +48,7 @@ function updateCart() {
 			<a href="#">${x.name}</a>
 			<div class="mini_cart_quantity_price_row">
 				<div class="price">
-		<span class="products-Price-amount amount"><bdi>&nbsp;<span class="products-Price-currencySymbol">تومان ${x.unitPrice}</span></bdi></span>
+		<span class="products-Price-amount amount"><bdi>&nbsp;<span class="products-Price-currencySymbol">${x.unitPrice} تومان  </span></bdi></span>
 				</div>
 		<div class="quantity">
 			<label class="screen-reader-text">${x.name}</label>

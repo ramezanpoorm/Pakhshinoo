@@ -1,4 +1,5 @@
 ﻿@page
+@inject ShopManagement.Application.Contracts.Setting.ISettingApplication setting
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -26,7 +27,7 @@
                                                         <p class="rs-p-wp-fix"></p>
 
                                                         @await Component.InvokeAsync("Slide")
-
+                                                        @await Component.InvokeAsync("BrandIndex")
                                                         <!-- END REVOLUTION SLIDER -->
                                                     </div>
                                                 </div>
@@ -47,13 +48,13 @@
                                             <div class="elementor-element elementor-element-f78791c elementor-widget elementor-widget-block-promotion">
                                                 <div class="elementor-widget-container">
                                                     <div class="banner hover-zoom">
-                                                        <a href="#" title="اجاره خودرو بدون راننده " target="_blank" rel="nofollow">
-                                                            <div class="banner-image" style="background-image: url(/Theme/assets/img/ban5-min.png);"></div>
+                                                        <a href="@setting.GetDetails(2).Banner1Link" title="@setting.GetDetails(2).Banner1Title" target="_blank" rel="nofollow">
+                                                            <div class="banner-image" style="background-image: url('/ProductPictures/2022-08-29-12-56-03-ban5-min.png');"></div>
                                                             <div class="banner-content-warper">
                                                                 <div class="banner-content align-right valign-top text-align-right">
                                                                     <div class="banner-inner">
-                                                                        <h3>اجاره خودرو بدون راننده</h3>
-                                                                        <p>با بهترین شرایط تحویل در سراسر کشور</p>
+                                                                        <h3>@setting.GetDetails(2).Banner1Title</h3>
+                                                                        <p>@setting.GetDetails(2).Banner1Des</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -70,13 +71,13 @@
                                             <div class="elementor-element elementor-element-846e511 elementor-widget elementor-widget-block-promotion">
                                                 <div class="elementor-widget-container">
                                                     <div class="banner hover-zoom">
-                                                        <div class="banner-image" style="background-image: url(/Theme/assets/img/ban3-min.png);"></div>
+                                                        <div class="banner-image" style="background-image: url('/ProductPictures/2022-08-29-12-56-03-ban3-min.png');"></div>
                                                         <div class="banner-content-warper">
                                                             <div class="banner-content align-left valign-middle text-align-right">
                                                                 <div class="banner-inner">
-                                                                    <h3>رینگ و لاستیک</h3>
-                                                                    <p>از برند های معتبر تا 60 درصد تخفیف</p>
-                                                                    <a href="#" class="btn btn_link_left" target="_blank" rel="nofollow">مشاهده محصولات</a>
+                                                                    <h3>@setting.GetDetails(2).Banner2Title</h3>
+                                                                    <p>@setting.GetDetails(2).Banner2Des</p>
+                                                                    <a href="@setting.GetDetails(2).Banner2Link" class="btn btn_link_left" target="_blank" rel="nofollow">بیشتر</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -86,13 +87,13 @@
                                             <div class="elementor-element elementor-element-bb82f8a elementor-widget elementor-widget-block-promotion">
                                                 <div class="elementor-widget-container">
                                                     <div class="banner hover-zoom">
-                                                        <div class="banner-image" style="background-image: url(/Theme/assets/img/ban4-min.png);"></div>
+                                                        <div class="banner-image" style="background-image: url('/ProductPictures/2022-08-29-12-56-03-ban4-min.png');"></div>
                                                         <div class="banner-content-warper">
                                                             <div class="banner-content align-left valign-middle text-align-right">
                                                                 <div class="banner-inner">
-                                                                    <h3>دیسک ترمز</h3>
-                                                                    <p>واردات کالای های استوک</p>
-                                                                    <a href="#" class="btn btn_link_center" target="_blank" rel="nofollow">خرید کنید</a>
+                                                                    <h3>@setting.GetDetails(2).Banner2Title</h3>
+                                                                    <p>@setting.GetDetails(2).Banner3Des</p>
+                                                                    <a href="@setting.GetDetails(2).Banner3Link" class="btn btn_link_center" target="_blank" rel="nofollow">بیشتر</a>
 
                                                                 </div>
                                                             </div>
@@ -108,7 +109,7 @@
                             </div>
                         </div>
                     </section>
-
+                    
 
                     @await Component.InvokeAsync("SpecialProducts")
 
@@ -139,7 +140,7 @@
                     </section>
 
 
-                    @await Component.InvokeAsync("BrandIndex")
+
 
 
 

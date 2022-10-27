@@ -32,6 +32,9 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -60,6 +63,9 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -108,6 +114,9 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -244,6 +253,9 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
 
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("IsSpecial")
                         .HasColumnType("bit");
 
@@ -379,6 +391,75 @@ namespace ShopManagement.InfraStructure.EFCore.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("ProductPictures");
+                });
+
+            modelBuilder.Entity("ShopManagement.Domain.SettingAgg.Setting", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Banner1Des")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Banner1Link")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Banner1Pic")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Banner1Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Banner2Des")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Banner2Link")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Banner2Pic")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Banner2Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Banner3Des")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Banner3Link")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Banner3Pic")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Banner3Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EmailAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Instagram")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Percent9")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Telegram")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Settings");
                 });
 
             modelBuilder.Entity("ShopManagement.Domain.SliderAgg.Slide", b =>

@@ -31,6 +31,7 @@ namespace ShopManagement.Domain.ProductAgg
         public string MetaDescription { get; private set; }
         public string Slug { get; private set; }
         public bool IsSpecial { get; private set; }
+        public bool IsRemoved { get; set; }
         public int VisitCount { get; private set; }
         public ProductCategory Category { get; private set; }        
         public Brand Brand { get; private set; }
@@ -54,11 +55,12 @@ namespace ShopManagement.Domain.ProductAgg
             Keywords = keywords;
             MetaDescription = metaDescription;
             IsSpecial = false;
+            IsRemoved = false;
             VisitCount = 0;
             BrandId = brandId;
         }
 
-        public void Edit(string name, string code, string shortDescription, string description, string picture, string pictureAlt, string pictureTitle, long categoryId, string slug, string keywords, string metaDescription)
+        public void Edit(string name, string code, string shortDescription, string description, string picture, string pictureAlt, string pictureTitle, long categoryId, string slug, string keywords, string metaDescription, long brandId)
         {
             Name = name;
             Code = code;
@@ -66,22 +68,32 @@ namespace ShopManagement.Domain.ProductAgg
             Description = description;
             if (!string.IsNullOrWhiteSpace(picture))
                 Picture = picture;
+
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;
             CategoryId = categoryId;
             Slug = slug;
             Keywords = keywords;
             MetaDescription = metaDescription;
+            BrandId = brandId;
         }
 
         public void Special()
         {
             IsSpecial = true;
         }
-
         public void NotSpecial()
         {
             IsSpecial = false;
+        }
+
+        public void Removed()
+        {
+            IsRemoved = true;
+        }
+        public void NotRemoved()
+        {
+            IsRemoved = false;
         }
 
         public void VisitIncrease()

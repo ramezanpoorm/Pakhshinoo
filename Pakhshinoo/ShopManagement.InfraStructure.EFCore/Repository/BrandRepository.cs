@@ -32,7 +32,8 @@ namespace ShopManagement.InfraStructure.EFCore.Repository
                 Id = x.Id,
                 Description = x.Description,
                 Name = x.Name,
-                Url=x.Url
+                Url = x.Url,
+                //PictureDB = x.Picture
             }).FirstOrDefault(x => x.Id == id);
         }
 
@@ -48,6 +49,7 @@ namespace ShopManagement.InfraStructure.EFCore.Repository
                 Id = x.Id,
                 Name = x.Name,
                 Picture = x.Picture,
+                IsRemoved = x.IsRemoved,
                 Url = x.Url
             });
 

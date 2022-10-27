@@ -12,6 +12,8 @@ namespace ShopManagement.Application.Contracts.Product
         List<ProductViewModel> Search(ProductSearchModel searchModel);
         OpretaionResult Special(long id);
         OpretaionResult NotSpecial(long id);
+        void Removed(long id);
+        void Restore(long id);
         OpretaionResult NotSpecialAll();
         void IncVisit(long id);
     }
